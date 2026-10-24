@@ -8,6 +8,21 @@ proyecto está en desarrollo y el contenido de un caso puede cambiar entre versi
 Cada caso registra en su traza la versión de sinsim con que se calculó: para reproducir un
 resultado, usa el código de esa versión.
 
+## [0.6.2] - 2026-10-24
+
+### Corregido
+
+- En los listados N-1, las columnas de cargabilidad y tensión quedaban fuera de la vista en
+  pantallas medianas: los nombres largos no partían línea y empujaban los valores a la derecha.
+  Ahora el valor va en la segunda columna, los nombres parten línea, la tabla reparte el ancho
+  disponible y los dos listados se apilan por debajo de 1280 px.
+
+### Añadido
+
+- Color por intensidad en los listados N-1: la cargabilidad va de claro a rojo pleno entre el
+  límite y el doble del límite; la tensión va en rojo (sobretensión) o azul (subtensión), más
+  intenso cuanto más lejos de la banda, pleno a 0,10 pu.
+
 ## [0.6.1] - 2026-10-24
 
 ### Corregido
@@ -112,6 +127,7 @@ programado y el pronóstico de demanda de XM, y la interfaz web para ejecutarlo.
 
 - Snapshots de PARATEC del 2026-10-09, 2026-10-19, 2026-10-20 y 2026-10-21.
 
+[0.6.2]: https://github.com/jucajata/sinsim/releases/tag/v0.6.2
 [0.6.1]: https://github.com/jucajata/sinsim/releases/tag/v0.6.1
 [0.6.0]: https://github.com/jucajata/sinsim/releases/tag/v0.6.0
 [0.5.0]: https://github.com/jucajata/sinsim/releases/tag/v0.5.0

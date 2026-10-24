@@ -1,5 +1,5 @@
 import type { N1Job } from "../../api/types";
-import { KIND_LABELS, fmtDeviation, fmtDuration, fmtLoading, fmtVm, isRunning, isolationText, outageLabel, progressText } from "./n1";
+import { KIND_LABELS, fmtDeviation, fmtDuration, fmtLoading, fmtVm, isRunning, isolationText, loadingStyle, outageLabel, progressText, voltageStyle } from "./n1";
 
 function job(partial: Partial<N1Job>): N1Job {
   return {
@@ -48,6 +48,21 @@ describe("n1", () => {
     expect(isRunning(job({ status: "calculando" }))).toBe(true);
     expect(isRunning(job({ status: "listo" }))).toBe(false);
     expect(isRunning(job({ status: "error" }))).toBe(false);
+  });
+
+  it("colorea más rojo cuanto más cargado, saturando al doble del límite", () => {
+    expect(loadingStyle(100)).toEqual({ background: "rgba(220, 38, 38, 0.12)", color: undefined });
+    expect(loadingStyle(160)).toEqual({ background: "rgba(220, 38, 38, 0.56)", color: "#fff" });
+    expect(loadingStyle(200)).toEqual({ background: "rgba(220, 38, 38, 0.85)", color: "#fff" });
+    expect(loadingStyle(300).background).toBe("rgba(220, 38, 38, 0.85)");
+    expect(loadingStyle(120, 110).background).toBe(loadingStyle(120, 110).background);
+  });
+
+  it("colorea la sobretensión en rojo y la subtensión en azul, más intenso cuanto más lejos", () => {
+    expect(voltageStyle(-0.1)).toEqual({ background: "rgba(37, 99, 235, 0.85)", color: "#fff" });
+    expect(voltageStyle(-0.02).background).toBe("rgba(37, 99, 235, 0.27)");
+    expect(voltageStyle(0.1).background).toBe("rgba(220, 38, 38, 0.85)");
+    expect(voltageStyle(0.03).background).toBe("rgba(220, 38, 38, 0.34)");
   });
 
   it("quita el prefijo técnico del nombre del activo", () => {
