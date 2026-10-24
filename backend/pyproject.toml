@@ -1,6 +1,6 @@
 [project]
 name = "sinsim"
-version = "0.6.1"
+version = "0.6.2"
 description = "Flujo de potencia del SIN colombiano con pandapower, PARATEC y archivos públicos de XM"
 license = "MIT"
 requires-python = ">=3.12,<3.13"

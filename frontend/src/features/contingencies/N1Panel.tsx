@@ -46,20 +46,20 @@ function LoadingList({ rows }: { rows: LoadingRow[] }): JSX.Element {
             <thead>
               <tr>
                 <th className="num">#</th>
+                <th className="num">Con N-1</th>
                 <th>Activo fuera</th>
                 <th>Elemento más cargado</th>
-                <th className="num">Con N-1</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((r) => (
                 <tr key={r.outage.element_id} title={`caso base ${fmtLoading(r.loading_base_percent)} · ${r.n_elements} elemento(s) cuentan`}>
                   <td className="num">{r.rank}</td>
-                  <OutageCell outage={r.outage} isolation={r.isolation} />
-                  <td>{outageLabel(r.element_id)}</td>
                   <td className="num">
                     <strong>{fmtLoading(r.loading_percent)}</strong>
                   </td>
+                  <OutageCell outage={r.outage} isolation={r.isolation} />
+                  <td>{outageLabel(r.element_id)}</td>
                 </tr>
               ))}
             </tbody>
@@ -85,22 +85,22 @@ function VoltageList({ rows }: { rows: VoltageRow[] }): JSX.Element {
             <thead>
               <tr>
                 <th className="num">#</th>
+                <th className="num">Fuera de banda</th>
+                <th className="num">V (pu)</th>
                 <th>Activo fuera</th>
                 <th>Barra más afectada</th>
-                <th className="num">V (pu)</th>
-                <th className="num">Fuera de banda</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((r) => (
                 <tr key={r.outage.element_id} title={`caso base ${fmtVm(r.vm_base_pu)} · ${r.n_buses} barra(s) cuentan`}>
                   <td className="num">{r.rank}</td>
-                  <OutageCell outage={r.outage} isolation={r.isolation} />
-                  <td>{r.bus_id}</td>
-                  <td className="num">{fmtVm(r.vm_pu)}</td>
                   <td className="num">
                     <strong>{fmtDeviation(r.deviation_pu)}</strong>
                   </td>
+                  <td className="num">{fmtVm(r.vm_pu)}</td>
+                  <OutageCell outage={r.outage} isolation={r.isolation} />
+                  <td>{r.bus_id}</td>
                 </tr>
               ))}
             </tbody>
