@@ -14,8 +14,14 @@ resultado, usa el código de esa versión.
 
 - En los listados N-1, las columnas de cargabilidad y tensión quedaban fuera de la vista en
   pantallas medianas: los nombres largos no partían línea y empujaban los valores a la derecha.
-  Ahora el valor va en la segunda columna, los nombres parten línea y los dos listados se apilan
-  por debajo de 1280 px.
+  Ahora el valor va en la segunda columna, los nombres parten línea, la tabla reparte el ancho
+  disponible y los dos listados se apilan por debajo de 1280 px.
+
+### Añadido
+
+- Color por intensidad en los listados N-1: la cargabilidad va de claro a rojo pleno entre el
+  límite y el doble del límite; la tensión va en rojo (sobretensión) o azul (subtensión), más
+  intenso cuanto más lejos de la banda, pleno a 0,10 pu.
 
 ## [0.6.1] - 2026-10-24
 

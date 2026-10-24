@@ -852,9 +852,21 @@ tr.violation td {
 .n1 .table-scroll {
   max-height: 420px;
 }
-/* Los nombres de activos son largos: parten línea para que los valores queden siempre a la vista. */
+/* Los nombres de activos son largos: la tabla reparte el ancho disponible y los nombres parten
+   línea, así los valores quedan siempre a la vista sin desplazamiento horizontal. */
+.n1__list table {
+  table-layout: fixed;
+  width: 100%;
+}
+.n1__list th:first-child {
+  width: 2.5em;
+}
+.n1__list th.num:not(:first-child) {
+  width: 7em;
+}
 .n1 table td:not(.num) {
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 .n1 table td.num {
   white-space: nowrap;

@@ -4,7 +4,7 @@ import { ProblemError } from "../../api/client";
 import { useN1Job, useStartN1 } from "../../api/hooks";
 import type { Isolation, IsolationRow, LoadingRow, N1Analysis, Outage, Run, UnsolvedRow, VoltageRow } from "../../api/types";
 import { fmtNum } from "../../lib/format";
-import { KIND_LABELS, fmtDeviation, fmtDuration, fmtLoading, fmtVm, isRunning, isolationText, outageLabel, progressText } from "./n1";
+import { KIND_LABELS, fmtDeviation, fmtDuration, fmtLoading, fmtVm, isRunning, isolationText, loadingStyle, outageLabel, progressText, voltageStyle } from "./n1";
 
 interface Props {
   run: Run;
@@ -31,13 +31,13 @@ function OutageCell({ outage, isolation = null }: { outage: Outage; isolation?: 
   );
 }
 
-function LoadingList({ rows }: { rows: LoadingRow[] }): JSX.Element {
+function LoadingList({ rows, limit }: { rows: LoadingRow[]; limit: number }): JSX.Element {
   return (
     <div className="n1__list" data-testid="n1-loading">
       <h3>
         Cargabilidad <span className={rows.length > 0 ? "count count--alert" : "count"}>{rows.length}</span>
       </h3>
-      <p className="muted small">De mayor a menor cargabilidad provocada en cualquier línea o transformador.</p>
+      <p className="muted small">De mayor a menor cargabilidad provocada en cualquier línea o transformador. Más rojo, más cargado (pleno al doble del límite).</p>
       {rows.length === 0 ? (
         <p className="muted">Ninguna contingencia empeora una cargabilidad por encima del límite.</p>
       ) : (
@@ -55,7 +55,7 @@ function LoadingList({ rows }: { rows: LoadingRow[] }): JSX.Element {
               {rows.map((r) => (
                 <tr key={r.outage.element_id} title={`caso base ${fmtLoading(r.loading_base_percent)} · ${r.n_elements} elemento(s) cuentan`}>
                   <td className="num">{r.rank}</td>
-                  <td className="num">
+                  <td className="num" style={loadingStyle(r.loading_percent, limit)}>
                     <strong>{fmtLoading(r.loading_percent)}</strong>
                   </td>
                   <OutageCell outage={r.outage} isolation={r.isolation} />
@@ -76,7 +76,7 @@ function VoltageList({ rows }: { rows: VoltageRow[] }): JSX.Element {
       <h3>
         Tensiones <span className={rows.length > 0 ? "count count--alert" : "count"}>{rows.length}</span>
       </h3>
-      <p className="muted small">De mayor a menor distancia fuera de la banda de tensión, por debajo o por encima.</p>
+      <p className="muted small">De mayor a menor distancia fuera de la banda de tensión. Rojo: sobretensión; azul: subtensión; más intenso, más lejos de la banda.</p>
       {rows.length === 0 ? (
         <p className="muted">Ninguna contingencia saca una barra de su banda más de lo que ya estaba.</p>
       ) : (
@@ -95,7 +95,7 @@ function VoltageList({ rows }: { rows: VoltageRow[] }): JSX.Element {
               {rows.map((r) => (
                 <tr key={r.outage.element_id} title={`caso base ${fmtVm(r.vm_base_pu)} · ${r.n_buses} barra(s) cuentan`}>
                   <td className="num">{r.rank}</td>
-                  <td className="num">
+                  <td className="num" style={voltageStyle(r.deviation_pu)}>
                     <strong>{fmtDeviation(r.deviation_pu)}</strong>
                   </td>
                   <td className="num">{fmtVm(r.vm_pu)}</td>
@@ -189,6 +189,7 @@ function UnsolvedBlock({ rows }: { rows: UnsolvedRow[] }): JSX.Element {
 function AnalysisView({ analysis }: { analysis: N1Analysis }): JSX.Element {
   const s = analysis.summary;
   const t = analysis.trace;
+  const loadingLimit = parseFloat(analysis.limits.find((l) => l.name === "Cargabilidad")?.value ?? "") || 100;
   return (
     <>
       <div className="kpis" data-testid="n1-summary">
@@ -215,7 +216,7 @@ function AnalysisView({ analysis }: { analysis: N1Analysis }): JSX.Element {
         </ul>
       </details>
       <div className="n1__lists">
-        <LoadingList rows={analysis.loading} />
+        <LoadingList rows={analysis.loading} limit={loadingLimit} />
         <VoltageList rows={analysis.voltage} />
       </div>
       <IsolationBlock rows={analysis.isolation} />

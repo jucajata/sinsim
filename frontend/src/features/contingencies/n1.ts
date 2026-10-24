@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import type { Isolation, N1Job, OutageKind } from "../../api/types";
 import { fmtNum } from "../../lib/format";
 
@@ -49,4 +51,29 @@ export function isRunning(job: N1Job | undefined): boolean {
 /** Nombre legible del activo: sin el prefijo «line:», «trafo:», «svc:» o «statcom:». */
 export function outageLabel(elementId: string): string {
   return elementId.replace(/^(line|trafo|svc|statcom):/, "");
+}
+
+// --- Color por intensidad (decisión del usuario, 2026-10-24) ---------------------------------
+
+const RED = "220, 38, 38";
+const BLUE = "37, 99, 235";
+const MIN_ALPHA = 0.12;
+const MAX_ALPHA = 0.85;
+
+function cellStyle(rgb: string, t: number): CSSProperties {
+  const alpha = MIN_ALPHA + (MAX_ALPHA - MIN_ALPHA) * Math.min(1, Math.max(0, t));
+  return {
+    background: `rgba(${rgb}, ${alpha.toFixed(2)})`,
+    color: alpha >= 0.5 ? "#fff" : undefined,
+  };
+}
+
+/** Más cargado, más rojo: de claro en el límite a rojo pleno al doble del límite. */
+export function loadingStyle(loadingPercent: number, limitPercent = 100): CSSProperties {
+  return cellStyle(RED, (loadingPercent - limitPercent) / limitPercent);
+}
+
+/** Sobretensión en rojo, subtensión en azul; más intenso cuanto más lejos de la banda (pleno a `full` pu). */
+export function voltageStyle(deviationPu: number, full = 0.1): CSSProperties {
+  return cellStyle(deviationPu < 0 ? BLUE : RED, Math.abs(deviationPu) / full);
 }
