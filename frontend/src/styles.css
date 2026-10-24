@@ -862,7 +862,7 @@ tr.violation td {
   width: 2.5em;
 }
 .n1__list th.num:not(:first-child) {
-  width: 7em;
+  width: 8.5em; /* cabe «Fuera de banda» en mayúsculas */
 }
 .n1 table td:not(.num) {
   white-space: normal;
