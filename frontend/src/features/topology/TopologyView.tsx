@@ -5,7 +5,7 @@ import { useBasemap, useTopology } from "../../api/hooks";
 import type { Run, TopologyNode } from "../../api/types";
 import { BusDetail } from "./BusDetail";
 import { busDetail, type BusDetailData } from "./busModel";
-import { angleColor, loadingColor, voltageColor } from "./colors";
+import { angleColor, ikssColor, loadingColor, voltageColor } from "./colors";
 import {
   BRANCH_FONT_PX,
   BUS_FONT_PX,
@@ -42,7 +42,7 @@ import {
 import { STR_ZOOM, busVisible } from "./lod";
 import { NO_SUBAREA_COLOR, filterBySubarea, subareaColor } from "./subareas";
 
-type ColorBy = "voltage" | "loading" | "subarea" | "angle";
+type ColorBy = "voltage" | "loading" | "subarea" | "angle" | "shortcircuit";
 
 /** Lee un token de color de la hoja de estilos para que Cytoscape siga el tema (claro u oscuro). */
 function cssVar(name: string, fallback: string): string {
@@ -63,6 +63,9 @@ type Layout = "logical" | "geo";
 
 interface Props {
   run: Run;
+  /** Ikss por barra del cortocircuito (spec 004, HU-9); sin él no se ofrece el modo. */
+  scByBus?: Map<string, number> | undefined;
+  scMax?: number | undefined;
 }
 
 /** Zoom a partir del cual se leen las etiquetas de barras y de flujos (FR-036). */
@@ -71,7 +74,7 @@ const LABEL_ZOOM = 2.5;
 const SETTLE_MS = 140;
 
 
-export function TopologyView({ run }: Props): JSX.Element {
+export function TopologyView({ run, scByBus, scMax = 0 }: Props): JSX.Element {
   const runId = run.run_id;
   const topology = useTopology(runId);
   const [selectedBus, setSelectedBus] = useState<string | null>(null);
@@ -173,6 +176,23 @@ export function TopologyView({ run }: Props): JSX.Element {
     cyRef.current?.style().update();
   }, [colorBy]);
 
+  // El cortocircuito llega después del grafo: se escribe en los nodos sin reconstruirlo.
+  const scByBusRef = useRef<Map<string, number> | undefined>(scByBus);
+  const scMaxRef = useRef<number>(scMax);
+  useEffect(() => {
+    scByBusRef.current = scByBus;
+    scMaxRef.current = scMax;
+    const cy = cyRef.current;
+    if (!cy) return;
+    cy.batch(() => {
+      cy.nodes().forEach((ele) => {
+        ele.data("ikss", scByBus?.get(ele.id()) ?? null);
+      });
+    });
+    cy.style().update();
+    if (!scByBus && colorBy === "shortcircuit") setColorBy("voltage");
+  }, [scByBus, scMax, colorBy]);
+
   useEffect(() => {
     const data = topology.data;
     const el = container.current;
@@ -219,6 +239,7 @@ export function TopologyView({ run }: Props): JSX.Element {
             p_gen: n.p_gen_mw ?? 0,
             p_load: n.p_load_mw ?? 0,
             va: n.va_degree ?? null,
+            ikss: scByBusRef.current?.get(n.id) ?? null,
             caption: busCaption(n, labels.bus),
           },
         })),
@@ -258,6 +279,7 @@ export function TopologyView({ run }: Props): JSX.Element {
               if (by === "voltage") return voltageColor(ele.data("vm_pu") as number | null);
               if (by === "subarea") return subareaColor(ele.data("subarea") as string | null, allNames);
               if (by === "angle") return angleColor(ele.data("va") as number | null);
+              if (by === "shortcircuit") return ikssColor(ele.data("ikss") as number | null, scMaxRef.current);
               return theme.node;
             },
             "background-opacity": (ele: NodeSingular) => (ele.data("frontier") ? 0.35 : 1),
@@ -462,7 +484,8 @@ export function TopologyView({ run }: Props): JSX.Element {
       const d = evt.target.data();
       const vm = d.vm_pu !== null ? ` · ${Number(d.vm_pu).toFixed(3)} pu` : "";
       const sa = d.subarea ? ` · ${d.subarea}${d.frontier ? " (vecina)" : ""}` : " · sin subárea";
-      setHover(`${d.label} · ${d.vn_kv} kV${vm}${sa}`);
+      const sc = typeof d.ikss === "number" ? ` · Ikss ${Number(d.ikss).toFixed(2)} kA · Sk ${(Math.sqrt(3) * Number(d.vn_kv) * Number(d.ikss)).toFixed(0)} MVA` : "";
+      setHover(`${d.label} · ${d.vn_kv} kV${vm}${sa}${sc}`);
     });
     cy.on("mouseover", "edge", (evt) => {
       const d = evt.target.data();
@@ -499,6 +522,7 @@ export function TopologyView({ run }: Props): JSX.Element {
             <option value="loading">cargabilidad (%)</option>
             <option value="subarea">subárea</option>
             <option value="angle">ángulo (°)</option>
+            {scByBus && <option value="shortcircuit">cortocircuito (kA)</option>}
           </select>
         </label>
         <label>
@@ -609,6 +633,12 @@ export function TopologyView({ run }: Props): JSX.Element {
                 <i style={{ background: angleColor(-30) }} /> −30° <i style={{ background: angleColor(0) }} /> 0°{" "}
                 <i style={{ background: angleColor(30) }} /> +30°
               </>
+            )}
+            {colorBy === "shortcircuit" && (
+              <span data-testid="sc-legend">
+                <i style={{ background: ikssColor(0, scMax || 1) }} /> 0 kA <i style={{ background: ikssColor(scMax / 2, scMax || 1) }} /> {(scMax / 2).toFixed(1)} kA{" "}
+                <i style={{ background: ikssColor(scMax, scMax || 1) }} /> {scMax.toFixed(1)} kA (máx. del caso)
+              </span>
             )}
             {colorBy === "subarea" && (
               <span data-testid="subarea-legend">

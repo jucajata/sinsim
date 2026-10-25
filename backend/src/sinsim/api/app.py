@@ -15,7 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.gzip import GZipMiddleware
 
 from sinsim.api import problems
-from sinsim.api.routers import cases, geo, n1, runs, snapshots
+from sinsim.api.routers import cases, geo, n1, runs, sc, snapshots
 from sinsim.api.security import host_allowed, origin_allowed
 from sinsim.bootstrap import AppContext, build_context
 from sinsim.config import sinsim_version
@@ -95,6 +95,7 @@ def create_app(ctx: AppContext | None = None) -> FastAPI:
     app.include_router(runs.router, prefix="/api")
     app.include_router(geo.router, prefix="/api")
     app.include_router(n1.router, prefix="/api")
+    app.include_router(sc.router, prefix="/api")
     # La interfaz construida, si existe, se sirve desde la raíz (FR-045). Se monta al final:
     # las rutas /api/… tienen prioridad.
     web = app.state.ctx.paths.web

@@ -4,12 +4,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sinsim.domain.entities import Run, StudyCase
+from sinsim.domain.entities import Run, ShortCircuitAnalysis, StudyCase
 from sinsim.domain.errors import DomainError
+
+SC_FILE = "sc.json"
 
 
 class FileCaseRepository:
-    """Guarda `case.json`, `net.json` y `runs/<run_id>.json` por caso."""
+    """Guarda `case.json`, `net.json`, `runs/<run_id>.json` y `sc.json` por caso."""
 
     def __init__(self, root: Path) -> None:
         """Crea el repositorio sobre `cases/`."""
@@ -58,3 +60,18 @@ class FileCaseRepository:
             for p in self.root.glob(f"*/runs/{run_id}.json"):
                 return Run.model_validate_json(p.read_text(encoding="utf-8"))
         raise DomainError("RUN_NOT_FOUND", f"no existe la ejecución {run_id}")
+
+    def save_sc(self, case_id: str, analysis: ShortCircuitAnalysis) -> Path:
+        """Guarda el cortocircuito del caso en `sc.json` (FR-071)."""
+        d = self._dir(case_id)
+        d.mkdir(parents=True, exist_ok=True)
+        p = d / SC_FILE
+        p.write_text(analysis.model_dump_json(indent=2), encoding="utf-8")
+        return p
+
+    def get_sc(self, case_id: str) -> ShortCircuitAnalysis | None:
+        """Cortocircuito guardado del caso, o `None` si no se ha calculado."""
+        p = self._dir(case_id) / SC_FILE
+        if not p.exists():
+            return None
+        return ShortCircuitAnalysis.model_validate_json(p.read_text(encoding="utf-8"))

@@ -1,6 +1,14 @@
 <!--
 Sync Impact Report
-- Versión: 1.2.0 → 1.3.0 (MINOR, 2026-10-24). Se añade el comando público `sinsim n1`, que
+- Versión: 1.3.0 → 1.4.0 (MINOR, 2026-10-25). Se añade el comando público `sinsim sc`, que
+  calcula el cortocircuito trifásico IEC 60909 ya previsto en I «Capacidades en alcance»
+  (specs/004-cortocircuito/; decisión del usuario del 2026-10-25), y el comando de
+  mantenimiento `sinsim equivalencias elevadores`. No se elimina ni se redefine ningún principio.
+  - III.4: el caso persiste además `sc.json` (resultado del cortocircuito) junto a `net.json`.
+  - IV «Comandos públicos»: nuevas entradas `uv run sinsim sc …` y
+    `uv run sinsim equivalencias elevadores …`.
+  - Plantillas (.specify/templates/): revisadas; no requieren cambios.
+- Enmienda anterior, 1.2.0 → 1.3.0 (MINOR, 2026-10-24). Se añade el comando público `sinsim n1`, que
   corre el análisis de contingencias N-1 ya previsto en I «Capacidades en alcance»
   (specs/003-contingencias-n1/; decisión del usuario del 2026-10-24). No se elimina ni se
   redefine ningún principio.
@@ -137,7 +145,10 @@ evita que cada feature introduzca herramientas paralelas.
    del paquete como copia byte a byte de uno versionado; las mismas reglas aplican. Un dato
    nuevo implica un snapshot nuevo. Cada snapshot DEBE tener
    `manifest.json` con: fecha de extracción, URL/endpoint de origen, versión del scraper,
-   número de registros por entidad y checksum SHA-256 de cada archivo.
+   número de registros por entidad y checksum SHA-256 de cada archivo. Una columna derivada
+   que un snapshot anterior no trae PUEDE completarse en memoria desde su `raw/` al cargarlo,
+   sin escribir nada. Lo que se calcula sobre un caso vive en `cases/<case_id>/` (`case.json`,
+   `net.json`, `runs/`, `sc.json` del cortocircuito), nunca dentro del snapshot.
 5. **Cero parámetros inventados**: si falta un parámetro técnico, el elemento se excluye
    o se imputa de forma explícita, con la columna `imputado = true`, el método de
    imputación y un reporte visible en la UI. Nunca se completa en silencio.
@@ -213,6 +224,12 @@ origen verificables; cualquier valor silencioso o inventado invalida el análisi
 - `sinsim serve [--puerto N]` — levanta la API y la interfaz construida en `127.0.0.1`.
 - `uv run sinsim n1 --fecha YYYY-MM-DD --periodo N [--fecha-despacho F] [--salida CARPETA] [--json]`
   — corre el flujo AC base y el análisis de contingencias N-1, y escribe los listados en CSV.
+- `uv run sinsim sc --fecha YYYY-MM-DD --periodo N [--fecha-despacho F] [--barra NOMBRE ...] [--salida CARPETA] [--json]`
+  — calcula el cortocircuito trifásico máximo (IEC 60909) de todas las barras del caso, o de
+  las pedidas, y escribe CSV y metadatos; con `--json` imprime solo el resultado.
+- `uv run sinsim equivalencias elevadores --fecha YYYY-MM-DD [--salida RUTA]` — comando de
+  mantenimiento del repositorio: propone la tabla `data/equivalencias/elevadores.csv`
+  (unidad ↔ transformador elevador) a partir de un snapshot, para curarla a mano.
 
 #### Modo instalado
 
@@ -341,4 +358,4 @@ decisión documentada; el código no especificado es deuda que nadie revisó.
   `.specify/templates/`.
 - El "Constitution Check" de cada `plan.md` DEBE verificar los principios III, IV y VI.
 
-**Versión**: 1.3.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-10-24
+**Versión**: 1.4.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-10-25

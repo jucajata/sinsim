@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+import csv
 import json
 import logging
 import sys
 import threading
 import time
 import urllib.request
+import uuid
 import webbrowser
 from datetime import date
 from pathlib import Path
@@ -16,17 +18,21 @@ from typing import Annotated, Any
 import pandapower as pp
 import typer
 
+from sinsim.adapters.sources_to_pandapower.buses import class_kv
 from sinsim.adapters.storage.export import write_export
 from sinsim.adapters.storage.export_n1 import write_export_n1
+from sinsim.adapters.storage.export_sc import write_export_sc
 from sinsim.bootstrap import AppContext, build_context
 from sinsim.domain.dates import parse_allowed
-from sinsim.domain.entities import N1Analysis, Run, StudyCase
+from sinsim.domain.entities import N1Analysis, Run, ShortCircuitAnalysis, StudyCase, Trace
 from sinsim.domain.errors import DomainError, ExitCode
+from sinsim.domain.shortcircuit import propose_step_ups
 from sinsim.observability import log_event, new_trace_id
 from sinsim.services import n1 as n1_service
+from sinsim.services import sc as sc_service
 from sinsim.services import snapshots as snapshot_service
-from sinsim.services.build_case import build_case
-from sinsim.services.run_flow import run_flow
+from sinsim.services.build_case import apply_aliases, build_case
+from sinsim.services.run_flow import run_flow, solver_settings
 from sinsim.services.scrape import PARATEC_NOTICE, scrape_snapshot
 
 log = logging.getLogger("sinsim.cli")
@@ -37,6 +43,8 @@ app = typer.Typer(
 )
 snapshots_app = typer.Typer(help="Snapshots de datos disponibles.")
 app.add_typer(snapshots_app, name="snapshots")
+equivalencias_app = typer.Typer(help="Mantenimiento de las tablas de equivalencias.")
+app.add_typer(equivalencias_app, name="equivalencias")
 
 
 # --- utilidades --------------------------------------------------------------------
@@ -335,6 +343,188 @@ def n1(
         typer.echo(_dump(analysis.model_dump(mode="json")))
     else:
         _print_n1(analysis)
+    raise typer.Exit(code=int(ExitCode.OK))
+
+
+# --- sc (cortocircuito) ----------------------------------------------------------------
+
+
+def _print_sc(analysis: ShortCircuitAnalysis) -> None:
+    s, q = analysis.summary, analysis.quality
+    typer.echo("── Cortocircuito trifásico máximo (IEC 60909) ──")
+    t = analysis.trace
+    typer.echo(
+        f"Snapshot PARATEC: {t.snapshot_date} | periodo {t.period} | pandapower "
+        f"{t.pandapower_version} | sinsim {t.sinsim_version} | caso: {analysis.case_id[:12]}…"
+    )
+    typer.echo(
+        f"Barras: {s.n_buses} | fuentes síncronas: {s.n_sources_sync} | convertidores: "
+        f"{s.n_sources_converter} | unidades con imputaciones: {s.n_imputed_units} | sin elevador: "
+        f"{s.n_without_step_up} | sin fuente: {s.n_no_source} | {s.duration_s:.1f} s"
+    )
+    if s.max_ikss:
+        typer.echo(f"Mayor Ikss: {s.max_ikss.bus_id} ({s.max_ikss.value:,.2f} kA)")
+    if s.min_skss:
+        typer.echo(f"Menor Sk: {s.min_skss.bus_id} ({s.min_skss.value:,.0f} MVA)")
+    typer.echo(
+        f"Elevadores casados: {q.step_up_equivalences.matched} "
+        f"({q.step_up_equivalences.uncurated} sin curar) | enlaces sin aporte: "
+        f"{len(q.sc_zero_sources)} | excluidos: {len(q.excluded)}"
+    )
+    typer.echo("Barras con mayor Ikss (kA / MVA / X/R):")
+    for b in sorted(analysis.buses, key=lambda x: x.ikss_ka, reverse=True)[:10]:
+        xr = f"{b.x_r:.2f}" if b.x_r is not None else "-"
+        typer.echo(f"  {b.bus_id}: {b.ikss_ka:,.2f} kA / {b.skss_mva:,.0f} MVA / {xr}")
+    for a in analysis.assumptions:
+        typer.echo(f"  supuesto {a.id}: {a.text}")
+
+
+@app.command()
+def sc(
+    fecha: Annotated[
+        str, typer.Option("--fecha", help="Fecha del snapshot de PARATEC (YYYY-MM-DD).")
+    ],
+    periodo: Annotated[int, typer.Option("--periodo", help="Periodo horario 1–24.")],
+    fecha_despacho: Annotated[
+        str | None, typer.Option("--fecha-despacho", help="Snapshot del despacho y la demanda.")
+    ] = None,
+    barra: Annotated[
+        list[str] | None,
+        typer.Option("--barra", help="Barra del caso (`SUB|kV` o `SUB kV`); repetible."),
+    ] = None,
+    salida: Annotated[
+        Path | None,
+        typer.Option("--salida", help="Carpeta de los CSV; por defecto ./cc-<fecha>-p<NN>/."),
+    ] = None,
+    json_output: Annotated[
+        bool, typer.Option("--json", help="Imprime solo el resultado en JSON; no escribe archivos.")
+    ] = False,
+) -> None:
+    """Cortocircuito trifásico máximo IEC 60909 por barra; escribe CSV o JSON (HU-10)."""
+    try:
+        if not 1 <= periodo <= 24:
+            raise DomainError("PERIOD_OUT_OF_RANGE", f"periodo {periodo}")
+        snapshot_date = parse_date(fecha)
+        dispatch_date = parse_date(fecha_despacho) if fecha_despacho else snapshot_date
+        ctx = _context()
+        snapshot = snapshot_service.load_verified(ctx.snapshots, snapshot_date)
+        dispatch_snapshot = (
+            snapshot
+            if dispatch_date == snapshot_date
+            else snapshot_service.load_verified(ctx.snapshots, dispatch_date)
+        )
+        built = build_case(
+            snapshot=snapshot,
+            dispatch_snapshot=dispatch_snapshot,
+            period=periodo,
+            equivalences=ctx.equivalences,
+            cfg=ctx.cfg,
+            sinsim_version=ctx.version,
+            cases=ctx.cases,
+        )
+        trace = Trace(
+            snapshot_date=snapshot_date,
+            dispatch_date=dispatch_date,
+            period=periodo,
+            flow_type="ac",
+            pandapower_version=pp.__version__,
+            sinsim_version=ctx.version,
+            solver=solver_settings(ctx.cfg),
+            case_id=built.case.case_id,
+        )
+        analysis = sc_service.get_or_calculate(
+            case_id=built.case.case_id,
+            run_id=str(uuid.uuid4()),
+            trace=trace,
+            net_json=ctx.cases.get_net_json(built.case.case_id),
+            snapshot=snapshot,
+            cfg=ctx.cfg,
+            equivalences=ctx.equivalences,
+            cases=ctx.cases,
+        )
+        analysis = sc_service.select_buses(analysis, list(barra or []))
+        if not json_output:
+            out_dir = salida if salida is not None else Path(f"cc-{snapshot_date}-p{periodo:02d}")
+            written = write_export_sc(analysis, out_dir)
+            typer.echo(f"Cortocircuito escrito en {out_dir} ({len(written)} archivos)", err=True)
+        log_event(
+            log,
+            "sc terminado",
+            case_id=built.case.case_id,
+            n_buses=len(analysis.buses),
+            n_sources=len(analysis.sources),
+        )
+    except DomainError as exc:
+        _fail(exc)
+        return
+    if json_output:
+        typer.echo(_dump(analysis.model_dump(mode="json")))
+    else:
+        _print_sc(analysis)
+    raise typer.Exit(code=int(ExitCode.OK))
+
+
+@equivalencias_app.command("elevadores")
+def equivalencias_elevadores(
+    fecha: Annotated[
+        str, typer.Option("--fecha", help="Fecha del snapshot de PARATEC (YYYY-MM-DD).")
+    ],
+    salida: Annotated[
+        Path | None,
+        typer.Option(
+            "--salida", help="CSV a escribir; por defecto data/equivalencias/elevadores.csv."
+        ),
+    ] = None,
+    vigente_desde: Annotated[
+        str,
+        typer.Option(
+            "--vigente-desde",
+            help="valid_from de las filas, como en las demás tablas (los elevadores existen antes "
+            "del snapshot que los revela).",
+        ),
+    ] = "2020-01-01",
+) -> None:
+    """Propone `elevadores.csv` (unidad ↔ transformador elevador) para curarlo a mano (FR-065)."""
+    try:
+        snapshot_date = parse_date(fecha)
+        valid_from = date.fromisoformat(vigente_desde)
+        ctx = _context()
+        snapshot = snapshot_service.load_verified(ctx.snapshots, snapshot_date)
+        tables, _ = apply_aliases(
+            snapshot.tables, ctx.equivalences.substation_aliases(snapshot_date)
+        )
+        units = tables.generators[tables.generators["state"] == "Operación"]
+        rows = propose_step_ups(
+            units,
+            tables.trafos2w,
+            tables.trafos3w,
+            aliases={},
+            class_of=class_kv,
+            valid_from=valid_from,
+        )
+        out = salida if salida is not None else ctx.paths.equivalences / "elevadores.csv"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with out.open("w", encoding="utf-8", newline="") as fh:
+            writer = csv.writer(fh, lineterminator="\n")
+            writer.writerow(
+                ["unit_id", "trafo_id", "method", "curated", "valid_from", "valid_to", "note"]
+            )
+            for r in rows:
+                writer.writerow(
+                    [r.unit_id, r.trafo_id, r.method, "false", r.valid_from.isoformat(), "", r.note]
+                )
+        by_method: dict[str, int] = {}
+        for r in rows:
+            by_method[r.method] = by_method.get(r.method, 0) + 1
+        n_sync = int(units["tech"].isin(["hidráulica", "térmica"]).sum())
+        typer.echo(
+            f"{len(rows)} de {n_sync} unidades síncronas con elevador propuesto "
+            f"({', '.join(f'{k}: {v}' for k, v in sorted(by_method.items()))}) → {out}"
+        )
+        typer.echo("Revisa y marca curated=true fila por fila antes de confiar en la propuesta.")
+    except DomainError as exc:
+        _fail(exc)
+        return
     raise typer.Exit(code=int(ExitCode.OK))
 
 

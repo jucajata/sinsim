@@ -33,3 +33,12 @@ export function angleColor(va: number | null | undefined): string {
   }
   return `rgb(${Math.round(120 + 130 * x)}, ${Math.round(130 - 20 * x)}, ${Math.round(140 - 120 * x)})`;
 }
+
+/** Color por corriente de cortocircuito: verde (0 kA) → amarillo → rojo (máximo del caso). Sin dato: gris. */
+export function ikssColor(ikss: number | null | undefined, max: number): string {
+  if (typeof ikss !== "number" || max <= 0) return NO_DATA;
+  const x = Math.max(0, Math.min(1, ikss / max));
+  const r = Math.round(x < 0.5 ? 60 + 380 * x : 250);
+  const g = Math.round(x < 0.5 ? 170 : 170 - 300 * (x - 0.5));
+  return `rgb(${r}, ${g}, 60)`;
+}

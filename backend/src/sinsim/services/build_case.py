@@ -266,6 +266,11 @@ def _frontier_map(
     return out
 
 
+# Reutilizados por el cortocircuito (spec 004): mismas reglas de alias y de frontera (S2).
+apply_aliases = _apply_aliases
+frontier_map = _frontier_map
+
+
 # --- Conciliación ---------------------------------------------------------------------
 
 
@@ -304,6 +309,9 @@ class _AliasedEquivalences:
 
     def substation_coords(self, on: date) -> Mapping[str, SubstationCoord]:
         return self._inner.substation_coords(on)
+
+    def step_up(self, unit_id: str, on: date) -> Any:
+        return self._inner.step_up(unit_id, on)
 
 
 @dataclass(frozen=True)

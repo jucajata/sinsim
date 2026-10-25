@@ -229,6 +229,30 @@ CATALOG: dict[str, ErrorSpec] = {
             "mientras la API sigue encendida.",
         ),
         ErrorSpec(
+            "SC_BUS_NOT_FOUND",
+            "Barra no encontrada para el cortocircuito",
+            422,
+            ExitCode.VALIDATION,
+            "La barra pedida no existe en el caso. Usa el nombre como aparece en la tabla de "
+            "barras (por ejemplo `SABANALARGA|230` o `SABANALARGA 220`).",
+        ),
+        ErrorSpec(
+            "SC_NO_SOURCES",
+            "Sin fuentes de cortocircuito",
+            422,
+            ExitCode.VALIDATION,
+            "Ninguna unidad generadora tiene parámetros de cortocircuito en este snapshot. "
+            "Genera uno nuevo con `sinsim scrape --fecha YYYY-MM-DD`.",
+        ),
+        ErrorSpec(
+            "SC_NOT_FOUND",
+            "Cortocircuito no calculado",
+            404,
+            ExitCode.GENERAL,
+            "No hay un cálculo de cortocircuito guardado para este caso. Lánzalo con el botón "
+            "«Cortocircuito» o con `sinsim sc`.",
+        ),
+        ErrorSpec(
             "INTERNAL_ERROR",
             "Error no previsto",
             500,

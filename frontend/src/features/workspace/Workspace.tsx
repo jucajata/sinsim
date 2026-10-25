@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { ProblemError, api } from "../../api/client";
-import { useCreateCase, useRunCase } from "../../api/hooks";
+import { useCreateCase, useRunCase, useSc } from "../../api/hooks";
 import type { Run, StudyCase } from "../../api/types";
 import { CaseQuality } from "../case-quality/CaseQuality";
 import { N1Panel } from "../contingencies/N1Panel";
 import { ResultsTables } from "../results-tables/ResultsTables";
 import { RunPicker, type RunRequest } from "../run-picker/RunPicker";
+import { ScPanel } from "../shortcircuit/ScPanel";
+import { maxIkss } from "../shortcircuit/sc";
 import { TopologyView } from "../topology/TopologyView";
 import { ViolationsReport } from "../violations/ViolationsReport";
 
@@ -22,6 +24,10 @@ export function Workspace(): JSX.Element {
   const [error, setError] = useState<string | null>(null);
 
   const busy = createCase.isPending || runCase.isPending;
+  // Cortocircuito guardado del caso (spec 004): colorea el mapa cuando existe.
+  const sc = useSc(run?.run_id ?? null);
+  const scByBus = useMemo(() => (sc.data ? new Map(sc.data.buses.filter((b) => !b.no_source).map((b) => [b.bus_id, b.ikss_ka])) : undefined), [sc.data]);
+  const scMax = useMemo(() => (sc.data ? maxIkss(sc.data.buses) : 0), [sc.data]);
 
   async function execute(req: RunRequest): Promise<void> {
     setError(null);
@@ -79,9 +85,10 @@ export function Workspace(): JSX.Element {
           </p>
         )}
         {busy && <p className="muted">Construyendo el caso y corriendo el flujo…</p>}
-        {run && run.result && <TopologyView run={run} />}
+        {run && run.result && <TopologyView run={run} scByBus={scByBus} scMax={scMax} />}
         {run && <ResultsTables run={run} />}
         {run && <N1Panel key={run.run_id} run={run} />}
+        {run && <ScPanel key={`sc-${run.run_id}`} run={run} />}
         {studyCase && (
           <div className="reports">
             <CaseQuality studyCase={studyCase} />

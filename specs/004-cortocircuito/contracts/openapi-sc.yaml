@@ -1,0 +1,123 @@
+# Rutas nuevas de la API para el cortocircuito (spec 004). Se suman a
+# specs/001-flujo-potencia-despacho/contracts/openapi.yaml; `RunId`, `Problem`, `Trace` y
+# `ProblemInfo` son los de ese contrato. Bajo la protección de FR-047 (host y origen locales).
+openapi: 3.1.0
+info:
+  title: sinsim — cortocircuito IEC 60909
+  version: 0.7.0
+paths:
+  /runs/{run_id}/sc:
+    post:
+      summary: Calcula (o recupera) el cortocircuito trifásico máximo del caso de la ejecución (FR-069, FR-071)
+      description: >
+        Síncrono (research R1). Si en `cases/<case_id>/sc.json` hay un resultado con el mismo
+        `case_hash` y `sc_config_hash`, se devuelve sin recalcular; si no, se calcula, se guarda y
+        se devuelve.
+      parameters: [{$ref: "#/components/parameters/RunId"}]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                buses: {type: array, items: {type: string}, description: "Limitar la respuesta a estas barras (`bus_id`). El cálculo y el guardado siguen siendo completos."}
+      responses:
+        "200":
+          description: Resultado completo
+          content: {application/json: {schema: {$ref: "#/components/schemas/ShortCircuitAnalysis"}}}
+        "404": {description: "RUN_NOT_FOUND", $ref: "#/components/responses/Problem"}
+        "422": {description: "SC_BUS_NOT_FOUND o SC_NO_SOURCES", $ref: "#/components/responses/Problem"}
+    get:
+      summary: Devuelve el resultado guardado del caso de la ejecución, si existe y sigue vigente
+      parameters: [{$ref: "#/components/parameters/RunId"}]
+      responses:
+        "200":
+          content: {application/json: {schema: {$ref: "#/components/schemas/ShortCircuitAnalysis"}}}
+        "404": {description: "RUN_NOT_FOUND, o SC_NOT_FOUND si no hay resultado guardado vigente", $ref: "#/components/responses/Problem"}
+components:
+  schemas:
+    ShortCircuitAnalysis:
+      type: object
+      required: [case_id, run_id, case_hash, sc_config_hash, trace, norm, config, assumptions, calculated_at, summary, buses, sources, quality, attribution]
+      properties:
+        case_id: {type: string}
+        run_id: {type: string, format: uuid}
+        case_hash: {type: string}
+        sc_config_hash: {type: string}
+        trace: {$ref: "#/components/schemas/Trace"}
+        norm:
+          type: object
+          properties:
+            standard: {type: string, example: "IEC 60909-0:2016"}
+            fault: {type: string, enum: ["3ph"]}
+            case: {type: string, enum: ["max"]}
+            c_max: {type: number, example: 1.10}
+        config: {type: object, additionalProperties: true}
+        assumptions:
+          type: array
+          items: {type: object, required: [id, text, source], properties: {id: {type: string}, text: {type: string}, source: {type: string}}}
+        calculated_at: {type: string, format: date-time}
+        summary: {$ref: "#/components/schemas/ScSummary"}
+        buses: {type: array, items: {$ref: "#/components/schemas/ScBusResult"}}
+        sources: {type: array, items: {$ref: "#/components/schemas/ScSource"}}
+        quality: {$ref: "#/components/schemas/ScQuality"}
+        attribution: {type: string}
+    ScBusResult:
+      type: object
+      required: [bus_id, nominal_kv, base_kv, ikss_ka, skss_mva, no_source]
+      properties:
+        bus_id: {type: string, example: "SABANALARGA|230"}
+        substation: {type: [string, "null"]}
+        subarea: {type: [string, "null"]}
+        nominal_kv: {type: number, example: 220}
+        base_kv: {type: number, example: 230}
+        ikss_ka: {type: number, minimum: 0}
+        skss_mva: {type: number, minimum: 0}
+        rk_ohm: {type: [number, "null"]}
+        xk_ohm: {type: [number, "null"]}
+        x_r: {type: [number, "null"]}
+        no_source: {type: boolean}
+    ScSource:
+      type: object
+      required: [unit_id, kind, bus_id, sn_mva, vn_kv, origins]
+      properties:
+        unit_id: {type: string}
+        kind: {type: string, enum: [sincrona, convertidor]}
+        bus_id: {type: string}
+        step_up_trafo_id: {type: [string, "null"]}
+        sn_mva: {type: number}
+        vn_kv: {type: number}
+        cos_phi: {type: [number, "null"]}
+        xdss_pu: {type: [number, "null"]}
+        rdss_ohm: {type: [number, "null"]}
+        k: {type: [number, "null"]}
+        origins: {type: object, additionalProperties: {type: string, enum: [publicado, mediana, relacion_iec, derivado_p_cosphi, tension_elevador]}}
+    ScQuality:
+      type: object
+      required: [imputed, generators_without_step_up, sc_zero_sources, excluded, step_up_equivalences]
+      properties:
+        imputed: {type: array, items: {type: object, properties: {unit_id: {type: string}, parameter: {type: string}, value: {type: number}, method: {type: string}}}}
+        generators_without_step_up: {type: array, items: {type: string}}
+        sc_zero_sources: {type: array, items: {type: object, properties: {resource: {type: string}, bus_id: {type: string}, reason: {type: string}}}}
+        excluded: {type: array, items: {type: object, properties: {unit_id: {type: string}, reason: {type: string}}}}
+        step_up_equivalences:
+          type: object
+          properties:
+            matched: {type: integer}
+            by_method: {type: object, additionalProperties: {type: integer}}
+            curated: {type: integer}
+            uncurated: {type: integer}
+    ScSummary:
+      type: object
+      required: [n_buses, n_sources_sync, n_sources_converter, n_imputed_units, n_without_step_up, n_no_source, duration_s]
+      properties:
+        n_buses: {type: integer}
+        max_ikss: {type: object, properties: {bus_id: {type: string}, ikss_ka: {type: number}}}
+        min_skss: {type: object, properties: {bus_id: {type: string}, skss_mva: {type: number}}}
+        n_sources_sync: {type: integer}
+        n_sources_converter: {type: integer}
+        n_imputed_units: {type: integer}
+        n_without_step_up: {type: integer}
+        n_no_source: {type: integer}
+        duration_s: {type: number}
