@@ -27,6 +27,22 @@ Todos los valores configurables están en `config/defaults.toml`, cada uno con s
 | S13 | Versiones del despacho | Prevalece la `_V<n>` mayor; V0 = sin sufijo | Decisión D-3, usuario | 2026-10-20 |
 | S14 | Base de tensión por clase | 110/112/115 → 115; 220/230 → 230; 13,2/13,8 → 13,8 | Decisión de implementación | 2026-10-20 |
 | S15 | Límites de tensión y cargabilidad | CREG 025/1995 y CREG 153/2019 | Research R9 | 2026-10-20 |
+| S16 | Subárea de cada barra | La que PARATEC publica para la subestación; sin ella, «sin subárea» | FR-034, usuario | 2026-10-20 |
+| S17 | Ubicación de las barras | Coordenadas de PARATEC por subestación; sin ellas, franja al oeste | FR-035, usuario | 2026-10-20 |
+| S18 | Lectura de flujos en la topología | Signo de pandapower: positivo sale de la barra origen | FR-036 | 2026-10-20 |
+| S19 | Líneas con ambos extremos en la misma subestación | Se repara el extremo por el nombre de la línea | FR-019 | 2026-10-20 |
+| S20 | Reporte de violaciones | Etiquetas por banda y límite configurados | FR-037 | 2026-10-20 |
+| S21 | Coordenadas curadas | Solo completan las que PARATEC no publica, con fuente | FR-035 | 2026-10-20 |
+| S22 | Modo instalado | Datos del paquete y carpeta del usuario | FR-040 a FR-046 | 2026-10-23 |
+| S23 | Reparto de la potencia del generador que sale (N-1) | Referencia distribuida ∝ P programada | Agente, aceptado por el usuario | 2026-10-24 |
+| S24 | Persistencia del N-1 | No se guarda en disco | Agente, aceptado por el usuario | 2026-10-24 |
+| S25 | Compensadores en el N-1 | Son contingencias; un generador es la planta por barra | Usuario | 2026-10-24 |
+| S26 | Tensión de referencia del cortocircuito | Nominal de PARATEC, no la base por clase | Decisión del agente | 2026-10-25 |
+| S27 | Reactancia subtransitoria y `ra = 0` | No saturada; un cero publicado es faltante | Decisión del agente | 2026-10-25 |
+| S28 | Resistencia de armadura faltante | Relación R_G/X''_d de IEC 60909-0 §6.6.1 | IEC 60909 | 2026-10-25 |
+| S29 | Enlaces internacionales en el cortocircuito | No aportan corriente | Usuario | 2026-10-25 |
+| S30 | Plantas solares y eólicas | k = 1,0 veces la corriente nominal | IEC 60909-0 §6.9 | 2026-10-25 |
+| S31 | Unidades sin elevador casado | Entran en la barra de alta sin la reactancia del elevador | Usuario | 2026-10-25 |
 
 ## Detalle
 
@@ -258,6 +274,56 @@ El modelo representa los compensadores como generadores con P = 0 que regulan te
 se analiza como la de cualquier generador y se etiqueta «compensador». Un generador es la planta
 completa en su barra (`RECURSO@BARRA`), no una unidad: sacar una planta grande es más severo que el
 N-1 por unidad del sector. Origen: decisión del usuario, 2026-10-24.
+
+### S26. Tensión de referencia del cortocircuito (FR-063)
+
+pandapower calcula con la base por clase del modelo (S14: 230 kV para las barras de 220 kV, 115 para
+las de 110). IEC 60909 define U_n como la tensión nominal del sistema, así que Ikss y Sk se refieren
+a la tensión nominal que PARATEC publica para cada barra: `Ikss · U_n/U_base` y
+`Sk · (U_n/U_base)²`; Rk y Xk en Ω no cambian. En una barra de 220 kV modelada en base 230 la
+corriente baja 4,3 % y la potencia 8,5 %. La tabla muestra las dos tensiones. Origen: decisión del
+agente, 2026-10-25 (specs/004-cortocircuito/).
+
+### S27. Reactancia subtransitoria no saturada y ceros como faltantes (FR-064)
+
+La reactancia de cada unidad es la subtransitoria **no saturada** (`xd2` en hidráulicas,
+`xdSubtrans` en térmicas), que es la que pide IEC 60909; la saturada se conserva como dato
+informativo. Una resistencia de armadura o una reactancia publicadas como 0 son físicamente
+imposibles y se tratan como no publicadas: entran a la imputación con su método visible. Origen:
+decisión del agente, 2026-10-25.
+
+### S28. Resistencia de armadura no publicada (FR-064)
+
+Si PARATEC no publica `ra` (o publica 0), la resistencia subtransitoria se toma de la relación
+R_G/X''_d de IEC 60909-0 §6.6.1: 0,05 para máquinas de 100 MVA o más y más de 1 kV; 0,07 para
+menos de 100 MVA y más de 1 kV; 0,15 hasta 1 kV. Los tres valores están en `[shortcircuit]` de
+`config/defaults.toml` con su cita. Afecta poco a Ikss y bastante a X/R, que es lo que consume un
+equivalente de red. Origen: decisión del agente, 2026-10-25.
+
+### S29. Los enlaces internacionales no aportan corriente de cortocircuito (FR-067)
+
+No hay fuente pública de la potencia de cortocircuito de las interconexiones con Ecuador
+(Jamondino 230, Panamericana 138) ni con Venezuela, y la constitución prohíbe inventarla. El
+usuario aceptó modelarlas sin aporte, sabiendo que la corriente queda subestimada en Nariño y Norte
+de Santander. Se listan en la calidad como `sc_zero_sources`. Si aparece una fuente, la
+configuración admite potencia de cortocircuito y R/X por enlace con su cita. Origen: decisión del
+usuario, 2026-10-25.
+
+### S30. Plantas solares y eólicas como fuentes de convertidor (FR-066)
+
+Aportan k = 1,0 veces su corriente nominal, el tratamiento de generadores de convertidor pleno de
+IEC 60909-0:2016 §6.9. `k` es configurable y citado. Origen: decisión del agente, 2026-10-25.
+
+### S31. Unidades sin transformador elevador casado (FR-065)
+
+PARATEC no vincula las unidades con su transformador elevador. La tabla
+`data/equivalencias/elevadores.csv` los casa por subestación, clase de tensión, nombre de planta o
+marca `G<n>`/`U<n>` y tensión de baja; la propuesta inicial (207 de 408 unidades en el snapshot del
+2026-10-24) está marcada `curated = false`. Una unidad casada entra tras su elevador como unidad de
+central (§6.7); una unidad sin casar entra directamente en su barra de alta, a la tensión de esa
+barra, despreciando la reactancia del elevador: sobreestima la corriente cerca de esas plantas y
+queda listada en `generators_without_step_up` para curar la tabla. Origen: decisión del usuario,
+2026-10-25.
 
 ## Lo que NO es un supuesto sino una limitación conocida
 

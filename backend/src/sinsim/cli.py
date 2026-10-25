@@ -475,10 +475,19 @@ def equivalencias_elevadores(
             "--salida", help="CSV a escribir; por defecto data/equivalencias/elevadores.csv."
         ),
     ] = None,
+    vigente_desde: Annotated[
+        str,
+        typer.Option(
+            "--vigente-desde",
+            help="valid_from de las filas, como en las demás tablas (los elevadores existen antes "
+            "del snapshot que los revela).",
+        ),
+    ] = "2020-01-01",
 ) -> None:
     """Propone `elevadores.csv` (unidad ↔ transformador elevador) para curarlo a mano (FR-065)."""
     try:
         snapshot_date = parse_date(fecha)
+        valid_from = date.fromisoformat(vigente_desde)
         ctx = _context()
         snapshot = snapshot_service.load_verified(ctx.snapshots, snapshot_date)
         tables, _ = apply_aliases(
@@ -491,7 +500,7 @@ def equivalencias_elevadores(
             tables.trafos3w,
             aliases={},
             class_of=class_kv,
-            valid_from=snapshot_date,
+            valid_from=valid_from,
         )
         out = salida if salida is not None else ctx.paths.equivalences / "elevadores.csv"
         out.parent.mkdir(parents=True, exist_ok=True)

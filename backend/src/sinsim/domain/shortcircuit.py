@@ -315,7 +315,7 @@ def propose_step_ups(
                 method=method,
                 curated=False,
                 valid_from=valid_from,
-                note=f"propuesta automática ({chosen['_kind']}) desde el snapshot {valid_from}",
+                note=f"propuesta automática ({chosen['_kind']})",
             )
         )
     return out

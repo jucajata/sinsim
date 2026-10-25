@@ -8,6 +8,32 @@ proyecto está en desarrollo y el contenido de un caso puede cambiar entre versi
 Cada caso registra en su traza la versión de sinsim con que se calculó: para reproducir un
 resultado, usa el código de esa versión.
 
+## [0.7.0] - 2026-10-25
+
+### Añadido
+
+- Análisis de cortocircuito trifásico máximo según IEC 60909 en todas las barras del caso: Ikss,
+  Sk, Rk, Xk y X/R referidos a la tensión nominal de PARATEC, con red completa y toda la
+  generación en servicio. Botón «Cortocircuito» en la interfaz (tabla coloreada, calidad,
+  supuestos y mapa por Ikss), `POST`/`GET /api/runs/{run_id}/sc` y comando `sinsim sc` con
+  `--barra` y `--json`.
+- Transformadores elevadores de PARATEC como unidades de central, con la tabla de equivalencias
+  `data/equivalencias/elevadores.csv` (207 de 408 unidades casadas de forma automática, sin curar)
+  y el comando de mantenimiento `sinsim equivalencias elevadores`.
+- Columnas de máquina (`sn_mva`, `vn_gen_kv`, `cos_phi`, `xdss_pu`, `xdss_sat_pu`, `rdss_pu`,
+  `x2_pu`, `x0_pu`) en la tabla normalizada de unidades; los snapshots anteriores las reciben en
+  memoria desde `raw/` sin modificarse.
+- Sección `[shortcircuit]` en `config/defaults.toml` con el factor c, el aporte de convertidores,
+  las relaciones R/X de IEC 60909 y la decisión sobre enlaces internacionales, cada uno con su
+  fuente. Supuestos S26 a S31.
+- El resultado del cortocircuito se guarda en `cases/<case_id>/sc.json` y se reutiliza mientras no
+  cambien el caso, la configuración, las equivalencias ni los parámetros de máquina.
+
+### Cambiado
+
+- Constitución 1.4.0: comandos `sinsim sc` y `sinsim equivalencias elevadores`; `sc.json` entre
+  los archivos del caso.
+
 ## [0.6.2] - 2026-10-24
 
 ### Corregido
