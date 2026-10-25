@@ -13,8 +13,10 @@ from pathlib import Path
 import duckdb
 import pandas as pd
 
+from sinsim.adapters.sources_to_pandapower._common import to_float, to_text
 from sinsim.adapters.sources_to_pandapower.buses import parse_subareas, parse_substation_coords
 from sinsim.adapters.sources_to_pandapower.field_mapping import RESPONSE_DATA
+from sinsim.adapters.sources_to_pandapower.generators import MACHINE_COLUMNS, machine_params
 from sinsim.domain.entities import LoadedSnapshot, Manifest, SnapshotSummary, SnapshotTables
 from sinsim.domain.errors import DomainError
 from sinsim.scraper.writer import NORMALIZED, RAW_PARATEC, TABLE_NAMES, sha256_bytes, sha256_file
@@ -115,6 +117,10 @@ class ParquetSnapshotRepository:
         tables = {name: self._read_table(base / f"{name}.parquet") for name in TABLE_NAMES}
         if not {"subarea", "lat", "lon"} <= set(tables["buses"].columns):
             tables["buses"] = self._with_substation_attrs_from_raw(tables["buses"], snapshot_date)
+        if not set(MACHINE_COLUMNS) <= set(tables["generators"].columns):
+            tables["generators"] = self._with_machine_params_from_raw(
+                tables["generators"], snapshot_date
+            )
         return LoadedSnapshot(
             date=snapshot_date,
             manifest=manifest,
@@ -148,6 +154,51 @@ class ParquetSnapshotRepository:
             out["lat"] = out["substation"].map(lambda s: coords.get(str(s), (None, None))[0])
             out["lon"] = out["substation"].map(lambda s: coords.get(str(s), (None, None))[1])
         return out
+
+    def _with_machine_params_from_raw(
+        self, generators: pd.DataFrame, snapshot_date: date
+    ) -> pd.DataFrame:
+        """Añade las columnas de máquina (spec 004, data-model §2) a snapshots anteriores.
+
+        Mismo principio que `_with_substation_attrs_from_raw`: `raw/` es inmutable y está
+        verificado, así que derivar las columnas en memoria no altera el snapshot (constitución
+        III.3 y III.4). No escribe nada. Las plantas solares y eólicas solo reciben `sn_mva`.
+        """
+        out = generators.copy()
+        for col in MACHINE_COLUMNS:
+            if col not in out.columns:
+                out[col] = None
+        raw_dir = self._dir(snapshot_date) / RAW_PARATEC
+        params: dict[str, dict[str, float | None]] = {}
+        for tech, pattern in (
+            ("hidráulica", "*HydraulicUnit*.json"),
+            ("térmica", "*ThermalUnit*.json"),
+        ):
+            for rec in self._raw_records(raw_dir, pattern):
+                unit = to_text(rec.get("elementName"))
+                if unit:
+                    params[f"{tech}:{unit}"] = machine_params(rec, tech)
+        for tech, pattern in (("solar", "*SolarPlant*.json"), ("eólica", "*WindPlant*.json")):
+            for rec in self._raw_records(raw_dir, pattern):
+                plant = to_text(rec.get("elementName"))
+                if plant:
+                    sn = to_float(rec.get("ratedPower")) or to_float(
+                        rec.get("netEffectiveCapacity")
+                    )
+                    params[f"{tech}:{plant}"] = {"sn_mva": sn if sn and sn > 0 else None}
+        for col in MACHINE_COLUMNS:
+            out[col] = out["unit_id"].map(lambda u, c=col: params.get(str(u), {}).get(c))
+            out[col] = pd.to_numeric(out[col], errors="coerce")
+        return out
+
+    @staticmethod
+    def _raw_records(raw_dir: Path, pattern: str) -> list[dict[str, object]]:
+        files = sorted(raw_dir.glob(pattern))
+        if not files:
+            return []
+        payload = json.loads(files[0].read_text(encoding="utf-8"))
+        records = payload.get(RESPONSE_DATA, []) if isinstance(payload, dict) else payload
+        return list(records or [])
 
     @staticmethod
     def _read_table(path: Path) -> pd.DataFrame:

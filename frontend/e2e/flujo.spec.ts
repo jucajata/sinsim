@@ -210,3 +210,30 @@ test("análisis N-1 completo desde la interfaz", async ({ page }) => {
   expect(s.n_isolation).toBe(job.result.isolation.length);
   await expect(page.getByTestId("n1-total")).toHaveText(String(s.n_total));
 });
+
+test("cortocircuito desde la interfaz y resultado persistente", async ({ page }) => {
+  test.setTimeout(240_000);
+  await page.goto("/");
+  await page.getByTestId("snapshot-date").fill("2026-10-20");
+  await page.getByTestId("period").fill("19");
+  await page.getByTestId("run-button").click();
+  await expect(page.getByTestId("results")).toContainText("Estado:", { timeout: 120_000 });
+  await expect(page.getByTestId("sc-start")).toBeEnabled();
+  await page.getByTestId("sc-start").click();
+  await expect(page.getByTestId("sc-summary")).toBeVisible({ timeout: 120_000 });
+  await expect(page.getByTestId("sc-table").locator("tbody tr").first()).toBeVisible();
+  // El selector del mapa gana la opción «cortocircuito» (HU-9).
+  await expect(page.getByTestId("color-by").locator('option[value="shortcircuit"]')).toHaveCount(1);
+  await page.getByTestId("color-by").selectOption("shortcircuit");
+  await expect(page.getByTestId("sc-legend")).toContainText("máx. del caso");
+  const buses = Number(await page.getByTestId("sc-buses").textContent());
+  expect(buses).toBeGreaterThan(500);
+  // FR-071: tras recargar y repetir el caso, la tabla vuelve sin pulsar el botón.
+  await page.reload();
+  await page.getByTestId("snapshot-date").fill("2026-10-20");
+  await page.getByTestId("period").fill("19");
+  await page.getByTestId("run-button").click();
+  await expect(page.getByTestId("results")).toContainText("Estado:", { timeout: 120_000 });
+  await expect(page.getByTestId("sc-summary")).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByTestId("sc-buses")).toHaveText(String(buses));
+});

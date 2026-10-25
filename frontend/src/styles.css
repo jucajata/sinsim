@@ -876,3 +876,48 @@ tr.violation td {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Cortocircuito IEC 60909 ---------- */
+.sc__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.sc__bar .input {
+  min-width: 16em;
+}
+.sc .table-scroll {
+  max-height: 480px;
+}
+.sc__table table {
+  table-layout: fixed;
+  width: 100%;
+}
+.sc__table th.num {
+  width: 7.5em;
+}
+.sc__table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+.sc__table td:not(.num) {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.sc__table td.num {
+  white-space: nowrap;
+}
+.sc__quality {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.sc__quality .table-scroll {
+  max-height: 260px;
+}
+@media (max-width: 1280px) {
+  .sc__quality {
+    grid-template-columns: 1fr;
+  }
+}

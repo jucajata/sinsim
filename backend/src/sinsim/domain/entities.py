@@ -516,3 +516,155 @@ class N1Job(Frozen):
     finished_at: datetime | None = None
     result: N1Analysis | None = None
     error: ProblemInfo | None = None
+
+
+# --- Cortocircuito IEC 60909 (spec 004, data-model.md) ---------------------------------------
+
+ScSourceKind = Literal["sincrona", "convertidor"]
+ScMethod = Literal[
+    "publicado", "mediana", "relacion_iec", "derivado_p_cosphi", "tension_elevador", "tension_barra"
+]
+StepUpMethod = Literal["nombre+tension", "nombre", "tension", "manual"]
+
+
+class StepUpEquivalence(Frozen):
+    """Fila de `data/equivalencias/elevadores.csv`: unidad ↔ transformador elevador (FR-065)."""
+
+    unit_id: str
+    trafo_id: str
+    method: StepUpMethod
+    curated: bool
+    valid_from: date
+    note: str = ""
+
+
+class ScSource(Frozen):
+    """Fuente de cortocircuito usada en el cálculo, con el origen de cada parámetro (FR-064)."""
+
+    unit_id: str
+    kind: ScSourceKind
+    bus_id: str
+    step_up_trafo_id: str | None = None
+    sn_mva: float = Field(gt=0)
+    vn_kv: float = Field(gt=0)
+    cos_phi: float | None = None
+    xdss_pu: float | None = None
+    rdss_ohm: float | None = None
+    k: float | None = None
+    origins: dict[str, ScMethod]
+
+
+class ScBusResult(Frozen):
+    """Resultado por barra referido a la tensión nominal de PARATEC (FR-063, S26)."""
+
+    bus_id: str
+    substation: str | None = None
+    subarea: str | None = None
+    nominal_kv: float = Field(gt=0)
+    base_kv: float = Field(gt=0)
+    ikss_ka: float = Field(ge=0)
+    skss_mva: float = Field(ge=0)
+    rk_ohm: float | None = None
+    xk_ohm: float | None = None
+    x_r: float | None = None
+    no_source: bool = False
+
+
+class ScImputed(Frozen):
+    """Parámetro imputado a una unidad (FR-073)."""
+
+    unit_id: str
+    parameter: str
+    value: float
+    method: ScMethod
+
+
+class ScZeroSource(Frozen):
+    """Fuente que no aporta corriente (enlaces internacionales, S29)."""
+
+    resource: str
+    bus_id: str
+    reason: str
+
+
+class ScExcluded(Frozen):
+    """Unidad o elemento fuera del cálculo, con su causa."""
+
+    unit_id: str
+    reason: str
+
+
+class StepUpStats(Frozen):
+    """Cuántas unidades casaron con su elevador y por qué método."""
+
+    matched: int = Field(ge=0)
+    by_method: dict[str, int]
+    curated: int = Field(ge=0)
+    uncurated: int = Field(ge=0)
+
+
+class ScQuality(Frozen):
+    """Reporte de calidad del cortocircuito (FR-073)."""
+
+    imputed: list[ScImputed]
+    generators_without_step_up: list[str]
+    sc_zero_sources: list[ScZeroSource]
+    excluded: list[ScExcluded]
+    step_up_equivalences: StepUpStats
+
+
+class ScExtreme(Frozen):
+    """Barra extrema del resumen."""
+
+    bus_id: str
+    value: float
+
+
+class ScSummary(Frozen):
+    """Resumen del cálculo (data-model §7)."""
+
+    n_buses: int = Field(ge=0)
+    max_ikss: ScExtreme | None = None
+    min_skss: ScExtreme | None = None
+    n_sources_sync: int = Field(ge=0)
+    n_sources_converter: int = Field(ge=0)
+    n_imputed_units: int = Field(ge=0)
+    n_without_step_up: int = Field(ge=0)
+    n_no_source: int = Field(ge=0)
+    duration_s: float = Field(ge=0)
+
+
+class ScAssumption(Frozen):
+    """Supuesto aplicado (S26 a S31) con su fuente."""
+
+    id: str
+    text: str
+    source: str
+
+
+class ScNorm(Frozen):
+    """Norma y variante calculadas."""
+
+    standard: str = "IEC 60909-0:2016"
+    fault: Literal["3ph"] = "3ph"
+    case: Literal["max"] = "max"
+    c_max: float
+
+
+class ShortCircuitAnalysis(Frozen):
+    """Resultado completo del cortocircuito de un caso (FR-071, FR-072)."""
+
+    case_id: str
+    run_id: str
+    case_hash: str
+    sc_config_hash: str
+    trace: Trace
+    norm: ScNorm
+    config: dict[str, Any]
+    assumptions: list[ScAssumption]
+    calculated_at: datetime
+    summary: ScSummary
+    buses: list[ScBusResult]
+    sources: list[ScSource]
+    quality: ScQuality
+    attribution: str

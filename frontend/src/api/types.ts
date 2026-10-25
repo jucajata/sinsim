@@ -433,3 +433,109 @@ export interface N1Job {
   result: N1Analysis | null;
   error: Problem | null;
 }
+
+// --- Cortocircuito IEC 60909 (spec 004, contracts/openapi-sc.yaml) ----------------------------
+
+export type ScSourceKind = "sincrona" | "convertidor";
+export type ScMethod = "publicado" | "mediana" | "relacion_iec" | "derivado_p_cosphi" | "tension_elevador" | "tension_barra";
+
+export interface ScBusResult {
+  bus_id: string;
+  substation: string | null;
+  subarea: string | null;
+  nominal_kv: number;
+  base_kv: number;
+  ikss_ka: number;
+  skss_mva: number;
+  rk_ohm: number | null;
+  xk_ohm: number | null;
+  x_r: number | null;
+  no_source: boolean;
+}
+
+export interface ScSource {
+  unit_id: string;
+  kind: ScSourceKind;
+  bus_id: string;
+  step_up_trafo_id: string | null;
+  sn_mva: number;
+  vn_kv: number;
+  cos_phi: number | null;
+  xdss_pu: number | null;
+  rdss_ohm: number | null;
+  k: number | null;
+  origins: Record<string, ScMethod>;
+}
+
+export interface ScImputed {
+  unit_id: string;
+  parameter: string;
+  value: number;
+  method: ScMethod;
+}
+
+export interface ScZeroSource {
+  resource: string;
+  bus_id: string;
+  reason: string;
+}
+
+export interface ScExcluded {
+  unit_id: string;
+  reason: string;
+}
+
+export interface StepUpStats {
+  matched: number;
+  by_method: Record<string, number>;
+  curated: number;
+  uncurated: number;
+}
+
+export interface ScQuality {
+  imputed: ScImputed[];
+  generators_without_step_up: string[];
+  sc_zero_sources: ScZeroSource[];
+  excluded: ScExcluded[];
+  step_up_equivalences: StepUpStats;
+}
+
+export interface ScExtreme {
+  bus_id: string;
+  value: number;
+}
+
+export interface ScSummary {
+  n_buses: number;
+  max_ikss: ScExtreme | null;
+  min_skss: ScExtreme | null;
+  n_sources_sync: number;
+  n_sources_converter: number;
+  n_imputed_units: number;
+  n_without_step_up: number;
+  n_no_source: number;
+  duration_s: number;
+}
+
+export interface ScAssumption {
+  id: string;
+  text: string;
+  source: string;
+}
+
+export interface ShortCircuitAnalysis {
+  case_id: string;
+  run_id: string;
+  case_hash: string;
+  sc_config_hash: string;
+  trace: Trace;
+  norm: { standard: string; fault: "3ph"; case: "max"; c_max: number };
+  config: Record<string, unknown>;
+  assumptions: ScAssumption[];
+  calculated_at: string;
+  summary: ScSummary;
+  buses: ScBusResult[];
+  sources: ScSource[];
+  quality: ScQuality;
+  attribution: string;
+}

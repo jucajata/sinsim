@@ -10,7 +10,14 @@ from datetime import date
 from pathlib import Path
 from typing import Protocol
 
-from sinsim.domain.entities import LoadedSnapshot, Run, SnapshotSummary, StudyCase
+from sinsim.domain.entities import (
+    LoadedSnapshot,
+    Run,
+    ShortCircuitAnalysis,
+    SnapshotSummary,
+    StepUpEquivalence,
+    StudyCase,
+)
 
 
 class SnapshotRepository(Protocol):
@@ -47,6 +54,10 @@ class EquivalenceRepository(Protocol):
 
     def substation_coords(self, on: date) -> Mapping[str, SubstationCoord]:
         """Coordenadas curadas vigentes de subestaciones sin coordenadas en PARATEC."""
+        ...
+
+    def step_up(self, unit_id: str, on: date) -> StepUpEquivalence | None:
+        """Transformador elevador vigente de una unidad (`elevadores.csv`, FR-065), o `None`."""
         ...
 
 
@@ -123,4 +134,12 @@ class CaseRepository(Protocol):
 
     def get_run(self, run_id: str) -> Run:
         """Devuelve una ejecución o lanza `RUN_NOT_FOUND`."""
+        ...
+
+    def save_sc(self, case_id: str, analysis: ShortCircuitAnalysis) -> Path:
+        """Guarda el cortocircuito del caso (`sc.json`, FR-071); devuelve su ruta."""
+        ...
+
+    def get_sc(self, case_id: str) -> ShortCircuitAnalysis | None:
+        """Cortocircuito guardado del caso, o `None` si no existe."""
         ...

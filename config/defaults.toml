@@ -114,3 +114,27 @@ source = "API pública de PARATEC unifilares/api/Diagrama/getAll, tema 'Diagrama
 "Putumayo" = "7f692023-e30f-4319-13f0-08dd52a72d2b"
 "Santander" = "face3ebe-6745-44dd-13f1-08dd52a72d2b"
 "Valle" = "cb17cdf0-ccaf-464e-13f2-08dd52a72d2b"
+
+[shortcircuit]
+# Cortocircuito trifásico máximo según IEC 60909-0:2016 (spec 004, FR-062 a FR-067).
+# Factor de tensión c para corriente máxima en redes de más de 1 kV (tabla 1 de la norma).
+c_max = 1.10
+c_max_source = "IEC 60909-0:2016, tabla 1 (c_max para U_n > 1 kV)"
+# Aporte de plantas solares y eólicas como fuentes de corriente limitada: k veces su corriente
+# nominal (S30; generadores de convertidor pleno, §6.9).
+converter_k = 1.0
+converter_k_source = "IEC 60909-0:2016 §6.9; supuesto S30 (decisión del agente, 2026-10-25)"
+# Resistencia de armadura cuando PARATEC no la publica o publica 0 (S27, S28): relación
+# R_G / X''_d por tamaño y tensión de la máquina (§6.6.1).
+rg_ratio_large = 0.05
+rg_ratio_small = 0.07
+rg_ratio_lv = 0.15
+rg_ratio_source = "IEC 60909-0:2016 §6.6.1: 0,05 (S ≥ 100 MVA, U > 1 kV); 0,07 (S < 100 MVA, U > 1 kV); 0,15 (U ≤ 1 kV)"
+# Enlaces internacionales (Ecuador, Venezuela): no hay fuente pública de su potencia de
+# cortocircuito; no aportan (S29).
+international_links_contribute = false
+international_links_source = "Supuesto S29 aprobado por el usuario el 2026-10-25: aporte nulo por falta de fuente pública"
+# Los resultados se refieren a la tensión nominal de PARATEC de cada barra, no a la base por
+# clase del modelo (S26).
+voltage_reference = "paratec_nominal"
+voltage_reference_source = "IEC 60909-0:2016 §3 (U_n = tensión nominal del sistema); supuesto S26 (decisión del agente, 2026-10-25)"

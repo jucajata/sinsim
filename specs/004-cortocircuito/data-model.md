@@ -10,7 +10,7 @@ reutilizan `Trace` y `ProblemInfo`.
 | Tipo | Valores |
 |---|---|
 | `ScSourceKind` | `sincrona`, `convertidor` |
-| `ScMethod` (origen de un parámetro) | `publicado`, `mediana`, `relacion_iec`, `derivado_p_cosphi`, `tension_elevador` |
+| `ScMethod` (origen de un parámetro) | `publicado`, `mediana`, `relacion_iec`, `derivado_p_cosphi`, `tension_elevador`, `tension_barra` |
 | `StepUpMethod` | `nombre+tension`, `nombre`, `tension`, `manual` |
 
 ## 2. Columnas nuevas de la tabla normalizada `generators`

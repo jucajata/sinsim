@@ -1,7 +1,7 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-import { api } from "./client";
-import type { CaseRequest, FlowType, N1Job, ScrapeJob } from "./types";
+import { ProblemError, api } from "./client";
+import type { CaseRequest, FlowType, N1Job, ScrapeJob, ShortCircuitAnalysis } from "./types";
 
 export function useSnapshots() {
   return useQuery({ queryKey: ["snapshots"], queryFn: api.snapshots });
@@ -88,5 +88,32 @@ export function useN1Job(jobId: string | null) {
     enabled: jobId !== null,
     staleTime: 0,
     refetchInterval: (query) => (isN1Running(query.state.data) || query.state.data === undefined ? N1_POLL_MS : false),
+  });
+}
+
+/** Cortocircuito guardado de la ejecución (FR-071); un 404 significa «no calculado», no un error. */
+export function useSc(runId: string | null) {
+  return useQuery<ShortCircuitAnalysis | null>({
+    queryKey: ["sc", runId],
+    queryFn: async () => {
+      try {
+        return await api.sc(runId as string);
+      } catch (e) {
+        if (e instanceof ProblemError && e.problem.code === "SC_NOT_FOUND") return null;
+        throw e;
+      }
+    },
+    enabled: runId !== null,
+    retry: false,
+    staleTime: Infinity,
+  });
+}
+
+/** Lanza el cálculo (FR-069) y deja el resultado en la caché de `useSc`. */
+export function useCalculateSc() {
+  const client = useQueryClient();
+  return useMutation({
+    mutationFn: (runId: string) => api.calculateSc(runId),
+    onSuccess: (analysis, runId) => client.setQueryData(["sc", runId], analysis),
   });
 }

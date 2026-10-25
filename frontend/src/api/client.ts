@@ -6,6 +6,7 @@ import type {
   Problem,
   Run,
   ScrapeJob,
+  ShortCircuitAnalysis,
   SnapshotSummary,
   StudyCase,
   Topology,
@@ -65,4 +66,6 @@ export const api = {
   exportUrl: (runId: string) => `/api/runs/${runId}/export`,
   startN1: (runId: string) => request<N1Job>(`/runs/${runId}/n1`, { method: "POST" }),
   n1Job: (jobId: string) => request<N1Job>(`/n1/${jobId}`),
+  sc: (runId: string) => request<ShortCircuitAnalysis>(`/runs/${runId}/sc`),
+  calculateSc: (runId: string) => request<ShortCircuitAnalysis>(`/runs/${runId}/sc`, { method: "POST" }),
 };

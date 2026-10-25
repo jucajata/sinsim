@@ -85,9 +85,10 @@ con pandapower 3.5.6. Scripts desechables en el scratchpad de la sesión.
 - **Hallazgo**: en el caso, 223 de 591 barras tienen `nominal_kv ≠ vn_kv` (base por clase, S14).
   pandapower usa `vn_kv` para c·U_n y para pasar de Ω a kA.
 - **Decisión**: `domain/shortcircuit.py` corrige a la tensión nominal de PARATEC:
-  `ikss_nominal = ikss · (vn_kv / nominal_kv)`, `skss_nominal = skss · (vn_kv / nominal_kv)²`;
-  `rk` y `xk` no cambian. Se reportan ambas tensiones (S26). Diferencia típica: 4,5 % en Ikss y
-  9 % en Sk en las barras de 220 kV modeladas en base 230.
+  `ikss_nominal = ikss · (nominal_kv / vn_kv)`, `skss_nominal = skss · (nominal_kv / vn_kv)²`
+  (`Ikss = c·U_n/(√3·Z)` es proporcional a U_n y `Sk = √3·U_n·Ikss` a U_n²); `rk` y `xk` no
+  cambian. Se reportan ambas tensiones (S26). Diferencia típica: −4,3 % en Ikss y −8,5 % en Sk en
+  las barras de 220 kV modeladas en base 230.
 
 ## R6. Resistencia de armadura y relación X/R
 

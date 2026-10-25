@@ -85,7 +85,18 @@ GENERATING_UNIT: Final[dict[str, str]] = {
     "maxQ": "q_gen_mvar",
     "elementStateName": "state",
     "operationMode": "operation_mode",
+    # Parámetros de máquina para el cortocircuito (spec 004, data-model §2).
+    "ratedS": "sn_mva",
+    "ratedU": "vn_gen_kv",
+    "ratedPowerFactor": "cos_phi",
+    "satDirectSubtransX": "xdss_sat_pu",
+    "ra": "rdss_pu",
+    "x2": "x2_pu",
+    "x0": "x0_pu",
 }
+# La reactancia subtransitoria no saturada tiene nombre distinto por tecnología.
+HYDRAULIC_XDSS_FIELD: Final = "xd2"
+THERMAL_XDSS_FIELD: Final = "xdSubtrans"
 HYDRAULIC_PLANT_FIELD: Final = "hydraulicPlant"
 THERMAL_PLANT_FIELD: Final = "thermalPlant"
 

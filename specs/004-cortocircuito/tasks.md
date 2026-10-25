@@ -106,8 +106,9 @@ servicio que calcula.
   `sn_mva` publicado → `publicado`; faltante → `p_max_mw / cos_phi` (`derivado_p_cosphi`) o mediana
   del tipo (`mediana`); `xdss_pu` faltante o 0 → mediana del tipo; `vn_kv`: si hay elevador casado
   manda la tensión de baja del elevador aunque exista `vn_gen_kv` (si difieren, se registra con
-  método `tension_elevador`); sin elevador, `vn_gen_kv`, y si falta, la tensión de la barra de
-  alta; `rdss` publicado > 0 → `publicado`, si no → relación
+  método `tension_elevador`); sin elevador, **siempre** la tensión de la barra de alta
+  (`tension_barra`), porque pandapower refiere Z_G a `vn_kv` y la máquina se conecta ahí
+  directamente (FR-065 c); `rdss` publicado > 0 → `publicado`, si no → relación
   IEC según `sn_mva ≥ 100` y `vn_kv > 1` (`relacion_iec`). `medians_by_tech(units)` calcula las
   medianas solo con valores publicados > 0. También `to_nominal(ikss, skss, base_kv, nominal_kv)`
   (S26: `ikss·base/nominal`, `skss·(base/nominal)²`), `x_over_r(rk, xk)` (null si `rk` ≤ 0 o sin

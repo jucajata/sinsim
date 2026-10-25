@@ -18,8 +18,9 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
+from typing import Literal
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 from sinsim.domain.limits import LoadingLimit, VoltageBand
 
@@ -152,6 +153,23 @@ class UnifilaresCfg(_Model):
         return f"{self.page_url}?typeReport={self.type_report}&category={category}"
 
 
+class ShortCircuitCfg(_Model):
+    """Cortocircuito IEC 60909 (spec 004, data-model §10); cada valor cita su fuente."""
+
+    c_max: float = Field(ge=1.0, le=1.1)
+    c_max_source: str
+    converter_k: float = Field(gt=0)
+    converter_k_source: str
+    rg_ratio_large: float = Field(gt=0)
+    rg_ratio_small: float = Field(gt=0)
+    rg_ratio_lv: float = Field(gt=0)
+    rg_ratio_source: str
+    international_links_contribute: bool
+    international_links_source: str
+    voltage_reference: Literal["paratec_nominal", "model_base"]
+    voltage_reference_source: str
+
+
 class Config(_Model):
     """Configuración completa de `defaults.toml`."""
 
@@ -164,6 +182,7 @@ class Config(_Model):
     scraper: ScraperCfg
     attribution: AttributionCfg
     unifilares: UnifilaresCfg
+    shortcircuit: ShortCircuitCfg
 
     def voltage_bands(self) -> list[VoltageBand]:
         """Bandas de tensión para `domain.limits`."""
