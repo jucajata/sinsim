@@ -266,7 +266,7 @@ aporta.
 - [X] T432 [P] CHANGELOG 0.7.0 (cortocircuito IEC 60909, columnas de máquina en snapshots nuevos,
   `elevadores.csv`, constitución 1.4.0) y versión 0.7.0 en `backend/pyproject.toml`,
   `frontend/package.json` y los textos de versión de la interfaz.
-- [ ] T433 Correr el quickstart completo (§1 a §6) y `ruff`, `mypy`, `eslint`, `pnpm test`,
+- [X] T433 Correr el quickstart completo (§1 a §6) y `ruff`, `mypy`, `eslint`, `pnpm test`,
   `pytest`; corregir lo que falle; marcar las tareas [X]; actualizar
   `specs/004-cortocircuito/checklists/requirements.md` si cambió algo de la spec.
 
