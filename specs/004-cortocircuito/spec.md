@@ -132,7 +132,8 @@ confianza del resultado en cada zona.
   (todas, o las de `--barra`), sus resultados, la calidad, los supuestos aplicados y la
   trazabilidad, sin ningún otro texto. Una barra pedida con `--barra` que no exista en el caso
   produce el error de validación de la API con el nombre que no se encontró. Si el caso no se puede
-  construir, sale con el código de error de validación.
+  construir, sale con el mismo código que usa `sinsim run` para ese error (contrato del CLI de la
+  spec 001).
 - **FR-071** Persistencia. El resultado se guarda junto al caso (`sc.json` en la carpeta del caso,
   o en la carpeta de datos del usuario en modo instalado) con el hash del caso y el hash de la
   configuración de cortocircuito. Al consultar el resultado de un caso, se devuelve el guardado si
@@ -156,7 +157,7 @@ confianza del resultado en cada zona.
 ## Casos límite
 
 - El caso no se puede construir (sin snapshot para la fecha): no hay cálculo; la interfaz no ofrece
-  el botón y el CLI sale con error de validación.
+  el botón y el CLI sale con el código que ya usa `sinsim run` para ese error.
 - El flujo del caso no convergió: el cálculo de cortocircuito sí se ofrece y se ejecuta (FR-069).
 - Una unidad síncrona sin barra de conexión en el caso (su barra está por debajo del alcance y no
   tiene barra de frontera): queda excluida con la causa en `excluded`.

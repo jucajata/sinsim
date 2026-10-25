@@ -128,5 +128,13 @@ Funciones sin pandapower ni E/S:
 |---|---|---|---|
 | `SC_BUS_NOT_FOUND` | 422 | 4 | `--barra` con un nombre que no existe en el caso. |
 | `SC_NO_SOURCES` | 422 | 4 | Ninguna unidad entra al cálculo (snapshot sin parámetros y sin `raw/`). |
+| `SC_NOT_FOUND` | 404 | 1 | `GET /runs/{run_id}/sc` sin resultado guardado vigente para el caso. |
 
 Los demás (caso o ejecución inexistentes) ya existen.
+
+## 13. Conversiones de unidades (constitución III.1)
+
+En `adapters/sources_to_pandapower/generators.py`, con fórmula en docstring y prueba con valor
+conocido: `rdss_ohm(rdss_pu, vn_kv, sn_mva) = rdss_pu · vn_kv² / sn_mva` y
+`xdss_ohm(xdss_pu, vn_kv, sn_mva) = xdss_pu · vn_kv² / sn_mva`. `services/sc.py` no convierte
+unidades.

@@ -17,9 +17,11 @@
 
 - [ ] T400 Enmendar la constitución a v1.4.0 (MINOR) en `.specify/memory/constitution.md`: en IV
   «Comandos públicos» añadir `uv run sinsim sc --fecha YYYY-MM-DD --periodo N [--fecha-despacho F]
-  [--barra NOMBRE ...] [--salida CARPETA] [--json]`; en III.4 nombrar `sc.json` junto a `net.json`
-  como archivo persistido del caso (`cases/<case_id>/`); actualizar el Sync Impact Report, la
-  versión y la fecha de última enmienda (2026-10-25).
+  [--barra NOMBRE ...] [--salida CARPETA] [--json]` y, como comando de mantenimiento del
+  repositorio, `uv run sinsim equivalencias elevadores --fecha YYYY-MM-DD [--salida RUTA]`
+  (hallazgo C2 de /speckit-analyze); en III.4 nombrar `sc.json` junto a `net.json` como archivo
+  persistido del caso (`cases/<case_id>/`); actualizar el Sync Impact Report, la versión y la fecha
+  de última enmienda (2026-10-25).
 - [ ] T401 [P] Sección `[shortcircuit]` en `config/defaults.toml` con los siete valores de
   data-model §10 (`c_max = 1.10`, `converter_k = 1.0`, `rg_ratio_large = 0.05`,
   `rg_ratio_small = 0.07`, `rg_ratio_lv = 0.15`, `international_links_contribute = false`,
@@ -43,7 +45,10 @@ servicio que calcula.
   `xdSubtrans` en térmicas; «> 0», si es 0 o falta → null), `xdss_sat_pu` (= `satDirectSubtransX`),
   `rdss_pu` (= `ra`; «null si no publicada o si es 0», S27), `x2_pu`, `x0_pu`; `parse_plants`
   añade `sn_mva` (= capacidad nominal) y deja las demás en null. Añadir las columnas a `COLUMNS`
-  y a `field_mapping.py`. Docstring con la regla de `ra = 0`.
+  y a `field_mapping.py`. Docstring con la regla de `ra = 0`. En el mismo módulo, la conversión
+  de unidades que exige la constitución III.1: `rdss_ohm(rdss_pu, vn_kv, sn_mva) = rdss_pu ·
+  vn_kv² / sn_mva` y `xdss_ohm(xdss_pu, vn_kv, sn_mva)`, con la fórmula en el docstring (hallazgo
+  C1 de /speckit-analyze).
 - [ ] T403 Derivación en memoria para snapshots anteriores en
   `backend/src/sinsim/adapters/storage/snapshots.py`: `_with_machine_params_from_raw(generators,
   snapshot_date)` que, cuando falte `xdss_pu` en la tabla, lee
@@ -52,7 +57,8 @@ servicio que calcula.
   (III.3/III.4). Subir `SCRAPER_VERSION` en `backend/src/sinsim/scraper/writer.py` y anotar en el
   docstring que las columnas de máquina existen desde esa versión.
 - [ ] T404 [P] Pruebas en `backend/tests/unit/test_generators_machine_params.py`: `ra = 0` → null;
-  `xd2 = 0` → null; `cos_phi` fuera de rango → null con `missing_params`; y en
+  `xd2 = 0` → null; `cos_phi` fuera de rango → null con `missing_params`; `rdss_ohm(0.005, 13.8,
+  150) = 0.006348 Ω` (valor conocido, III.1); y en
   `backend/tests/integration/test_snapshot_machine_params.py`: cargar el snapshot empaquetado
   (sin columnas) y comprobar que `generators.xdss_pu` llega poblado desde `raw/` sin modificar
   ningún archivo del snapshot (comparar checksums antes y después).
@@ -98,8 +104,10 @@ servicio que calcula.
 - [ ] T412 Reglas de parámetros en `backend/src/sinsim/domain/shortcircuit.py` (puro, FR-064,
   S27, S28): `source_parameters(unit, medians, step_up_lv_kv, cfg) -> (params, origins, imputed)`:
   `sn_mva` publicado → `publicado`; faltante → `p_max_mw / cos_phi` (`derivado_p_cosphi`) o mediana
-  del tipo (`mediana`); `xdss_pu` faltante o 0 → mediana del tipo; `vn_kv` = `vn_gen_kv` o la tensión
-  de baja del elevador (`tension_elevador`); `rdss` publicado > 0 → `publicado`, si no → relación
+  del tipo (`mediana`); `xdss_pu` faltante o 0 → mediana del tipo; `vn_kv`: si hay elevador casado
+  manda la tensión de baja del elevador aunque exista `vn_gen_kv` (si difieren, se registra con
+  método `tension_elevador`); sin elevador, `vn_gen_kv`, y si falta, la tensión de la barra de
+  alta; `rdss` publicado > 0 → `publicado`, si no → relación
   IEC según `sn_mva ≥ 100` y `vn_kv > 1` (`relacion_iec`). `medians_by_tech(units)` calcula las
   medianas solo con valores publicados > 0. También `to_nominal(ikss, skss, base_kv, nominal_kv)`
   (S26: `ikss·base/nominal`, `skss·(base/nominal)²`), `x_over_r(rk, xk)` (null si `rk` ≤ 0 o sin
@@ -115,14 +123,18 @@ servicio que calcula.
   quality)` en `backend/src/sinsim/services/sc.py`: carga la red del caso, borra `net.gen` entero
   (plantas del despacho y compensadores → `quality.excluded` con motivo «compensador» o
   «planta_despacho_reemplazada»); por cada unidad síncrona en «Operación» con barra en el caso crea
-  `gen` (`p_mw = 0`, `vm_pu = 1`, `sn_mva`, `vn_kv`, `xdss_pu`, `rdss_ohm = rdss_pu·vn_kv²/sn_mva`,
-  `cos_phi`, `pg_percent = 0`); si tiene elevador casado crea una barra nueva a `vn_kv` y el
+  `gen` (`p_mw = 0`, `vm_pu = 1`, `sn_mva`, `vn_kv`, `xdss_pu`, `rdss_ohm` con la función
+  `generators.rdss_ohm` de T402 —ninguna conversión de unidades aquí—, `cos_phi`,
+  `pg_percent = 0`); si tiene elevador casado, **una barra de generación y un transformador por
+  `trafo_id`**: la primera unidad que lo usa crea la barra a la tensión de baja del elevador y el
   transformador con `create_transformer_from_parameters` (datos del elevador; para 3 devanados, el
-  par alta–baja de la unidad) y pone `power_station_trafo` al índice del trafo; si no, el `gen` va a
+  par alta–baja de la unidad), y las demás unidades que comparten ese `trafo_id` se conectan a esa
+  misma barra (caso límite de la spec); cada `gen` pone `power_station_trafo` al índice del
+  trafo; si no hay elevador, el `gen` va a
   la barra de alta con `vn_kv` = `vn_kv` de la barra y entra en `generators_without_step_up`;
   unidades sin barra en el caso → `excluded` («sin_barra»); plantas solares y eólicas en operación
   → `sgen(sn_mva, k = cfg.converter_k, generator_type="current_source")`; enlaces internacionales
-  (recursos `link:*`) → `sc_zero_sources`. Conversión pu → Ω documentada en el docstring (III.1).
+  (recursos `link:*`) → `sc_zero_sources`.
 - [ ] T415 `calculate(run, snapshot, cfg, equivalences) -> ShortCircuitAnalysis` en
   `backend/src/sinsim/services/sc.py`: construye la red (T414), `calc_sc(net, fault="3ph",
   case="max", ip=False, ith=False, branch_results=False)`, toma `res_bus_sc` solo de las barras del
@@ -167,8 +179,9 @@ servicio que calcula.
 - [ ] T420 [P] [US10] Pruebas de contrato en `backend/tests/contract/test_cli_sc.py` (sobre
   `cases/demo` o el snapshot empaquetado): sin `--json` crea los cuatro archivos; con `--json` la
   salida completa es JSON válido y nada más; `--barra` inexistente sale con 4 y nombra la barra;
-  `--barra` válida filtra; y `backend/tests/contract/test_export_sc.py`: columnas exactas de los CSV
-  y claves de `metadatos.json`.
+  `--barra` válida filtra; para una barra, los valores de `cc_barras.csv` y del JSON de `--json`
+  son idénticos (SC-022, hallazgo G1); y `backend/tests/contract/test_export_sc.py`: columnas
+  exactas de los CSV y claves de `metadatos.json`.
 
 ---
 
@@ -197,8 +210,8 @@ persistente.
   reintentos en 404) y `useCalculateSc()` (mutation que escribe la caché de `["sc", runId]`) en
   `frontend/src/api/hooks.ts`.
 - [ ] T424 [P] [US9] Módulo puro `frontend/src/features/shortcircuit/sc.ts`: `ikssStyle(ikss,
-  maxIkss)` (misma rampa que `loadingStyle` del N-1, intensidad relativa al máximo del caso; gris si
-  `no_source`), `formatKa`, `formatMva`, `formatOhm`, `formatXr` (coma decimal, 2–3 decimales),
+  maxIkss)` (misma rampa que `loadingStyle` del N-1; la intensidad va de 0 kA al máximo Ikss del
+  caso, igual que la leyenda del mapa de T426; gris si `no_source`; hallazgo A1), `formatKa`, `formatMva`, `formatOhm`, `formatXr` (coma decimal, 2–3 decimales),
   `sortBuses(buses, column, dir)` y `filterBuses(buses, text)`; pruebas en
   `frontend/src/features/shortcircuit/sc.test.ts`.
 - [ ] T425 [US9] `frontend/src/features/shortcircuit/ScPanel.tsx`: sección «Cortocircuito» con

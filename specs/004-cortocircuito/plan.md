@@ -25,16 +25,18 @@ consumidores externos) e interfaz (tabla y mapa coloreado).
   repositorio las deriva en memoria desde `raw/` en los anteriores, con el patrón ya existente
   `_with_substation_attrs_from_raw`. Ningún snapshot versionado cambia.
 - **Equivalencias** (research R4): `data/equivalencias/elevadores.csv` nuevo, con propuesta
-  inicial generada por `sinsim equivalencias elevadores --fecha F` (subcomando interno de
-  mantenimiento, no público) a partir de `domain/shortcircuit.propose_step_ups`. Entra en el
+  inicial generada por `sinsim equivalencias elevadores --fecha F` (comando de mantenimiento del
+  repositorio, listado en la constitución IV junto a los públicos; hallazgo C2 de
+  /speckit-analyze) a partir de `domain/shortcircuit.propose_step_ups`. Entra en el
   `EquivalenceRepository` (`step_up(unit_id, on)`) y en el SHA de equivalencias.
 - **Dominio puro** (`domain/shortcircuit.py`, data-model §11): reglas de parámetros faltantes
   (FR-064), propuesta de elevadores, corrección a tensión nominal (S26), X/R, resumen, hash de
   configuración. Sin pandapower ni E/S.
 - **Servicio** (`services/sc.py`):
   - `build_sc_net(net_json, units, trafos, equivalences, cfg) -> (net, sources, quality)`: la red
-    derivada de research R3; crea barras de generación y transformadores de central para las
-    unidades con elevador casado;
+    derivada de research R3; crea una barra de generación y un transformador de central por
+    elevador casado (las unidades que comparten elevador comparten barra). Las conversiones
+    pu → Ω las toma de `adapters/sources_to_pandapower/generators.py` (III.1; hallazgo C1);
   - `calculate(run, snapshot, cfg, equivalences) -> ShortCircuitAnalysis`: construye, llama a
     `calc_sc(net, fault="3ph", case="max", ip=False, ith=False, branch_results=False)`, corrige
     a tensión nominal, arma `buses`, `sources`, `quality`, `summary`, `assumptions` y los hashes;
@@ -74,8 +76,9 @@ consumidores externos) e interfaz (tabla y mapa coloreado).
 - **I. Naturaleza**: el cortocircuito está en «Capacidades en alcance». Fuera: estabilidad.
 - **II. Stack**: sin dependencias nuevas.
 - **III. Reglas de dominio**:
-  - III.1 unidades: kA, MVA, Ω, pu; la conversión de `ra` (pu) a `rdss_ohm` y de uS/km, etc.,
-    sigue en `adapters/sources_to_pandapower/`, con fórmula en docstring y prueba;
+  - III.1 unidades: kA, MVA, Ω, pu; la conversión de `ra` (pu) a `rdss_ohm` vive en
+    `adapters/sources_to_pandapower/generators.py`, con fórmula en docstring y prueba con valor
+    conocido; `services/sc.py` no convierte unidades (hallazgo C1 de /speckit-analyze);
   - III.3/III.4 inmutabilidad: las columnas nuevas se escriben solo en snapshots nuevos; los
     anteriores se completan en memoria desde `raw/` (research R2). `sc.json` vive en `cases/`, no
     en el snapshot; III.4 se enmienda para nombrarlo junto a `net.json`;
