@@ -8,6 +8,25 @@ proyecto está en desarrollo y el contenido de un caso puede cambiar entre versi
 Cada caso registra en su traza la versión de sinsim con que se calculó: para reproducir un
 resultado, usa el código de esa versión.
 
+## [0.7.1] - 2026-10-31
+
+### Corregido
+
+- `data/equivalencias/nodos_demanda.csv` curada: 528 de 543 filas confirmadas (481 propuestas
+  revisadas, 45 de ellas corregidas, y 47 nodos nuevos), con la fuente en `note`. Entre las
+  corregidas, nodos que estaban en una subestación homónima de otra región (UNION, SAN ANTONIO,
+  CODAZZI, BARBOSA, SALAMINA…). En el periodo 20 del 2026-10-21 la demanda sin ubicar baja de
+  1 443 MW (66 nodos) a 0 MW. Cambia el `case_id` de todos los casos, porque el hash de las
+  equivalencias entra en él.
+
+### Limitación conocida
+
+- Con toda la demanda ubicada, el periodo 21 del snapshot incluido (2026-10-20) no converge: la
+  tensión colapsa en Mompox–Magangué. Antes convergía solo porque faltaban 1,4 GW de demanda, y
+  aun así con barras a 0,44 pu. La causa es el soporte de reactiva del modelo (taps en neutro, sin
+  transformadores elevadores en el flujo, condensadores siempre conectados); la prueba de ese
+  periodo queda marcada como falla esperada hasta corregirlo.
+
 ## [0.7.0] - 2026-10-25
 
 ### Añadido
@@ -153,6 +172,8 @@ programado y el pronóstico de demanda de XM, y la interfaz web para ejecutarlo.
 
 - Snapshots de PARATEC del 2026-10-09, 2026-10-19, 2026-10-20 y 2026-10-21.
 
+[0.7.1]: https://github.com/jucajata/sinsim/releases/tag/v0.7.1
+[0.7.0]: https://github.com/jucajata/sinsim/releases/tag/v0.7.0
 [0.6.2]: https://github.com/jucajata/sinsim/releases/tag/v0.6.2
 [0.6.1]: https://github.com/jucajata/sinsim/releases/tag/v0.6.1
 [0.6.0]: https://github.com/jucajata/sinsim/releases/tag/v0.6.0

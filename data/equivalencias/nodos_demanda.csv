@@ -1,497 +1,544 @@
 node,ucp,vn_kv,substation,paratec_vn_kv,valid_from,valid_to,note
-DONCELL1,Uandaki,115,DONCELLO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AMAGA__1,Uantioquia,110,AMAGA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ANCONSU1,Uantioquia,110,ANCON SUR (EPM),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: ANCON SUR (EPM); ANCON SUR (ISA)) — NO CURADA, REVISAR"
-ANCONSU4,Uantioquia,44,ANCON SUR (EPM),44,2020-01-01,,"propuesta heurística (prefijo, ambigua: ANCON SUR (EPM); ANCON SUR (ISA)) — NO CURADA, REVISAR"
-BARBOSA1,Uantioquia,110,BARBOSA (ANTIOQUIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: BARBOSA (ANTIOQUIA); BARBOSA (SANTANDER)) — NO CURADA, REVISAR"
-BELEN__1,Uantioquia,110,BELEN (ANTIOQUIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: BELEN (ANTIOQUIA); BELEN (CUCUTA); BELENCITO (APR)) — NO CURADA, REVISAR"
-BELLO_21,Uantioquia,110,BELLO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BELLO__1,Uantioquia,110,BELLO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOLOMBO1,Uantioquia,110,BOLOMBOLO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CABANAS1,Uantioquia,110,CABAÑAS (MEDELLIN),110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALDAS_1,Uantioquia,110,CALDAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALIZAS1,Uantioquia,110,CALIZAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CASTILL1,Uantioquia,110,CASTILLA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CAUCAS71,Uantioquia,44,CAUCASIA,44,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CAUCAS72,Uantioquia,44,CAUCASIA,44,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CAUCHER1,Uantioquia,110,CAUCHERAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CENTRAL1,Uantioquia,110,CENTRAL,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHOROD41,Uantioquia,44,CHORODO (FRONTINO),44,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHORODO1,Uantioquia,110,CHORODO (FRONTINO),110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-COCORNA1,Uantioquia,110,COCORNA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-COLOMBI1,Uantioquia,110,COLOMBIA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CORDOVA1,Uantioquia,110,CORDOVA (ANTIOQUIA),110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CRUZADA1,Uantioquia,110,LA CRUZADA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ENVIGA12,Uantioquia,110,ENVIGADO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ENVIGAD1,Uantioquia,110,ENVIGADO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ENVIGAD4,Uantioquia,46,ENVIGADO,46,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUADALU4,Uantioquia,220,GUADALUPE IV,220,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUATAPE1,Uantioquia,110,GUATAPE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUAYABA1,Uantioquia,110,GUAYABAL,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-HISPANI1,Uantioquia,110,HISPANIA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-HORIZON1,Uantioquia,110,HORIZONTE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ITAGUI_1,Uantioquia,110,ITAGUI,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LAGUNA11,Uantioquia,110,LAGUNAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MALENA_2,Uantioquia,220,MALENA,220,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MIRAFLO1,Uantioquia,110,MIRAFLORES,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MORICHE1,Uantioquia,110,MORICHE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NCOLONI1,Uantioquia,110,NUEVA COLONIA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ORIENTE1,Uantioquia,110,ORIENTE,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: ORIENTE; ORIENTE (HUILA)) — NO CURADA, REVISAR"
-ORIENTE4,Uantioquia,44,ORIENTE,44,2020-01-01,,"propuesta heurística (prefijo, ambigua: ORIENTE; ORIENTE (HUILA)) — NO CURADA, REVISAR"
-PLAYAS_4,Uantioquia,44,PLAYAS,44,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-POBLADO1,Uantioquia,110,POBLADO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PORCE__1,Uantioquia,110,PORCE (EADE),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: PORCE (EADE); PORCE II (EEPPM); PORCE III) — NO CURADA, REVISAR"
-PTO_NAR1,Uantioquia,110,PUERTO NARE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIOGRAN4,Uantioquia,44,RIOGRANDE,44,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIONEGR1,Uantioquia,110,RIONEGRO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIO_CLA1,Uantioquia,110,RIO CLARO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RODEO__1,Uantioquia,110,EL RODEO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SN_DIEG1,Uantioquia,110,SAN DIEGO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SONSON_1,Uantioquia,110,SONSON,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-S_JERON1,Uantioquia,110,SAN JERONIMO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TIGRE__1,Uantioquia,110,EL TIGRE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-URABA__1,Uantioquia,110,URABA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-V_HERMO1,Uantioquia,110,VILLA HERMOSA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+DONCELL1,Uandaki,115,DONCELLO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AMAGA__1,Uantioquia,110,AMAGA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ANCONSU1,Uantioquia,110,ANCON SUR (EPM),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ANCONSU4,Uantioquia,44,ANCON SUR (EPM),44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARBOSA1,Uantioquia,110,BARBOSA (ANTIOQUIA),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BELEN__1,Uantioquia,110,BELEN (ANTIOQUIA),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BELLO_21,Uantioquia,110,BELLO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BELLO__1,Uantioquia,110,BELLO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOLOMBO1,Uantioquia,110,BOLOMBOLO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CABANAS1,Uantioquia,110,CABAÑAS (MEDELLIN),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALDAS_1,Uantioquia,110,CALDAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALIZAS1,Uantioquia,110,CALIZAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CASTILL1,Uantioquia,110,CASTILLA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAUCAS71,Uantioquia,44,CAUCASIA,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAUCAS72,Uantioquia,44,CAUCASIA,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAUCHER1,Uantioquia,110,CAUCHERAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CENTRAL1,Uantioquia,110,CENTRAL,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHOROD41,Uantioquia,44,CHORODO (FRONTINO),44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHORODO1,Uantioquia,110,CHORODO (FRONTINO),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COCORNA1,Uantioquia,110,COCORNA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COLOMBI1,Uantioquia,110,COLOMBIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CORDOVA1,Uantioquia,110,CORDOVA (ANTIOQUIA),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CRUZADA1,Uantioquia,110,LA CRUZADA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ENVIGA12,Uantioquia,110,ENVIGADO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ENVIGAD1,Uantioquia,110,ENVIGADO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ENVIGAD4,Uantioquia,46,ENVIGADO,46,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUADALU4,Uantioquia,220,GUADALUPE IV,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUATAPE1,Uantioquia,110,GUATAPE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUAYABA1,Uantioquia,110,GUAYABAL,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+HISPANI1,Uantioquia,110,HISPANIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+HORIZON1,Uantioquia,110,HORIZONTE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ITAGUI_1,Uantioquia,110,ITAGUI,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LAGUNA11,Uantioquia,110,LAGUNAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MALENA_2,Uantioquia,220,MALENA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MIRAFLO1,Uantioquia,110,MIRAFLORES,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MORICHE1,Uantioquia,110,MORICHE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NCOLONI1,Uantioquia,110,NUEVA COLONIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ORIENTE1,Uantioquia,110,ORIENTE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ORIENTE4,Uantioquia,44,ORIENTE,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PLAYAS_4,Uantioquia,44,PLAYAS,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+POBLADO1,Uantioquia,110,POBLADO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PORCE__1,Uantioquia,110,PORCE (EADE),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTO_NAR1,Uantioquia,110,PUERTO NARE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOGRAN4,Uantioquia,44,RIOGRANDE,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIONEGR1,Uantioquia,110,RIONEGRO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIO_CLA1,Uantioquia,110,RIO CLARO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RODEO__1,Uantioquia,110,EL RODEO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SN_DIEG1,Uantioquia,110,SAN DIEGO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SONSON_1,Uantioquia,110,SONSON,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+S_JERON1,Uantioquia,110,SAN JERONIMO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TIGRE__1,Uantioquia,110,EL TIGRE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+URABA__1,Uantioquia,110,URABA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+V_HERMO1,Uantioquia,110,VILLA HERMOSA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 YARUMAL1,Uantioquia,110,YARUMAL I,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: YARUMAL I; YARUMAL II) — NO CURADA, REVISAR"
-ZAMORA_1,Uantioquia,110,ZAMORA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARANO31,Ubarranquilla,34,BARANOA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARANO71,Ubarranquilla,14,BARANOA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARACO71,Ubarranquilla,14,CARACOLI,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARACO72,Ubarranquilla,14,CARACOLI,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CENTRO_1,Ubarranquilla,110,CENTRO (BARRANQUILLA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: CENTRO (BARRANQUILLA); CENTRO (FLORENCIA)) — NO CURADA, REVISAR"
-CORDIAL1,Ubarranquilla,110,CORDIALIDAD,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUANMIN31,Ubarranquilla,34,JUAN MINA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUANMIN71,Ubarranquilla,14,JUAN MINA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LFLORES3,Ubarranquilla,34,LAS FLORES,34,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-MAGDALE3,Ubarranquilla,34,NUEVA MAGDALENA,34,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
+ZAMORA_1,Uantioquia,110,ZAMORA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARANO31,Ubarranquilla,34,BARANOA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARANO71,Ubarranquilla,14,BARANOA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARACO71,Ubarranquilla,14,CARACOLI,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARACO72,Ubarranquilla,14,CARACOLI,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CENTRO_1,Ubarranquilla,110,CENTRO (BARRANQUILLA),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CORDIAL1,Ubarranquilla,110,CORDIALIDAD,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANMIN31,Ubarranquilla,34,JUAN MINA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANMIN71,Ubarranquilla,14,JUAN MINA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LFLORES3,Ubarranquilla,34,LAS FLORES,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAGDALE3,Ubarranquilla,34,UNION (ATLANTICO),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 MALAMB31,Ubarranquilla,35,MALAMBO,35,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
 MALAMB71,Ubarranquilla,14,MALAMBO,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NBARRAN7,Ubarranquilla,14,NUEVA BARRANQUILLA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NORTE_12,Ubarranquilla,110,NORTE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NORTE__1,Ubarranquilla,110,NORTE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OASIS__1,Ubarranquilla,110,OASIS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+NBARRAN7,Ubarranquilla,14,NUEVA BARRANQUILLA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NORTE_12,Ubarranquilla,110,NORTE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NORTE__1,Ubarranquilla,110,NORTE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OASIS__1,Ubarranquilla,110,OASIS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 PIZANO_3,Ubarranquilla,34,PIZANO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SABANA31,Ubarranquilla,34,SABANALARGA,34,2020-01-01,,"propuesta heurística (prefijo, ambigua: SABANA DE TORRES; SABANALARGA) — NO CURADA, REVISAR"
-SABANA_7,Ubarranquilla,14,SABANALARGA,14,2020-01-01,,"propuesta heurística (prefijo, ambigua: SABANA DE TORRES; SABANALARGA) — NO CURADA, REVISAR"
-SALAM_31,Ubarranquilla,34,SALAMINA (CALDAS),34,2020-01-01,,"propuesta heurística (prefijo, ambigua: SALAMINA (CALDAS); SALAMINA (MAGDALENA)) — NO CURADA, REVISAR"
-SALAM_71,Ubarranquilla,14,SALAMINA (CALDAS),14,2020-01-01,,"propuesta heurística (prefijo, ambigua: SALAMINA (CALDAS); SALAMINA (MAGDALENA)) — NO CURADA, REVISAR"
+SABANA31,Ubarranquilla,34,SABANALARGA,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera SABANALARGA|230
+SABANA_7,Ubarranquilla,14,SABANALARGA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALAM_31,Ubarranquilla,34,SALAMINA (MAGDALENA),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALAM_71,Ubarranquilla,14,SALAMINA (MAGDALENA),14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 SILENC32,Ubarranquilla,34,SILENCIO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SILENCI3,Ubarranquilla,34,SILENCIO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TEBSA__1,Ubarranquilla,110,TEBSA,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: TEBSA; TEBSA II) — NO CURADA, REVISAR"
-UNION_12,Ubarranquilla,110,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
-UNION_13,Ubarranquilla,110,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
-UNION__1,Ubarranquilla,110,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
-CAICEDO1,Ubputumayo,115,PUERTO CAICEDO,115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-YARUMO_1,Ubputumayo,115,EL YARUMO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AGUABLA1,Ucali,115,AGUABLANCA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ALFEREZ1,Ucali,115,ALFEREZ I,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: ALFEREZ (EEB); ALFEREZ I; ALFEREZ II) — NO CURADA, REVISAR"
-ARROYOH1,Ucali,115,ARROYOHONDO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CAMPINA1,Ucali,115,LA CAMPIÑA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHIPIC12,Ucali,115,CHIPICHAPE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHIPICH1,Ucali,115,CHIPICHAPE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-DIESEL11,Ucali,115,DIESEL II,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+SILENCI3,Ubarranquilla,34,SILENCIO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TEBSA__1,Ubarranquilla,110,TEBSA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UNION_12,Ubarranquilla,110,UNION (ATLANTICO),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UNION_13,Ubarranquilla,110,UNION (ATLANTICO),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UNION__1,Ubarranquilla,110,UNION (ATLANTICO),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAICEDO1,Ubputumayo,115,PUERTO CAICEDO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YARUMO_1,Ubputumayo,115,EL YARUMO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AGUABLA1,Ucali,115,AGUABLANCA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ALFEREZ1,Ucali,115,ALFEREZ I,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ARROYOH1,Ucali,115,ARROYOHONDO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAMPINA1,Ucali,115,LA CAMPIÑA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHIPIC12,Ucali,115,CHIPICHAPE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHIPICH1,Ucali,115,CHIPICHAPE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DIESEL11,Ucali,115,DIESEL II,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 DIESEL12,Ucali,115,DIESEL II,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUACHA12,Ucali,115,GUACHAL,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: GUACHAL; GUACHAL II) — NO CURADA, REVISAR"
-JUANCH12,Ucali,115,JUANCHITO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LADERA_1,Ucali,115,LADERA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MELENDE1,Ucali,115,MELENDEZ,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PANCE__1,Ucali,115,PANCE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SAN_LUI1,Ucali,115,SAN LUIS,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN LUIS; SAN LUIS DE PALENQUE) — NO CURADA, REVISAR"
-SAN_LUI2,Ucali,115,SAN LUIS,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN LUIS; SAN LUIS DE PALENQUE) — NO CURADA, REVISAR"
-SN_ANT12,Ucali,115,SAN ANTONIO (BOYACA),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN ANTONIO; SAN ANTONIO (BOYACA); SAN ANTONIO (CALI)) — NO CURADA, REVISAR"
-SN_ANTO1,Ucali,115,SAN ANTONIO (BOYACA),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN ANTONIO; SAN ANTONIO (BOYACA); SAN ANTONIO (CALI)) — NO CURADA, REVISAR"
-YUMBO21,Ucali,115,YUMBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-YUMBO_12,Ucali,115,YUMBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ARGOS__1,Ucartagena,110,ARGOS,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: ARGOS; ARGOS SOGAMOSO) — NO CURADA, REVISAR"
-BAYUNCA71,Ucartagena,14,BAYUNCA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOCAGRA6,Ucartagena,66,BOCAGRANDE,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOSQUE62,Ucartagena,66,EL BOSQUE,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHAMBAC6,Ucartagena,66,CHAMBACU,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-COSPIQU6,Ucartagena,66,COSPIQUE,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GAMBOT31,Ucartagena,34,GAMBOTE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GAMBOT71,Ucartagena,14,GAMBOTE,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAMONAL6,Ucartagena,66,MAMONAL,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MANZAN_1,Ucartagena,66,MANZANILLO,66,2020-01-01,,"propuesta heurística (prefijo, ambigua: MANZANARES (CALDAS); MANZANARES (MAGDALENA); MANZANILLO) — NO CURADA, REVISAR"
-MARINA71,Ucartagena,14,LA MARINA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MARINA72,Ucartagena,14,LA MARINA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MEMBRIL6,Ucartagena,66,MEMBRILLAL,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERNER71,Ucartagena,14,TERNERA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERNER72,Ucartagena,14,TERNERA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERNERA1,Ucartagena,14,TERNERA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERNERA3,Ucartagena,14,TERNERA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERNERA6,Ucartagena,14,TERNERA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZARAGO61,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZARAGO62,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZARAGO63,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARTAG12,Ucartago,115,CARTAGO,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: CARTAGENA; CARTAGO) — NO CURADA, REVISAR"
-CATAMBU1,Ucedenar,115,CATAMBUCO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JAMONDI1,Ucedenar,115,JAMONDINO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JARDINE1,Ucedenar,115,JARDINERA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUNIN__1,Ucedenar,115,JUNIN (NARIÑO),115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PASTO__1,Ucedenar,115,PASTO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIO_MAY1,Ucedenar,115,RIO MAYO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AGUACHI1,Ucens,115,AGUACHICA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AYACUC12,Ucens,115,AYACUCHO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AYACUCH1,Ucens,115,AYACUCHO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BUTURAM1,Ucens,115,BUTURAMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CONVENC1,Ucens,115,CONVENCION,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-INSUL__1,Ucens,115,INSULA (CHINCHINA),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: INSULA (CHINCHINA); LA INSULA (CUCUTA)) — NO CURADA, REVISAR"
-OCANA_31,Ucens,34,OCAÑA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OCANA_71,Ucens,14,OCAÑA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SAMORE_2,Ucens,230,SAMORE,230,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SEVILL12,Ucens,115,SEVILLA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SEVILLA1,Ucens,115,SEVILLA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SN_MATE1,Ucens,115,SAN MATEO (CUCUTA),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN MATEO (BOGOTA); SAN MATEO (CUCUTA)) — NO CURADA, REVISAR"
-TIBU___1,Ucens,115,TIBU,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TOLEDO_2,Ucens,220,TOLEDO,230,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZULIA__1,Ucens,115,ZULIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUATAP11,Ucesar,110,GUATAPE,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: GUATAPE; GUATAPURI) — NO CURADA, REVISAR"
-GUATAPU3,Ucesar,0,GUATAPURI,0,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-DORADA_1,Uchec,115,LA DORADA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: DORADA NORTE; LA DORADA) — NO CURADA, REVISAR"
-ENEA___1,Uchec,115,LA ENEA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-HERMOSA1,Uchec,115,LA HERMOSA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-INSULA31,Uchec,33,INSULA (CHINCHINA),33,2020-01-01,,"propuesta heurística (prefijo, ambigua: INSULA (CHINCHINA); LA INSULA (CUCUTA)) — NO CURADA, REVISAR"
-IRRA___1,Uchec,115,IRRA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MANIZAL1,Uchec,115,MANIZALES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOLINO11,Uchec,115,EL MOLINO,110,2020-01-01,,"propuesta heurística (prefijo, ambigua: EL MOLINO; MOLINOS) — NO CURADA, REVISAR"
-NORTE_11,Uchec,115,NORTE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+GUACHA12,Ucali,115,GUACHAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANCH12,Ucali,115,JUANCHITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LADERA_1,Ucali,115,LADERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MELENDE1,Ucali,115,MELENDEZ,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PANCE__1,Ucali,115,PANCE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_LUI1,Ucali,115,SAN LUIS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_LUI2,Ucali,115,SAN LUIS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SN_ANT12,Ucali,115,SAN ANTONIO (CALI),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SN_ANTO1,Ucali,115,SAN ANTONIO (CALI),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YUMBO21,Ucali,115,TERMOYUMBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YUMBO_12,Ucali,115,TERMOYUMBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ARGOS__1,Ucartagena,110,ARGOS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BAYUNCA71,Ucartagena,14,BAYUNCA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOCAGRA6,Ucartagena,66,BOCAGRANDE,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOSQUE62,Ucartagena,66,EL BOSQUE,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHAMBAC6,Ucartagena,66,CHAMBACU,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COSPIQU6,Ucartagena,66,COSPIQUE,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GAMBOT31,Ucartagena,34,GAMBOTE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GAMBOT71,Ucartagena,14,GAMBOTE,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAMONAL6,Ucartagena,66,MAMONAL,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MANZAN_1,Ucartagena,66,MANZANILLO,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MARINA71,Ucartagena,14,LA MARINA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MARINA72,Ucartagena,14,LA MARINA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MEMBRIL6,Ucartagena,66,MEMBRILLAL,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNER71,Ucartagena,14,TERNERA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNER72,Ucartagena,14,TERNERA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNERA1,Ucartagena,14,TERNERA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNERA3,Ucartagena,14,TERNERA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNERA6,Ucartagena,14,TERNERA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZARAGO61,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZARAGO62,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZARAGO63,Ucartagena,66,ZARAGOCILLA,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARTAG12,Ucartago,115,CARTAGO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CATAMBU1,Ucedenar,115,CATAMBUCO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JAMONDI1,Ucedenar,115,JAMONDINO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JARDINE1,Ucedenar,115,JARDINERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUNIN__1,Ucedenar,115,JUNIN (NARIÑO),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PASTO__1,Ucedenar,115,PASTO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIO_MAY1,Ucedenar,115,RIO MAYO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AGUACHI1,Ucens,115,AGUACHICA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AYACUC12,Ucens,115,AYACUCHO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AYACUCH1,Ucens,115,AYACUCHO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BUTURAM1,Ucens,115,BUTURAMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CONVENC1,Ucens,115,CONVENCION,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+INSUL__1,Ucens,115,LA INSULA (CUCUTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OCANA_31,Ucens,34,OCAÑA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OCANA_71,Ucens,14,OCAÑA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAMORE_2,Ucens,230,SAMORE,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SEVILL12,Ucens,115,SEVILLA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SEVILLA1,Ucens,115,SEVILLA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SN_MATE1,Ucens,115,SAN MATEO (CUCUTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TIBU___1,Ucens,115,TIBU,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TOLEDO_2,Ucens,220,TOLEDO,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZULIA__1,Ucens,115,ZULIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUATAP11,Ucesar,110,GUATAPURI,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUATAPU3,Ucesar,0,VALLEDUPAR,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|230
+DORADA_1,Uchec,115,LA DORADA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ENEA___1,Uchec,115,LA ENEA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+HERMOSA1,Uchec,115,LA HERMOSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+INSULA31,Uchec,33,INSULA (CHINCHINA),33,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+IRRA___1,Uchec,115,IRRA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MANIZAL1,Uchec,115,MANIZALES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOLINO11,Uchec,115,MOLINOS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NORTE_11,Uchec,115,DORADA NORTE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 PAPELES1,Uchec,115,PAPELES NACIONALES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PERALON1,Uchec,115,PERALONSO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIOSUCI1,Uchec,115,RIOSUCIO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ROSA__12,Uchec,115,LA ROSA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SALAMIN1,Uchec,115,SALAMINA (CALDAS),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SALAMINA (CALDAS); SALAMINA (MAGDALENA)) — NO CURADA, REVISAR"
-VITERBO1,Uchec,115,VITERBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CERTEGU1,Uchoco,115,CERTEGUI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-EL_SIET1,Uchoco,110,EL SIETE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-QUIBDO_1,Uchoco,115,QUIBDO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CIRAINF2,Ucirainf,220,LA CIRA INFANTAS,230,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ARANJUE1,Ucodensa,115,ARANJUEZ,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AUTOPIS1,Ucodensa,115,AUTOPISTA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BALSIL31,Ucodensa,34,BALSILLAS,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BALSILL1,Ucodensa,115,BALSILLAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARZALO1,Ucodensa,115,BARZALOSA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOCHIC11,Ucodensa,115,BOCHICA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOCHIC21,Ucodensa,115,BOCHICA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOLIVIA1,Ucodensa,115,BOLIVIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOSA___1,Ucodensa,115,BOSA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALLE511,Ucodensa,115,CALLE51,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: CALLE51; CALLE67) — NO CURADA, REVISAR"
-CALLE671,Ucodensa,115,CALLE51,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: CALLE51; CALLE67) — NO CURADA, REVISAR"
-CAQUEZA1,Ucodensa,115,CAQUEZA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARRERA1,Ucodensa,115,CARRERA QUINTA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CASTELL1,Ucodensa,115,CASTELLANA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHIA___1,Ucodensa,115,CHIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHICALA1,Ucodensa,115,CHICALA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-COLEGIO1,Ucodensa,115,COLEGIO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-COMPART1,Ucodensa,115,COMPARTIR,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CONCORD1,Ucodensa,115,CONCORDIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-DIACOC_1,Ucodensa,115,DIACO,115,2020-01-01,,"propuesta heurística (contenido, ambigua: DIACO; DIACO (BOYACA)) — NO CURADA, REVISAR"
-FACATA_1,Ucodensa,115,FACATATIVA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-FLANDES2,Ucodensa,115,FLANDES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-FONTIBO1,Ucodensa,115,FONTIBON,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GORGONZ7,Ucodensa,58,GORGONZOLA,57.5,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUACA__3,Ucodensa,34,LA GUACA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+PERALON1,Uchec,115,PERALONSO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOSUCI1,Uchec,115,RIOSUCIO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ROSA__12,Uchec,115,LA ROSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALAMIN1,Uchec,115,SALAMINA (CALDAS),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VITERBO1,Uchec,115,VITERBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERTEGU1,Uchoco,115,CERTEGUI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+EL_SIET1,Uchoco,110,EL SIETE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+QUIBDO_1,Uchoco,115,QUIBDO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CIRAINF2,Ucirainf,220,LA CIRA INFANTAS,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ARANJUE1,Ucodensa,115,ARANJUEZ,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AUTOPIS1,Ucodensa,115,AUTOPISTA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BALSIL31,Ucodensa,34,BALSILLAS,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera BALSILLAS|230
+BALSILL1,Ucodensa,115,BALSILLAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARZALO1,Ucodensa,115,BARZALOSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOCHIC11,Ucodensa,115,BOCHICA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOCHIC21,Ucodensa,115,BOCHICA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOLIVIA1,Ucodensa,115,BOLIVIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOSA___1,Ucodensa,115,BOSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALLE511,Ucodensa,115,CALLE51,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALLE671,Ucodensa,115,CALLE67,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAQUEZA1,Ucodensa,115,CAQUEZA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARRERA1,Ucodensa,115,CARRERA QUINTA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CASTELL1,Ucodensa,115,CASTELLANA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHIA___1,Ucodensa,115,CHIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHICALA1,Ucodensa,115,CHICALA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COLEGIO1,Ucodensa,115,COLEGIO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COMPART1,Ucodensa,115,COMPARTIR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CONCORD1,Ucodensa,115,CONCORDIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DIACOC_1,Ucodensa,115,DIACO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FACATA_1,Ucodensa,115,FACATATIVA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLANDES2,Ucodensa,115,FLANDES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FONTIBO1,Ucodensa,115,FONTIBON,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GORGONZ7,Ucodensa,58,GORGONZOLA,58,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUACA__3,Ucodensa,34,LA GUACA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 GUAVIO_1,Ucodensa,115,GUAVIO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-INDUMI11,Ucodensa,115,INDUMIL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAMBITA1,Ucodensa,115,MAMBITA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MONTEV11,Ucodensa,115,MONTEVIDEO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MORATO_1,Ucodensa,115,MORATO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOSQUER1,Ucodensa,115,MOSQUERA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+INDUMI11,Ucodensa,115,INDUMIL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAMBITA1,Ucodensa,115,MAMBITA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MONTEV11,Ucodensa,115,MONTEVIDEO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MORATO_1,Ucodensa,115,MORATO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOSQUER1,Ucodensa,115,MOSQUERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 MUNA___1,Ucodensa,115,MUÑA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: MUÑA; MUÑA III) — NO CURADA, REVISAR"
-MUZU___1,Ucodensa,115,MUZU,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NOROEST1,Ucodensa,115,NOROESTE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PELDAR_1,Ucodensa,115,PELDAR,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PORTUGA1,Ucodensa,115,PORTUGAL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PORVEN11,Ucodensa,115,PORVENIR,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PORVEN21,Ucodensa,115,PORVENIR,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SALITRE1,Ucodensa,115,SALITRE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SALTO__1,Ucodensa,115,EL SALTO (EPM),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: EL SALTO (EPM); SALTO I (BOGOTA); SALTO II (COLEGIO)) — NO CURADA, REVISAR"
-SAN_FAC7,Ucodensa,58,SAN FACON,57.5,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SAN_JOS1,Ucodensa,115,SAN JOSE,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN JOSE; SAN JOSE DEL GUAVIARE) — NO CURADA, REVISAR"
-SAUCES_1,Ucodensa,115,SAUCES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SESQUI31,Ucodensa,34,SESQUILE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SESQUIL1,Ucodensa,115,SESQUILE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SIMIJAC7,Ucodensa,14,SIMIJACA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SUBA___1,Ucodensa,115,SUBA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TECHO__1,Ucodensa,115,TECHO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TENJO__1,Ucodensa,115,TENJO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TERMIN_1,Ucodensa,115,TERMINAL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TIBABUY1,Ucodensa,115,TIBABUYES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TORCAEE1,Ucodensa,115,TORCA,115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-TRENOCC11,Ucodensa,115,TREN OCCIDENTE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TUNAL__1,Ucodensa,115,TUNAL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-UBALA__1,Ucodensa,115,UBALA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-UBATE__1,Ucodensa,115,UBATE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-UBATE__3,Ucodensa,34,UBATE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-USAQUEN1,Ucodensa,115,USAQUEN,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-USME___1,Ucodensa,115,USME,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VERAGUA1,Ucodensa,115,VERAGUAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VICTORI1,Ucodensa,115,VICTORIA (BOGOTA),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: VICTORIA (BOGOTA); VICTORIA (CALDAS)) — NO CURADA, REVISAR"
-VILLETA1,Ucodensa,115,VILLETA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VILLETA13,Ucodensa,34,VILLETA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZIPAQUI1,Ucodensa,115,ZIPAQUIRA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BAVARIA1,Uebsa,115,BAVARIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BOAVIT11,Uebsa,115,BOAVITA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHIQUIN1,Uebsa,115,CHIQUINQUIRA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-DIACO__1,Uebsa,115,DIACO,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: DIACO; DIACO (BOYACA)) — NO CURADA, REVISAR"
-DUITAMA1,Uebsa,115,DUITAMA (HIGUERAS),115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ELHUCHE1,Uebsa,115,EL HUCHE,115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-GUATEQU1,Uebsa,115,GUATEQUE,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-HOLCIM_1,Uebsa,115,HOLCIM,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JENESAN1,Uebsa,34,JENESANO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MUISCAS1,Uebsa,115,MUISCAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAIPA__1,Uebsa,115,PAIPA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PTO_BOY1,Uebsa,110,PUERTO BOYACA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RAMADA_1,Uebsa,115,LA RAMADA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SIDENAL1,Uebsa,115,SIDENAL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-STAMAR11,Uebsa,115,SANTA MARIA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SANTA MARIA; SANTA MARTA) — NO CURADA, REVISAR"
-S_ANTON1,Uebsa,34,SAN ANTONIO,34,2020-01-01,,"propuesta heurística (prefijo, ambigua: SAN ANTONIO; SAN ANTONIO (BOYACA); SAN ANTONIO (CALI)) — NO CURADA, REVISAR"
-TOQUILL1,Uebsa,115,TOQUILLA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TUNJA__1,Uebsa,115,TUNJA (DONATO),115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VASCONI1,Uebsa,110,VASCONIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARZAL_1,Uemsa,115,BARZAL,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: BARZAL; BARZALOSA) — NO CURADA, REVISAR"
-CATAMA_1,Uemsa,115,CATAMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GRANAD31,Uemsa,34,GRANADA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GRANADA2,Uemsa,13,GRANADA,13,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OCOA__31,Uemsa,34,OCOA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OCOA__32,Uemsa,14,OCOA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OCOA___1,Uemsa,115,OCOA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PTO_LOP1,Uemsa,115,PUERTO LOPEZ,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-REFORM31,Uemsa,34,LA REFORMA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-REFORM71,Uemsa,14,LA REFORMA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SURIA_31,Uemsa,34,SURIA,34,2020-01-01,,"propuesta heurística (prefijo, ambigua: SURIA; SURIA (DELSUR)) — NO CURADA, REVISAR"
-SURIA__2,Uemsa,14,SURIA,14,2020-01-01,,"propuesta heurística (prefijo, ambigua: SURIA; SURIA (DELSUR)) — NO CURADA, REVISAR"
-SURIA__3,Uemsa,115,SURIA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SURIA; SURIA (DELSUR)) — NO CURADA, REVISAR"
-BANADIA1,Uenelar,115,BANADIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TAME___1,Uenelar,115,TAME,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-AGUACLA1,Uenerca,115,AGUACLARA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+MUZU___1,Ucodensa,115,MUZU,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NOROEST1,Ucodensa,115,NOROESTE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PELDAR_1,Ucodensa,115,PELDAR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PORTUGA1,Ucodensa,115,PORTUGAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PORVEN11,Ucodensa,115,PORVENIR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PORVEN21,Ucodensa,115,PORVENIR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALITRE1,Ucodensa,115,SALITRE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALTO__1,Ucodensa,115,SALTO I (BOGOTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_FAC7,Ucodensa,58,SAN FACON,58,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_JOS1,Ucodensa,115,SAN JOSE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAUCES_1,Ucodensa,115,SAUCES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SESQUI31,Ucodensa,34,SESQUILE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SESQUIL1,Ucodensa,115,SESQUILE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SIMIJAC7,Ucodensa,14,SIMIJACA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SUBA___1,Ucodensa,115,SUBA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TECHO__1,Ucodensa,115,TECHO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TENJO__1,Ucodensa,115,TENJO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERMIN_1,Ucodensa,115,TERMINAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TIBABUY1,Ucodensa,115,TIBABUYES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TORCAEE1,Ucodensa,115,TORCA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TRENOCC11,Ucodensa,115,TREN OCCIDENTE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TUNAL__1,Ucodensa,115,TUNAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UBALA__1,Ucodensa,115,UBALA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UBATE__1,Ucodensa,115,UBATE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+UBATE__3,Ucodensa,34,UBATE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+USAQUEN1,Ucodensa,115,USAQUEN,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+USME___1,Ucodensa,115,USME,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VERAGUA1,Ucodensa,115,VERAGUAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VICTORI1,Ucodensa,115,VICTORIA (BOGOTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VILLETA1,Ucodensa,115,VILLETA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VILLETA13,Ucodensa,34,VILLETA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZIPAQUI1,Ucodensa,115,ZIPAQUIRA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BAVARIA1,Uebsa,115,BAVARIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOAVIT11,Uebsa,115,BOAVITA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHIQUIN1,Uebsa,115,CHIQUINQUIRA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DIACO__1,Uebsa,115,DIACO (BOYACA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DUITAMA1,Uebsa,115,DUITAMA (HIGUERAS),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ELHUCHE1,Uebsa,115,EL HUCHE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUATEQU1,Uebsa,115,GUATEQUE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+HOLCIM_1,Uebsa,115,HOLCIM,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JENESAN1,Uebsa,34,JENESANO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MUISCAS1,Uebsa,115,MUISCAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAIPA__1,Uebsa,115,PAIPA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTO_BOY1,Uebsa,110,PUERTO BOYACA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RAMADA_1,Uebsa,115,LA RAMADA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SIDENAL1,Uebsa,115,SIDENAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+STAMAR11,Uebsa,115,SANTA MARIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+S_ANTON1,Uebsa,34,SAN ANTONIO (BOYACA),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TOQUILL1,Uebsa,115,TOQUILLA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TUNJA__1,Uebsa,115,TUNJA (DONATO),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VASCONI1,Uebsa,110,VASCONIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARZAL_1,Uemsa,115,BARZAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CATAMA_1,Uemsa,115,CATAMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GRANAD31,Uemsa,34,GRANADA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GRANADA2,Uemsa,13,GRANADA,13,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OCOA__31,Uemsa,34,OCOA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OCOA__32,Uemsa,14,OCOA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OCOA___1,Uemsa,115,OCOA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTO_LOP1,Uemsa,115,PUERTO LOPEZ,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+REFORM31,Uemsa,34,LA REFORMA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+REFORM71,Uemsa,14,LA REFORMA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SURIA_31,Uemsa,34,SURIA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SURIA__2,Uemsa,14,SURIA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SURIA__3,Uemsa,115,SURIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BANADIA1,Uenelar,115,BANADIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TAME___1,Uenelar,115,TAME,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AGUACLA1,Uenerca,115,AGUACLARA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 BOAVIT12,Uenerca,115,BOAVITA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MORRO1,Uenerca,115,MORRO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAZARIP1,Uenerca,115,PAZ DE ARIPORO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+MORRO1,Uenerca,115,MORRO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAZARIP1,Uenerca,115,PAZ DE ARIPORO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 STAMAR12,Uenerca,115,SANTA MARIA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SANTA MARIA; SANTA MARTA) — NO CURADA, REVISAR"
-YOPAL__1,Uenerca,115,YOPAL,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: LA YOPALOSA; YOPAL) — NO CURADA, REVISAR"
-CIENAGA1,Uguajiram,110,CIENAGA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CUESTEC1,Uguajiram,110,CUESTECITAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-FUNDACI1,Uguajiram,110,FUNDACION,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GAIRA__1,Uguajiram,110,GAIRA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUAJIRA2,Uguajiram,220,GUAJIRA,220,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LIBERTA1,Uguajiram,110,LIBERTADOR,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAICAO_1,Uguajiram,110,MAICAO,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MANZANA1,Uguajiram,110,MANZANARES (CALDAS),115,2020-01-01,,"propuesta heurística (prefijo, ambigua: MANZANARES (CALDAS); MANZANARES (MAGDALENA)) — NO CURADA, REVISAR"
-RIOCOR31,Uguajiram,34,RIO CORDOBA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIOCOR71,Uguajiram,14,RIO CORDOBA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+YOPAL__1,Uenerca,115,YOPAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CIENAGA1,Uguajiram,110,CIENAGA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CUESTEC1,Uguajiram,110,CUESTECITAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FUNDACI1,Uguajiram,110,FUNDACION,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GAIRA__1,Uguajiram,110,GAIRA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUAJIRA2,Uguajiram,220,GUAJIRA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LIBERTA1,Uguajiram,110,LIBERTADOR,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAICAO_1,Uguajiram,110,MAICAO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MANZANA1,Uguajiram,110,MANZANARES (MAGDALENA),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOCOR31,Uguajiram,34,RIO CORDOBA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOCOR71,Uguajiram,14,RIO CORDOBA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 RIOCORD1,Uguajiram,110,RIO CORDOBA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-RIOHACH1,Uguajiram,110,RIOHACHA,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-STAMA_31,Uguajiram,34,SANTA MARIA,34,2020-01-01,,"propuesta heurística (prefijo, ambigua: SANTA MARIA; SANTA MARTA) — NO CURADA, REVISAR"
-MINA_IN1,Uintercor,110,MINA INTERCOR,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ALTAMIR1,Upacande,115,ALTAMIRA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BETANIA1,Upacande,115,BETANIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-HOBO___1,Upacande,115,HOBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ORIENT_1,Upacande,115,ORIENTE,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: ORIENTE; ORIENTE (HUILA)) — NO CURADA, REVISAR"
-PITALIT1,Upacande,115,PITALITO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SEBORUC1,Upacande,115,SEBORUCO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SEGOVI_1,Upacande,115,SEGOVIANAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TENAY__3,Upacande,34,TENAY,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BAJOANC1,Upacifico,115,BAJO ANCHICAYA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BUGA___1,Upacifico,115,BUGA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BUGA___2,Upacifico,115,BUGA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALIMA_1,Upacifico,115,CALIMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALIMA_2,Upacifico,115,CALIMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CANDELA1,Upacifico,34,CANDELARIA (VALLE),34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARMEL11,Upacifico,115,EL CARMELO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARMEL31,Upacifico,34,EL CARMELO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARMEL32,Upacifico,34,EL CARMELO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CARTAG11,Upacifico,115,CARTAGO,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: CARTAGENA; CARTAGO) — NO CURADA, REVISAR"
-CERRITO1,Upacifico,115,CERRITO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CERRITO2,Upacifico,115,CERRITO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CODAZZI1,Upacifico,115,CODAZZI (CESAR),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: CODAZZI (CESAR); CODAZZI (VALLE)) — NO CURADA, REVISAR"
-CODAZZI2,Upacifico,115,CODAZZI (CESAR),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: CODAZZI (CESAR); CODAZZI (VALLE)) — NO CURADA, REVISAR"
-ESTAMBU31,Upacifico,34,ESTAMBUL,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ESTAMBU32,Upacifico,34,ESTAMBUL,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JAMUNDI1,Upacifico,115,JAMUNDI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JAMUNDI2,Upacifico,115,JAMUNDI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUANCH13,Upacifico,115,JUANCHITO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUANCH31,Upacifico,34,JUANCHITO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-JUANCH32,Upacifico,34,JUANCHITO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LAUNION1,Upacifico,115,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (contenido, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
-LAUNION2,Upacifico,115,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (contenido, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
+RIOHACH1,Uguajiram,110,RIOHACHA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+STAMA_31,Uguajiram,34,SANTA MARTA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MINA_IN1,Uintercor,110,MINA INTERCOR,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ALTAMIR1,Upacande,115,ALTAMIRA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BETANIA1,Upacande,115,BETANIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+HOBO___1,Upacande,115,HOBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ORIENT_1,Upacande,115,ORIENTE (HUILA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PITALIT1,Upacande,115,PITALITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SEBORUC1,Upacande,115,SEBORUCO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SEGOVI_1,Upacande,115,SEGOVIANAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TENAY__3,Upacande,34,TENAY,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BAJOANC1,Upacifico,115,BAJO ANCHICAYA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BUGA___1,Upacifico,115,BUGA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BUGA___2,Upacifico,115,BUGA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALIMA_1,Upacifico,115,CALIMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALIMA_2,Upacifico,115,CALIMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CANDELA1,Upacifico,34,CANDELARIA (VALLE),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARMEL11,Upacifico,115,EL CARMELO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARMEL31,Upacifico,34,EL CARMELO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARMEL32,Upacifico,34,EL CARMELO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARTAG11,Upacifico,115,CARTAGO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERRITO1,Upacifico,115,CERRITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERRITO2,Upacifico,115,CERRITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CODAZZI1,Upacifico,115,CODAZZI (VALLE),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CODAZZI2,Upacifico,115,CODAZZI (VALLE),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ESTAMBU31,Upacifico,34,ESTAMBUL,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ESTAMBU32,Upacifico,34,ESTAMBUL,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JAMUNDI1,Upacifico,115,JAMUNDI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JAMUNDI2,Upacifico,115,JAMUNDI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANCH13,Upacifico,115,JUANCHITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANCH31,Upacifico,34,JUANCHITO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+JUANCH32,Upacifico,34,JUANCHITO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LAUNION1,Upacifico,115,LA UNION (VALLE),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LAUNION2,Upacifico,115,LA UNION (VALLE),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 LAUNION3,Upacifico,115,LA UNION (MONTERIA),110,2020-01-01,,"propuesta heurística (contenido, ambigua: LA UNION (MONTERIA); LA UNION (VALLE); UNION (ATLANTICO)) — NO CURADA, REVISAR"
-PALMAS11,Upacifico,115,LAS PALMAS,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: LAS PALMAS; PALMASECA) — NO CURADA, REVISAR"
-PAPELCA1,Upacifico,115,PAPELCAUCA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SALVAJI2,Upacifico,220,SALVAJINA,230,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SUCROMI1,Upacifico,115,SUCROMILES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TABOR_12,Upacifico,115,TABOR (BVENTURA),115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TULUA_11,Upacifico,34,TULUA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VIJES_12,Upacifico,115,VIJES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-VIJES__1,Upacifico,115,VIJES,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-YUMBO22,Upacifico,115,YUMBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-YUMBO_11,Upacifico,115,YUMBO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZARZAL_1,Upacifico,115,ZARZAL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CUBA___1,Upereira,115,CUBA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-DOSQUE71,Upereira,35,DOSQUEBRADAS,35,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAVAS__1,Upereira,115,PAVAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ROSA__11,Upereira,115,LA ROSA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BRISAS_1,Upijaos,115,BRISAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CAJAMAR1,Upijaos,115,NUEVA CAJAMARCA (TOLIMA),115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-ESPINA31,Upijaos,34,NUEVA ESPINAL,34,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-FLANDE31,Upijaos,34,FLANDES,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-FLANDE32,Upijaos,34,FLANDES,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUALAN31,Upijaos,34,GUALANDAY,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-LANCERO31,Upijaos,34,LANCEROS,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MARIQU31,Upijaos,34,MARIQUITA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MARIQU32,Upijaos,34,MARIQUITA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MIROLI31,Upijaos,34,MIROLINDO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MIROLI32,Upijaos,34,MIROLINDO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NATAGA_1,Upijaos,115,NATAGAIMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NESPIN31,Upijaos,34,NUEVA ESPINAL,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-NESPIN71,Upijaos,14,NUEVA ESPINAL,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAPAYO31,Upijaos,34,PAPAYO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAPAYO32,Upijaos,34,PAPAYO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PAPAYO_1,Upijaos,115,PAPAYO,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PRADO_13,Upijaos,34,PRADO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TULUNI_1,Upijaos,115,TULUNI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PLANET31,Uplaneta,34,PLANETA RICA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PLANET71,Uplaneta,14,PLANETA RICA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOCOA__1,Uputumayo,115,MOCOA (JUNIN),115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ARMENIA1,Uquindio,115,ARMENIA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-REGIVIT1,Uquindio,115,REGIVIT,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TEBAIDA1,Uquindio,115,TEBAIDA NUEVA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARBO_12,Usantander,115,BARBOSA (ANTIOQUIA),110,2020-01-01,,"propuesta heurística (prefijo, ambigua: BARBOSA (ANTIOQUIA); BARBOSA (SANTANDER)) — NO CURADA, REVISAR"
-BARRAN31,Usantander,34,BARRANCA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-BARRAN32,Usantander,34,BARRANCA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CIMITAR1,Usantander,115,CIMITARRA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CONUCOS1,Usantander,14,CONUCO,14,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-CONUCOS2,Usantander,14,CONUCO,14,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-FLORID_1,Usantander,115,FLORIDA,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: FLORIDA; FLORIDA (BUCARAMANGA); FLORIDA (CAUCA)) — NO CURADA, REVISAR"
-LIZAMA_1,Usantander,115,LIZAMA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MESASOL1,Usantander,115,MESA DEL SOL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OIBA___1,Usantander,115,OIBA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PALENQU3,Usantander,34,PALENQUE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PALOS__1,Usantander,115,LOS PALOS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-PIEDECU1,Usantander,115,PIEDECUESTA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-REALMIN1,Usantander,115,REAL DE MINAS,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SAN_GIL1,Usantander,115,SAN GIL,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SAN_SI31,Usantander,34,SAN SILVESTRE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SNALBER3,Usantander,34,SAN ALBERTO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-STAROSA1,Usantander,115,SANTA ROSA ,115,2020-01-01,,"propuesta heurística (prefijo, ambigua: SANTA ROSA ; SANTA ROSALIA) — NO CURADA, REVISAR"
-WILCHES1,Usantander,115,PUERTO WILCHES,115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-BOSTON_1,Usinu,110,BOSTON,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CALAMAR6,Usinu,66,CALAMAR,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CERETE_1,Usinu,110,CERETE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CERETE_2,Usinu,110,CERETE,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-CHINUC31,Usinu,34,CHINU,34,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-COVENAS1,Usinu,110,COVEÑAS,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAGANG31,Usinu,34,MAGANGUE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAGANG71,Usinu,14,MAGANGUE,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MAGANG72,Usinu,14,MAGANGUE,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOJANA31,Usinu,34,LA MOJANA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOJANA71,Usinu,14,LA MOJANA,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOMPOX31,Usinu,34,MOMPOX,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MOMPOX71,Usinu,14,MOMPOX,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-MONTER31,Usinu,34,MONTERIA,34,2020-01-01,,"propuesta heurística (prefijo, ambigua: MONTERIA; MONTERIA (ISA)) — NO CURADA, REVISAR"
-MONTER72,Usinu,14,MONTERIA,14,2020-01-01,,"propuesta heurística (prefijo, ambigua: MONTERIA; MONTERIA (ISA)) — NO CURADA, REVISAR"
-RIOSINU1,Usinu,110,RIO SINU,110,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SINCE_31,Usinu,34,SINCE,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SINCE_71,Usinu,14,SINCE,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SNJACIN6,Usinu,66,SAN JACINTO,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
+PALMAS11,Upacifico,115,LAS PALMAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAPELCA1,Upacifico,115,PAPELCAUCA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALVAJI2,Upacifico,220,SALVAJINA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SUCROMI1,Upacifico,115,SUCROMILES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TABOR_12,Upacifico,115,TABOR (BVENTURA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TULUA_11,Upacifico,34,TULUA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VIJES_12,Upacifico,115,VIJES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VIJES__1,Upacifico,115,VIJES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YUMBO22,Upacifico,115,TERMOYUMBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YUMBO_11,Upacifico,115,TERMOYUMBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZARZAL_1,Upacifico,115,ZARZAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CUBA___1,Upereira,115,CUBA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DOSQUE71,Upereira,35,DOSQUEBRADAS,35,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAVAS__1,Upereira,115,PAVAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ROSA__11,Upereira,115,LA ROSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BRISAS_1,Upijaos,115,BRISAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAJAMAR1,Upijaos,115,NUEVA CAJAMARCA (TOLIMA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ESPINA31,Upijaos,34,NUEVA ESPINAL,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLANDE31,Upijaos,34,FLANDES,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLANDE32,Upijaos,34,FLANDES,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUALAN31,Upijaos,34,GUALANDAY,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LANCERO31,Upijaos,34,LANCEROS,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MARIQU31,Upijaos,34,MARIQUITA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MARIQU32,Upijaos,34,MARIQUITA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MIROLI31,Upijaos,34,MIROLINDO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MIROLI32,Upijaos,34,MIROLINDO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NATAGA_1,Upijaos,115,NATAGAIMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NESPIN31,Upijaos,34,NUEVA ESPINAL,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NESPIN71,Upijaos,14,NUEVA ESPINAL,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAPAYO31,Upijaos,34,PAPAYO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAPAYO32,Upijaos,34,PAPAYO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAPAYO_1,Upijaos,115,PAPAYO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PRADO_13,Upijaos,34,PRADO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TULUNI_1,Upijaos,115,TULUNI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PLANET31,Uplaneta,34,PLANETA RICA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PLANET71,Uplaneta,14,PLANETA RICA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera PLANETA RICA|115
+MOCOA__1,Uputumayo,115,MOCOA (JUNIN),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ARMENIA1,Uquindio,115,ARMENIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+REGIVIT1,Uquindio,115,REGIVIT,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TEBAIDA1,Uquindio,115,TEBAIDA NUEVA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARBO_12,Usantander,115,BARBOSA (SANTANDER),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARRAN31,Usantander,34,BARRANCA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BARRAN32,Usantander,34,BARRANCA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CIMITAR1,Usantander,115,CIMITARRA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CONUCOS1,Usantander,14,CONUCO,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CONUCOS2,Usantander,14,CONUCO,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLORID_1,Usantander,115,FLORIDA (BUCARAMANGA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LIZAMA_1,Usantander,115,LIZAMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MESASOL1,Usantander,115,MESA DEL SOL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OIBA___1,Usantander,115,OIBA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PALENQU3,Usantander,34,PALENQUE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PALOS__1,Usantander,115,LOS PALOS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PIEDECU1,Usantander,115,PIEDECUESTA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+REALMIN1,Usantander,115,REAL DE MINAS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_GIL1,Usantander,115,SAN GIL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_SI31,Usantander,34,SAN SILVESTRE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SNALBER3,Usantander,34,SAN ALBERTO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+STAROSA1,Usantander,115,SANTA ROSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+WILCHES1,Usantander,115,PUERTO WILCHES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BOSTON_1,Usinu,110,BOSTON,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALAMAR6,Usinu,66,CALAMAR,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERETE_1,Usinu,110,CERETE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERETE_2,Usinu,110,CERETE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CHINUC31,Usinu,34,CHINU PLANTA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COVENAS1,Usinu,110,COVEÑAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAGANG31,Usinu,34,MAGANGUE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAGANG71,Usinu,14,MAGANGUE,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MAGANG72,Usinu,14,MAGANGUE,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOJANA31,Usinu,34,LA MOJANA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOJANA71,Usinu,14,LA MOJANA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOMPOX31,Usinu,34,MOMPOX,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MOMPOX71,Usinu,14,MOMPOX,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MONTER31,Usinu,34,MONTERIA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MONTER72,Usinu,14,MONTERIA,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOSINU1,Usinu,110,RIO SINU,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SINCE_31,Usinu,34,SINCE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SINCE_71,Usinu,14,SINCE,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SNJACIN6,Usinu,66,SAN JACINTO,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 SNJACIN62,Usinu,66,SAN JACINTO,66,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TOLUVIE31,Usinu,34,TOLUVIEJO,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TOLUVIE71,Usinu,14,TOLUVIEJO,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ZAMBRA71,Usinu,14,ZAMBRANO,14,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ELZAQUE1,Usur,115,EL ZAQUE,115,2020-01-01,,"propuesta heurística (contenido, única) — NO CURADA, REVISAR"
-GUAPI__1,Usur,115,GUAPI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-GUAPI__2,Usur,115,GUAPI,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-OLAYA__1,Usur,115,OLAYA HERRERA,115,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-SANTAN31,Usur,34,SANTANDER,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-TULUA_12,Utulua,34,TULUA,34,2020-01-01,,"propuesta heurística (prefijo, única) — NO CURADA, REVISAR"
-ANTIOQ41,Uantioquia,44,ANTIOQUIA,18,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Antioquia', barra 'Antioquia 44', similitud 1.00) — NO CURADA, REVISAR"
-APRTADO1,Uantioquia,110,APARTADO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Apartado 110', barra 'PT lod APRTADO1', similitud 1.00) — NO CURADA, REVISAR"
-CAUCAS73,Uantioquia,13,CAUCASIA,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Caucasia 110', barra 'Caucasia 13.2', similitud 1.00) — NO CURADA, REVISAR"
-GIRARDT1,Uantioquia,110,GIRARDOTA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Girardota 110', barra 'PT lod GIRARDT1', similitud 1.00) — NO CURADA, REVISAR"
-LACEJA_1,Uantioquia,110,LA CEJA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Ceja 110', barra 'PT lod LACEJA_1', similitud 1.00) — NO CURADA, REVISAR"
-PTOANT_1,Uantioquia,110,NUEVA COLONIA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Nva Colonia 110', barra 'PT Carga Pto Antioquia', similitud 1.00) — NO CURADA, REVISAR"
-SALTEPM4,Uantioquia,44,ANTIOQUIA,18,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Antioquia', barra 'El Salto 44', similitud 1.00) — NO CURADA, REVISAR"
-TEXAS__1,Uantioquia,110,COCORNA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Cocorna 110', barra 'LinCcoTex11', similitud 1.00) — NO CURADA, REVISAR"
+TOLUVIE31,Usinu,34,TOLUVIEJO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TOLUVIE71,Usinu,14,TOLUVIEJO,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ZAMBRA71,Usinu,14,ZAMBRANO,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ELZAQUE1,Usur,115,EL ZAQUE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUAPI__1,Usur,115,GUAPI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUAPI__2,Usur,115,GUAPI,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+OLAYA__1,Usur,115,OLAYA HERRERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANTAN31,Usur,34,SANTANDER,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TULUA_12,Utulua,34,TULUA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ANTIOQ41,Uantioquia,44,STA FE DE ANTIOQUIA,44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+APRTADO1,Uantioquia,110,APARTADO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAUCAS73,Uantioquia,13,CAUCASIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera CAUCASIA|115
+GIRARDT1,Uantioquia,110,GIRARDOTA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LACEJA_1,Uantioquia,110,LA CEJA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTOANT_1,Uantioquia,110,NUEVA COLONIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALTEPM4,Uantioquia,44,EL SALTO (EPM),44,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TEXAS__1,Uantioquia,110,COCORNA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
 ARGTOL21,UArgosTol,230,TOLUVIEJO,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Toluviejo 220', barra 'PT Bolivar - Toluviejo 1 220(1)', similitud 1.00) — NO CURADA, REVISAR"
-ACESCO_1,Ubarranquilla,110,MALAMBO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Malambo 110', barra 'PT lod ACESCO_1', similitud 1.00) — NO CURADA, REVISAR"
-EL_RIO31,Ubarranquilla,34,EL RIO,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Rio 34_5', barra 'El Rio 34.5 B1', similitud 1.00) — NO CURADA, REVISAR"
-EL_RIO32,Ubarranquilla,34,EL RIO,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Rio 34_5', barra 'El Rio 34.5 B2', similitud 1.00) — NO CURADA, REVISAR"
-NVABRRQ1,Ubarranquilla,110,NUEVA BARRANQUILLA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Nv Barranquilla 110', barra 'PT Nva Bqlla-Trf6', similitud 1.00) — NO CURADA, REVISAR"
-VTEJUL21,Ubarranquilla,110,VEINTE DE JULIO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Veinte Julio 110', barra 'PT lod VTEJULI2', similitud 0.89) — NO CURADA, REVISAR"
-VTEJUL31,Ubarranquilla,110,VEINTE DE JULIO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Veinte Julio 110', barra 'PT Silencio - Vte Julio 1 110', similitud 0.89) — NO CURADA, REVISAR"
-VTEJULI1,Ubarranquilla,110,VEINTE DE JULIO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Veinte Julio 110', barra 'PT lod VTEJULI1', similitud 0.89) — NO CURADA, REVISAR"
-SIDELPA1,Ucali,115,SAN LUIS,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Luis 115', barra 'PT San Luis - Sidelpa 1 115', similitud 1.00) — NO CURADA, REVISAR"
-CAN_ECA1,Ucartagena,110,TERMOCANDELARIA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Termocandelaria 110', barra 'PT lod CAN_ECA1', similitud 1.00) — NO CURADA, REVISAR"
-NV_COSP1,Ucartagena,110,NUEVA COSPIQUE,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Nv Cospique 110', barra 'PT lod NV_COSP1', similitud 1.00) — NO CURADA, REVISAR"
-SERENAM1,Ucartagena,66,MANZANILLO,66,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Manzanillo 66', barra 'PT lod SERENAM1', similitud 1.00) — NO CURADA, REVISAR"
-VILLAES6,Ucartagena,66,VILLA ESTRELLA,66,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Villa Estrella 66', barra 'PT lod VILLAES6', similitud 1.00) — NO CURADA, REVISAR"
-SMARTIN1,Ucedenar,115,SAN MARTIN,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Martin 115', barra 'PT lod SMARTIN1', similitud 1.00) — NO CURADA, REVISAR"
-TUMACO_1,Ucedenar,115,BUCHELY,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Buchely 115', barra 'Buchely 115', similitud 1.00) — NO CURADA, REVISAR"
-COPEY__3,Ucesar,0,EL COPEY,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Copey 34.5', barra 'El Copey 34.5_B1', similitud 1.00) — NO CURADA, REVISAR"
-COPEY__32,Ucesar,0,EL COPEY,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Copey 34.5', barra 'Copey 34.5_B2', similitud 1.00) — NO CURADA, REVISAR"
-ELBANCO1,Ucesar,0,EL BANCO,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Banco 110', barra 'PT lod ELBANCO1', similitud 1.00) — NO CURADA, REVISAR"
-ELPASO31,Ucesar,0,EL PASO,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Paso 110', barra 'EL PASO 1 34.5 kV', similitud 1.00) — NO CURADA, REVISAR"
-ELPASO71,Ucesar,0,EL PASO,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Paso 110', barra 'EL PASO 1 13.8 kV', similitud 1.00) — NO CURADA, REVISAR"
-LAJAGUA1,Ucesar,0,LA JAGUA,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Jagua 110', barra 'PT lod LAJAGUA1', similitud 1.00) — NO CURADA, REVISAR"
-LAJAGUA2,Ucesar,0,LA JAGUA,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Jagua 110', barra 'PT lod LAJAGUA2', similitud 1.00) — NO CURADA, REVISAR"
-LALOMA31,Ucesar,0,LA LOMA,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Loma 110', barra 'LA LOMA 34.5 kV', similitud 1.00) — NO CURADA, REVISAR"
-LALOMA71,Ucesar,0,LA LOMA,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Loma 110', barra 'LA LOMA 13.8 kV', similitud 1.00) — NO CURADA, REVISAR"
-VALLED27,Ucesar,0,VALLEDUPAR,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Valledupar 13_8', barra 'Valledupar 13.8 T3', similitud 1.00) — NO CURADA, REVISAR"
-VALLEDP7,Ucesar,0,VALLEDUPAR,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Valledupar 13_8', barra 'Valledupar 13.8 T1', similitud 1.00) — NO CURADA, REVISAR"
-ACASA__1,Uchec,115,LA ENEA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Enea 115', barra 'PT Enea - Acasa 115', similitud 1.00) — NO CURADA, REVISAR"
-ITSMINA1,Uchoco,115,ISTMINA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Istmina 115', barra 'PT lod ITSMINA1', similitud 1.00) — NO CURADA, REVISAR"
-CALLE1_1,Ucodensa,115,AVENIDA PRIMERA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Avenida Primera 115', barra 'PT lod CALLE1_1', similitud 1.00) — NO CURADA, REVISAR"
-EEARC__1,Ucodensa,115,EL RIO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Rio (Bogota) 115', barra 'Elevadora 115', similitud 1.00) — NO CURADA, REVISAR"
-EL_SOL_1,Ucodensa,115,EL SOL,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'El Sol 115', barra 'PT lod EL_SOL_1', similitud 1.00) — NO CURADA, REVISAR"
-GRASAB_1,Ucodensa,115,GRAN SABANA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Gran Sabana 115', barra 'PT lod GRASAB_1', similitud 1.00) — NO CURADA, REVISAR"
-LA_PAZ_1,Ucodensa,115,LA PAZ (BOGOTA),115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Paz 115', barra 'PT lod LA_PAZ_1', similitud 1.00) — NO CURADA, REVISAR"
-LACALER1,Ucodensa,115,CALERA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Calera 115', barra 'PT lod LACALER1', similitud 1.00) — NO CURADA, REVISAR"
-TUNAL_71,Ucodensa,11,TUNAL,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Tunal 220', barra 'Tunal 11.4', similitud 1.00) — NO CURADA, REVISAR"
-TZIPAQU1,Ucodensa,115,TERMOZIPA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Termo Zipa 115', barra 'PT lod TZIPAQU1', similitud 0.95) — NO CURADA, REVISAR"
-PTODRM21,Udrummond,220,RIO CORDOBA,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'R Cordoba 220', barra 'PT Lod PtoDrummond 220', similitud 0.90) — NO CURADA, REVISAR"
-ACERIPR1,Uebsa,115,BELENCITO (APR),115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Belencito 115', barra 'Belencito 115', similitud 1.00) — NO CURADA, REVISAR"
-ARICAUR1,Uebsa,115,ALTO RICAURTE,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Alto Ricaurte 115', barra 'PT lod ARICAUR1', similitud 1.00) — NO CURADA, REVISAR"
-CEMENPR1,Uebsa,115,ARGOS SOGAMOSO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Argos Sogamoso', barra 'Argos Sogamoso 115', similitud 1.00) — NO CURADA, REVISAR"
-SPABLO_1,Uebsa,115,SAN PABLO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Pablo 115', barra 'San Pablo 115', similitud 1.00) — NO CURADA, REVISAR"
-STERES11,Uebsa,115,SANTA TERESA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Santa Teresa 115', barra 'PT Duitama D1', similitud 1.00) — NO CURADA, REVISAR"
-ALTILLA1,Uemsa,115,PUERTO GAITAN,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Puerto Gaitan 115', barra 'PT lod ALTILLA1', similitud 1.00) — NO CURADA, REVISAR"
-CAMPBON1,Uemsa,115,CAMPOBONITO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Campobonito 115', barra 'Campobonito 115', similitud 1.00) — NO CURADA, REVISAR"
-CAMPBON2,Uemsa,115,CAMPOBONITO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Campobonito 115', barra 'Campobonito 115', similitud 1.00) — NO CURADA, REVISAR"
-POCOAE_1,Uemsa,115,OCOA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Ocoa 115', barra 'PT lod POCOAE_1', similitud 1.00) — NO CURADA, REVISAR"
-SNFER__1,Uemsa,115,OCOA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Ocoa 115', barra 'PT lod SNFER__1', similitud 1.00) — NO CURADA, REVISAR"
-AAZUL_11,Uenerca,115,AGUAZUL,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Aguazul 115', barra 'PT lod AAZUL_11', similitud 1.00) — NO CURADA, REVISAR"
-SANLUIS1,Uenerca,115,SAN LUIS,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Luis (Palenque) 115', barra 'San Luis 115', similitud 1.00) — NO CURADA, REVISAR"
-SROSLIA1,Uenerca,115,SANTA ROSALIA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Santa Rosalia 115', barra 'Santa Rosalia 115', similitud 1.00) — NO CURADA, REVISAR"
-PLATO_31,Uguajiram,34,ZAMBRANO,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Zambrano 66', barra 'Zambrano 34.5', similitud 1.00) — NO CURADA, REVISAR"
-PTO_NVO1,Uguajiram,110,PUERTO NUEVO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Puerto Nuevo', barra 'Puerto Nuevo', similitud 1.00) — NO CURADA, REVISAR"
-SAN_JDG1,Uguaviare,115,SAN JOSE DEL GUAVIARE,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Sn Jose del Guaviare 115', barra 'Sn Jose del Guaviare 115', similitud 1.00) — NO CURADA, REVISAR"
-ECOPETR2,UMagdalenaecop,230,COMUNEROS,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Comuneros 220', barra 'Magdalena M 220', similitud 1.00) — NO CURADA, REVISAR"
-ALFERII1,Upacifico,115,ALFEREZ II,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Alferez II 115', barra 'PT lod ALFERII1', similitud 1.00) — NO CURADA, REVISAR"
-B_MALAG1,Upacifico,115,MALAGA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Malaga 115', barra 'Barra1', similitud 1.00) — NO CURADA, REVISAR"
-BUENAVE1,Upacifico,115,TABOR (BVENTURA),115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Tabor (Bventura) 115', barra 'PT lod BUENAVE1', similitud 1.00) — NO CURADA, REVISAR"
-CARTON11,Upacifico,115,GUACHAL,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Guachal 115', barra 'PT Carga Carton', similitud 1.00) — NO CURADA, REVISAR"
-ELPAIL12,Upacifico,115,PAILON,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Pailon 115', barra 'PT lod ELPAILO2', similitud 1.00) — NO CURADA, REVISAR"
-ELPAILO1,Upacifico,115,PAILON,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Pailon 115', barra 'PT lod ELPAILO1', similitud 1.00) — NO CURADA, REVISAR"
-GUACHA31,Upacifico,34,GUACHAL,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Guachal 115', barra 'PT lod GUACHA11', similitud 1.00) — NO CURADA, REVISAR"
-PALMIRA1,Upacifico,115,SANTA BARBARA (PALMIRA),115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Santa Barbara 115', barra 'PT lod PALMIRA1', similitud 1.00) — NO CURADA, REVISAR"
-PROPAL11,Upacifico,115,TERMOYUMBO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Termoyumbo 115', barra 'PT Propal en Termoyumbo 115', similitud 1.00) — NO CURADA, REVISAR"
-DIAMANT1,Upijaos,115,CEMEX,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Cemex 115', barra 'Cemex 115', similitud 1.00) — NO CURADA, REVISAR"
-PICALE31,Upijaos,34,MIROLINDO,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Mirolindo 115', barra 'Picaleña 34.5', similitud 1.00) — NO CURADA, REVISAR"
-SALADO31,Upijaos,34,PAPAYO,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Papayo 115', barra 'Salado 1 34.5 kV', similitud 1.00) — NO CURADA, REVISAR"
-SANFEL31,Upijaos,34,SAN FELIPE,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Felipe 115', barra 'San Felipe B1S1', similitud 1.00) — NO CURADA, REVISAR"
-SANFEL32,Upijaos,34,SAN FELIPE,34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Felipe 115', barra 'San Felipe B1S2', similitud 1.00) — NO CURADA, REVISAR"
-REFICAR2,UReficar,220,BOLIVAR,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Bolivar 220', barra 'PT Bolivar 220-Reficar', similitud 1.00) — NO CURADA, REVISAR"
-SNFER_21,USanfernando,220,LA REFORMA,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'La Reforma 220', barra 'PT Reforma - San Fernado 1 220', similitud 1.00) — NO CURADA, REVISAR"
-BSCONIA1,Usantander,115,BOSCONIA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Bosconia 115', barra 'Bosconia 115', similitud 1.00) — NO CURADA, REVISAR"
-BVISTA_1,Usantander,115,BUENAVISTA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Buena Vista 115', barra 'PT lod BVISTA_1', similitud 0.95) — NO CURADA, REVISAR"
-CONDOR_1,Usantander,115,BARRANCA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Barranca 115', barra 'PT 10', similitud 1.00) — NO CURADA, REVISAR"
-PRCIPAL1,Usantander,14,SANTANDER,13.8,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Santander', barra 'Principal 13.8kV', similitud 1.00) — NO CURADA, REVISAR"
-RFRIO__1,Usantander,115,RIO FRIO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Rio Frio 115', barra 'PT lod RFRIO__1 115', similitud 1.00) — NO CURADA, REVISAR"
-SBNTORR1,Usantander,115,SABANA DE TORRES,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Sabana de Torres 115', barra 'PT lod SBNTORR1', similitud 1.00) — NO CURADA, REVISAR"
-YARIGUI1,Usantander,115,PUERTO WILCHES,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Pto Wilches 115', barra 'PT lod YARIGUI1', similitud 1.00) — NO CURADA, REVISAR"
-NVAMON_1,Usinu,110,NUEVA MONTERIA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Nueva Monteria 110', barra 'lod NVAMON_1', similitud 1.00) — NO CURADA, REVISAR"
-SIEFLOR1,Usinu,110,SIERRA FLOR,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Sierra Flor 110', barra 'PT Sierraflor 110-TF1', similitud 1.00) — NO CURADA, REVISAR"
-TIEALTA1,Usinu,110,TIERRALTA,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Tierralta 110', barra 'Tierralta 110', similitud 1.00) — NO CURADA, REVISAR"
-PAEZ__31,Usur,34,CABAÑA (CAUCA),34.5,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Cabaña (Cauca) 115', barra 'CABAÑA (CAUCA) 1 34.5 kV', similitud 1.00) — NO CURADA, REVISAR"
-SANBERN1,Usur,115,SAN BERNARDINO,115,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'San Bernardino 115', barra 'PT lod SANBERN1', similitud 1.00) — NO CURADA, REVISAR"
-TERNIUM2,UTernium,220,SABANALARGA,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Sabanalarga 220', barra 'PT Ternium', similitud 1.00) — NO CURADA, REVISAR"
-TUBOCAR1,Utubocaribe,220,TERNERA,230,2020-01-01,,"propuesta desde topología PowerFactory (subestación 'Ternera 220', barra 'PT TraTubocaribe', similitud 1.00) — NO CURADA, REVISAR"
+ACESCO_1,Ubarranquilla,110,MALAMBO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+EL_RIO31,Ubarranquilla,34,EL RIO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+EL_RIO32,Ubarranquilla,34,EL RIO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NVABRRQ1,Ubarranquilla,110,NUEVA BARRANQUILLA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VTEJUL21,Ubarranquilla,110,VEINTE DE JULIO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VTEJUL31,Ubarranquilla,110,VEINTE DE JULIO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VTEJULI1,Ubarranquilla,110,VEINTE DE JULIO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SIDELPA1,Ucali,115,SAN LUIS,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAN_ECA1,Ucartagena,110,TERMOCANDELARIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NV_COSP1,Ucartagena,110,NUEVA COSPIQUE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SERENAM1,Ucartagena,66,MANZANILLO,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VILLAES6,Ucartagena,66,VILLA ESTRELLA,66,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SMARTIN1,Ucedenar,115,SAN MARTIN,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TUMACO_1,Ucedenar,115,BUCHELY,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COPEY__3,Ucesar,0,EL COPEY,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera EL COPEY|115
+COPEY__32,Ucesar,0,EL COPEY,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera EL COPEY|115
+ELBANCO1,Ucesar,0,EL BANCO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera EL BANCO|115
+ELPASO31,Ucesar,0,EL PASO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera EL PASO|115
+ELPASO71,Ucesar,0,EL PASO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera EL PASO|115
+LAJAGUA1,Ucesar,0,LA JAGUA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera LA JAGUA|115
+LAJAGUA2,Ucesar,0,LA JAGUA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera LA JAGUA|115
+LALOMA31,Ucesar,0,LA LOMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera LA LOMA|115
+LALOMA71,Ucesar,0,LA LOMA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera LA LOMA|115
+VALLED27,Ucesar,0,VALLEDUPAR,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|230
+VALLEDP7,Ucesar,0,VALLEDUPAR,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|230
+ACASA__1,Uchec,115,LA ENEA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ITSMINA1,Uchoco,115,ISTMINA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CALLE1_1,Ucodensa,115,AVENIDA PRIMERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+EEARC__1,Ucodensa,115,RIO (BOGOTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+EL_SOL_1,Ucodensa,115,EL SOL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GRASAB_1,Ucodensa,115,GRAN SABANA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LA_PAZ_1,Ucodensa,115,LA PAZ (BOGOTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LACALER1,Ucodensa,115,CALERA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TUNAL_71,Ucodensa,11,TUNAL,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera TUNAL|230
+TZIPAQU1,Ucodensa,115,TERMOZIPA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTODRM21,Udrummond,220,RIO CORDOBA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ACERIPR1,Uebsa,115,BELENCITO (APR),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ARICAUR1,Uebsa,115,ALTO RICAURTE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CEMENPR1,Uebsa,115,ARGOS SOGAMOSO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SPABLO_1,Uebsa,115,SAN PABLO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+STERES11,Uebsa,115,SANTA TERESA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ALTILLA1,Uemsa,115,PUERTO GAITAN,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAMPBON1,Uemsa,115,CAMPOBONITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CAMPBON2,Uemsa,115,CAMPOBONITO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+POCOAE_1,Uemsa,115,OCOA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SNFER__1,Uemsa,115,OCOA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+AAZUL_11,Uenerca,115,AGUAZUL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANLUIS1,Uenerca,115,SAN LUIS DE PALENQUE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SROSLIA1,Uenerca,115,SANTA ROSALIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PLATO_31,Uguajiram,34,ZAMBRANO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTO_NVO1,Uguajiram,110,PUERTO NUEVO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SAN_JDG1,Uguaviare,115,SAN JOSE DEL GUAVIARE,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ECOPETR2,UMagdalenaecop,230,COMUNEROS,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ALFERII1,Upacifico,115,ALFEREZ II,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+B_MALAG1,Upacifico,115,MALAGA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BUENAVE1,Upacifico,115,TABOR (BVENTURA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CARTON11,Upacifico,115,GUACHAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ELPAIL12,Upacifico,115,PAILON,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ELPAILO1,Upacifico,115,PAILON,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUACHA31,Upacifico,34,GUACHAL,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera GUACHAL|115
+PALMIRA1,Upacifico,115,SANTA BARBARA (PALMIRA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PROPAL11,Upacifico,115,TERMOYUMBO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DIAMANT1,Upijaos,115,CEMEX,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PICALE31,Upijaos,34,MIROLINDO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SALADO31,Upijaos,34,PAPAYO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANFEL31,Upijaos,34,SAN FELIPE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANFEL32,Upijaos,34,SAN FELIPE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+REFICAR2,UReficar,220,BOLIVAR,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SNFER_21,USanfernando,220,LA REFORMA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BSCONIA1,Usantander,115,BOSCONIA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+BVISTA_1,Usantander,115,BUENAVISTA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CONDOR_1,Usantander,115,BARRANCA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PRCIPAL1,Usantander,14,PRINCIPAL (BUCARAMANGA),14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RFRIO__1,Usantander,115,RIO FRIO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SBNTORR1,Usantander,115,SABANA DE TORRES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+YARIGUI1,Usantander,115,PUERTO WILCHES,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NVAMON_1,Usinu,110,NUEVA MONTERIA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SIEFLOR1,Usinu,110,SIERRA FLOR,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TIEALTA1,Usinu,110,TIERRALTA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAEZ__31,Usur,34,CABAÑA (CAUCA),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANBERN1,Usur,115,SAN BERNARDINO,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TERNIUM2,UTernium,220,SABANALARGA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TUBOCAR1,Utubocaribe,220,TERNERA,220,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLORENC1,Uandaki,115,CENTRO (FLORENCIA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLORENC2,Uandaki,115,CENTRO (FLORENCIA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NSROSA11,Uantioquia,110,NUEVA SANTA ROSA,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PTO_INM1,Uantioquia,110,PUERTO NARE,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); alimentada desde (radial: «Pto Inmarco 110» no está en PARATEC)
+P_BLANC1,Uantioquia,110,PIEDRAS BLANCAS,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+RIOMAR_3,Ubarranquilla,34,LAS FLORES,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SURCAL11,Ucali,115,SUR (CALI),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+IPIALES3,Ucedenar,34,PANAMERICANA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CUCUTA_1,Ucens,115,BELEN (CUCUTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CUCUTA_2,Ucens,34,BELEN (CUCUTA),34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+URE1___1,Ucerromatoso,110,CERROMATOSO,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CODZZI_1,Ucesar,0,CODAZZI (CESAR),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera CODAZZI (CESAR)|115
+PAZ___31,Ucesar,0,VALLEDUPAR,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|230
+PAZ___71,Ucesar,0,VALLEDUPAR,230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|230
+SALGUER3,Ucesar,0,VALLEDUPAR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|115
+VALJES31,Ucesar,0,VALLEDUPAR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera VALLEDUPAR|115
+BCAFE__1,Uchec,115,INSULA (CHINCHINA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+MANZA_C1,Uchec,115,MANZANARES (CALDAS),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VICTO_C1,Uchec,115,VICTORIA (CALDAS),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+FLORCOD1,Ucodensa,115,FLORIDA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+LEOAGA_1,Ucodensa,115,GRAN SABANA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); alimentada desde (radial: «TLeona 115» no está en PARATEC)
+MUNA3__1,Ucodensa,115,MUÑA III,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PAVCO__1,Ucodensa,115,BOSA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); alimentada desde (radial: «Pavco 115» no está en PARATEC)
+SANMTO71,Ucodensa,11,SAN MATEO (BOGOTA),230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera SAN MATEO (BOGOTA)|230
+SANMTO72,Ucodensa,11,SAN MATEO (BOGOTA),230,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026); en la barra de frontera SAN MATEO (BOGOTA)|230
+SNCA_EE1,Ucodensa,115,SAN CARLOS (BOGOTA),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+DRUMMO11,UdrummondLoma,110,LA LOMA,110,2020-01-01,,curada 2026-10-31: PF alimenta la carga de Drummond desde La Loma; Drummond no está en PARATEC
+POPAYA12,Uemec,115,PRINCIPAL (POPAYAN),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CANLARA3,Uenelar,34,CAÑO LIMON,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANJUAN1,Uguajiram,110,SAN JUAN,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+TFUNDAC1,Uguajiram,110,FUNDACION,110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CANLOXY3,Uoxyint,34,CAÑO LIMON,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+NEIVA__1,Upacande,34,EL BOTE,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SESUR__1,Upacande,115,SUR,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PALSECA31,Upacifico,34,PALMASECA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+PALSECA32,Upacifico,34,PALMASECA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+GUAMO_31,Upijaos,34,NUEVA ESPINAL,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+VENTAN31,Upijaos,34,GUALANDAY,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+CERROMT3,Uplaneta,34,CERROMATOSO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+M_LIBAN3,Uplaneta,34,CERROMATOSO,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+COROCO21,Urubiales,220,CHIVOR,220,2020-01-01,,curada 2026-10-31: PF conecta la carga de Rubiales a la bahía de Chivor 220 de la línea que la alimenta; Rubiales no está en PARATEC
+JAGUEY21,Urubiales,220,CHIVOR,220,2020-01-01,,curada 2026-10-31: PF conecta la carga de Rubiales a la bahía de Chivor 220 de la línea que la alimenta; Rubiales no está en PARATEC
+BUCMANG1,Usantander,115,BUCARAMANGA,115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+ELCARM71,Usinu,14,EL CARMEN,14,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+SANMARC1,Usinu,110,SAN MARCOS (SUCRE),110,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+STALUC31,Usinu,34,MONTERIA,34,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)
+POPAYA11,Usur,115,PRINCIPAL (POPAYAN),115,2020-01-01,,curada 2026-10-31: subestación de la carga homónima en el modelo de red de PowerFactory de XM (IPOEL 2026)

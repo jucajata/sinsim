@@ -128,7 +128,7 @@ con vigencia (FR-011, research R7):
 | Tabla | Relaciona | Estado en el snapshot incluido |
 |---|---|---|
 | `recursos_despacho.csv` | Recurso del `dDEC` → planta o unidad de PARATEC | Propuesta heurística por nombre normalizado; **no curada** (T064) |
-| `nodos_demanda.csv` | `NODO` del `PRON_BARRA` → subestación y nivel de PARATEC | Propuesta heurística; **no curada** (T064) |
+| `nodos_demanda.csv` | `NODO` del `PRON_BARRA` → subestación y nivel de PARATEC | Curada el 2026-10-31 (528 de 543 filas, fuente en `note`); 15 filas siguen "NO CURADA" |
 | `subestaciones_alias.csv` | Nombres distintos de la misma subestación entre entidades de PARATEC (por ejemplo `MONTERIA (ISA)` ≡ `NUEVA MONTERIA`) | Curada a mano durante la implementación |
 | `coordenadas_subestaciones.csv` | Latitud y longitud WGS84 de subestaciones que PARATEC publica sin coordenadas (por ejemplo Pimampiro, en Ecuador); solo completa, nunca reemplaza | Curada a mano, con la fuente de cada fila en `note` |
 
