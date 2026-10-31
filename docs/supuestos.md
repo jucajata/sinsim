@@ -327,8 +327,9 @@ queda listada en `generators_without_step_up` para curar la tabla. Origen: decis
 
 ## Lo que NO es un supuesto sino una limitación conocida
 
-- Las tablas `recursos_despacho.csv` y `nodos_demanda.csv` del snapshot incluido son propuestas
-  heurísticas **sin curar** (tarea T064). Mientras no se curen, parte de la demanda queda sin
-  ubicar y el balance lo muestra.
+- La tabla `recursos_despacho.csv` del snapshot incluido es una propuesta heurística **sin curar**
+  (tarea T064). `nodos_demanda.csv` quedó curada el 2026-10-31 en 528 de sus 543 filas (la
+  fuente de cada una está en `note`); las 15 restantes siguen marcadas "NO CURADA". Lo que no se
+  pudo ubicar aparece en el balance.
 - El resultado describe el **despacho programado**, nunca el estado real del SIN (R-10). Cada
   caso lleva la advertencia `PROGRAM_NOT_REAL_STATE`.
