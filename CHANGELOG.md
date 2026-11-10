@@ -8,6 +8,42 @@ proyecto está en desarrollo y el contenido de un caso puede cambiar entre versi
 Cada caso registra en su traza la versión de sinsim con que se calculó: para reproducir un
 resultado, usa el código de esa versión.
 
+## [0.7.2] - 2026-11-10
+
+### Corregido
+
+- Propuesta de `data/equivalencias/elevadores.csv`: el número de la unidad se buscaba también en
+  la placa del transformador, y el «8» de «13.8 kV» casaba CHIVOR 8 (y muchas más) con el
+  elevador G1; se apilaban varias unidades en un mismo transformador y una marca G<n> de otra
+  planta bastaba para casar (CUCUANA con un elevador solar). Ahora la marca se busca sin la placa,
+  las series numeradas usan el último dígito (GUADALUPE 31 → G1), G12 de tres devanados sirve a las
+  unidades 1 y 2, cada transformador recibe unidades mientras sus MVA alcancen, una turbina de vapor
+  no toma el elevador de una de gas, y la alta del elevador se acepta a ±12 % de la clase de la
+  barra (127 kV en una barra de 115 kV). Nuevo método `marca+tension` para los elevadores que
+  PARATEC nombra por la subestación («ANTIOQUIA G1» para ITUANGO 1).
+- `elevadores.csv` curada: 183 filas, 149 marcadas `curated=true` porque PARATEC clasifica el
+  transformador como de uso «Generación», su operador es el de la unidad y el nombre o la marca,
+  las tensiones y la capacidad son coherentes; las otras 34 explican en `note` qué falta. Se
+  quitaron 17 filas que apuntaban a transformadores de distribución: esas unidades entran sin
+  elevador (S31). Cambia el resultado del cortocircuito: en SAN CARLOS 230 kV la Ikss pasa de
+  38,4 kA a 44,0 kA, y frente a los reportes de cortocircuito de la UPME (año 2026, 11 áreas), de
+  las 176 barras que cambian el 94 % queda más cerca. Cambia el `case_id` de todos
+  los casos.
+
+### Cambiado
+
+- La interfaz propone por defecto la fecha de mañana desde las 15:00 de Colombia, cuando XM ya
+  suele haber publicado el despacho programado de mañana (lo publicó entre las 13:11 y las 14:37
+  del 2026-10-17 al 2026-11-09), y la de hoy antes de esa hora; si la fecha no está descargada,
+  ofrece descargarla. Antes proponía la última fecha ya descargada. La hora y la zona horaria van
+  en `config/defaults.toml` (`scraper.dispatch_published_at`, `scraper.timezone`) y la interfaz
+  las lee de `GET /api/snapshots/fecha-sugerida`.
+
+### Añadido
+
+- Comando de mantenimiento `sinsim equivalencias revisar-elevadores`: chequea cada fila de
+  `elevadores.csv` contra PARATEC y lista las que hay que revisar. Constitución 1.5.0.
+
 ## [0.7.1] - 2026-10-31
 
 ### Corregido
@@ -172,6 +208,7 @@ programado y el pronóstico de demanda de XM, y la interfaz web para ejecutarlo.
 
 - Snapshots de PARATEC del 2026-10-09, 2026-10-19, 2026-10-20 y 2026-10-21.
 
+[0.7.2]: https://github.com/jucajata/sinsim/releases/tag/v0.7.2
 [0.7.1]: https://github.com/jucajata/sinsim/releases/tag/v0.7.1
 [0.7.0]: https://github.com/jucajata/sinsim/releases/tag/v0.7.0
 [0.6.2]: https://github.com/jucajata/sinsim/releases/tag/v0.6.2

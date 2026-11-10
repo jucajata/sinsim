@@ -84,6 +84,12 @@ distributed_slack = true
 min_interval_s = 1.0
 timeout_s = 60.0
 user_agent = "sinsim/{version} (+https://github.com/jucajata/sinsim)"
+# Fecha que la interfaz propone por defecto (FR-039): mañana desde esta hora de Colombia, hoy antes.
+# XM publicó el despacho programado dDEC<D> la víspera entre las 13:11 y las 14:37 del 2026-10-17
+# al 2026-11-09 (fechaModificacion del listado de archivos del portal de XM); el pronóstico de
+# demanda sale antes, en la mañana. 15:00 deja margen sobre el más tardío.
+dispatch_published_at = "15:00"
+timezone = "America/Bogota"
 
 [attribution]
 text = "Información proporcionada por XM S.A. E.S.P. – PARATEC y archivos públicos de despacho"

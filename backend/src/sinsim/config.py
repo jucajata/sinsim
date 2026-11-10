@@ -128,6 +128,8 @@ class ScraperCfg(_Model):
     min_interval_s: float
     timeout_s: float
     user_agent: str
+    dispatch_published_at: str = "15:00"
+    timezone: str = "America/Bogota"
 
 
 class AttributionCfg(_Model):

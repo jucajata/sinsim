@@ -18,6 +18,13 @@ export interface SnapshotSummary {
   intact: boolean;
 }
 
+/** Fecha que se propone por defecto: mañana desde la hora en que XM suele publicar el despacho (FR-039). */
+export interface SuggestedDate {
+  date: string;
+  published_at: string;
+  timezone: string;
+}
+
 export type ScrapeStatus = "en_cola" | "descargando" | "listo" | "error";
 export type ScrapeStep = "en_cola" | "paratec" | "despacho_y_demanda" | "normalizacion" | "listo" | "error";
 

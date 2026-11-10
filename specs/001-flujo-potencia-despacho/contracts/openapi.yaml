@@ -21,6 +21,15 @@ paths:
               schema:
                 type: array
                 items: {$ref: "#/components/schemas/SnapshotSummary"}
+  /snapshots/fecha-sugerida:
+    get:
+      summary: Fecha que la interfaz propone por defecto (FR-039)
+      description: >
+        Mañana si en la zona horaria configurada ya pasó la hora a la que XM suele publicar el
+        despacho programado de mañana (`scraper.dispatch_published_at`, 15:00 en America/Bogota);
+        hoy si todavía no. No consulta a XM: es una regla de reloj.
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {$ref: "#/components/schemas/SuggestedDate"}}}}
   /snapshots/{fecha}/descarga:
     post:
       summary: Inicia la descarga de PARATEC, despacho y demanda de una fecha (FR-038)
@@ -171,6 +180,13 @@ components:
         has_dispatch: {type: boolean}
         has_demand: {type: boolean}
         intact: {type: boolean, description: Los checksums coinciden con el manifiesto (FR-006)}
+    SuggestedDate:
+      type: object
+      required: [date, published_at, timezone]
+      properties:
+        date: {type: string, format: date}
+        published_at: {type: string, description: "Hora local HH:MM desde la que se propone mañana"}
+        timezone: {type: string, description: Zona horaria IANA de esa hora}
     ScrapeJob:
       type: object
       description: Descarga de una fecha pedida desde la interfaz (FR-038). Vive en memoria mientras corre la API; no se persiste.

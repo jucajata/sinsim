@@ -26,7 +26,7 @@ from sinsim.bootstrap import AppContext, build_context
 from sinsim.domain.dates import parse_allowed
 from sinsim.domain.entities import N1Analysis, Run, ShortCircuitAnalysis, StudyCase, Trace
 from sinsim.domain.errors import DomainError, ExitCode
-from sinsim.domain.shortcircuit import propose_step_ups
+from sinsim.domain.shortcircuit import propose_step_ups, review_step_ups
 from sinsim.observability import log_event, new_trace_id
 from sinsim.services import n1 as n1_service
 from sinsim.services import sc as sc_service
@@ -522,6 +522,65 @@ def equivalencias_elevadores(
             f"({', '.join(f'{k}: {v}' for k, v in sorted(by_method.items()))}) → {out}"
         )
         typer.echo("Revisa y marca curated=true fila por fila antes de confiar en la propuesta.")
+    except DomainError as exc:
+        _fail(exc)
+        return
+    raise typer.Exit(code=int(ExitCode.OK))
+
+
+@equivalencias_app.command("revisar-elevadores")
+def equivalencias_revisar_elevadores(
+    fecha: Annotated[
+        str, typer.Option("--fecha", help="Fecha del snapshot de PARATEC (YYYY-MM-DD).")
+    ],
+    salida: Annotated[
+        Path | None,
+        typer.Option(
+            "--salida", help="CSV con el resultado de cada fila; por defecto no se escribe."
+        ),
+    ] = None,
+) -> None:
+    """Chequea la coherencia de `elevadores.csv` contra PARATEC y lista lo que hay que revisar."""
+    try:
+        snapshot_date = parse_date(fecha)
+        ctx = _context()
+        snapshot = snapshot_service.load_verified(ctx.snapshots, snapshot_date)
+        tables, _ = apply_aliases(
+            snapshot.tables, ctx.equivalences.substation_aliases(snapshot_date)
+        )
+        checks = review_step_ups(
+            ctx.equivalences.step_ups,
+            tables.generators,
+            tables.trafos2w,
+            tables.trafos3w,
+            aliases={},
+            class_of=class_kv,
+        )
+        if salida is not None:
+            salida.parent.mkdir(parents=True, exist_ok=True)
+            with salida.open("w", encoding="utf-8", newline="") as fh:
+                writer = csv.writer(fh, lineterminator="\n")
+                writer.writerow(["unit_id", "trafo_id", "method", "curated", "estado", "motivos"])
+                for c in checks:
+                    writer.writerow(
+                        [
+                            c.unit_id,
+                            c.trafo_id,
+                            c.method,
+                            str(c.curated).lower(),
+                            "ok" if c.ok else "revisar",
+                            " | ".join(c.issues),
+                        ]
+                    )
+        pending = [c for c in checks if not c.ok]
+        typer.echo(
+            f"{len(checks) - len(pending)} de {len(checks)} filas coherentes con PARATEC; "
+            f"{len(pending)} por revisar" + (f" → {salida}" if salida is not None else "")
+        )
+        for c in pending[:20]:
+            typer.echo(f"  {c.unit_id} → {c.trafo_id}: {' | '.join(c.issues)}")
+        if len(pending) > 20:
+            typer.echo(f"  … y {len(pending) - 20} más (usa --salida para la lista completa)")
     except DomainError as exc:
         _fail(exc)
         return

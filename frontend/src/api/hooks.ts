@@ -7,6 +7,11 @@ export function useSnapshots() {
   return useQuery({ queryKey: ["snapshots"], queryFn: api.snapshots });
 }
 
+/** Fecha que se propone por defecto (FR-039); sin reintentos: si falla, se usa la última disponible. */
+export function useSuggestedDate() {
+  return useQuery({ queryKey: ["fecha-sugerida"], queryFn: api.suggestedDate, retry: false, staleTime: 5 * 60_000 });
+}
+
 /** Inicia la descarga de una fecha (FR-038). */
 export function useStartScrape() {
   return useMutation({ mutationFn: (date: string) => api.startScrape(date) });

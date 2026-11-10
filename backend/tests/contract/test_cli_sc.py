@@ -103,5 +103,28 @@ def test_equivalencias_elevadores_writes_a_proposal(ctx, tmp_path: Path):
         "note",
     }
     assert {r["curated"] for r in rows} == {"false"}
-    assert {r["method"] for r in rows} <= {"nombre+tension", "nombre", "tension"}
+    assert {r["method"] for r in rows} <= {"nombre+tension", "marca+tension", "nombre", "tension"}
     assert "unidades síncronas con elevador propuesto" in result.output
+
+
+def test_equivalencias_revisar_elevadores_reports_each_row(ctx, tmp_path: Path):
+    out = tmp_path / "revision.csv"
+    result = runner.invoke(
+        cli.app,
+        ["equivalencias", "revisar-elevadores", "--fecha", "2026-10-20", "--salida", str(out)],
+    )
+    assert result.exit_code == 0, result.output
+    with out.open(encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        rows = list(reader)
+    assert set(reader.fieldnames or []) == {
+        "unit_id",
+        "trafo_id",
+        "method",
+        "curated",
+        "estado",
+        "motivos",
+    }
+    assert {r["estado"] for r in rows} <= {"ok", "revisar"}
+    assert all((r["estado"] == "ok") == (r["motivos"] == "") for r in rows)
+    assert "filas coherentes con PARATEC" in result.output

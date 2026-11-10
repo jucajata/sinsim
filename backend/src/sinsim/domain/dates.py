@@ -6,7 +6,7 @@ siguiente al actual (D+1). Cualquier fecha posterior es `INVALID_DATE`.
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta, tzinfo
 
 from sinsim.domain.errors import DomainError
 
@@ -34,3 +34,13 @@ def parse_allowed(text: str, today: date | None = None) -> date:
     except ValueError as exc:
         raise DomainError("INVALID_DATE", f"fecha {text!r}") from exc
     return ensure_allowed(value, today)
+
+
+def suggested_date(now: datetime, published_at: time, tz: tzinfo) -> date:
+    """Fecha que se propone por defecto.
+
+    Mañana si en `tz` ya pasó la hora a la que XM suele publicar el despacho programado de mañana
+    (`published_at`); hoy si todavía no.
+    """
+    local = now.astimezone(tz)
+    return local.date() + timedelta(days=1) if local.time() >= published_at else local.date()
