@@ -8,6 +8,7 @@ import type {
   ScrapeJob,
   ShortCircuitAnalysis,
   SnapshotSummary,
+  SuggestedDate,
   StudyCase,
   Topology,
 } from "./types";
@@ -50,6 +51,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 
 export const api = {
   snapshots: () => request<SnapshotSummary[]>("/snapshots"),
+  suggestedDate: () => request<SuggestedDate>("/snapshots/fecha-sugerida"),
   startScrape: (date: string) => request<ScrapeJob>(`/snapshots/${date}/descarga`, { method: "POST" }),
   scrapeJob: (jobId: string) => request<ScrapeJob>(`/snapshots/descargas/${jobId}`),
   createCase: (body: CaseRequest) =>

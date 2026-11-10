@@ -2,7 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
 import { ProblemError } from "../../api/client";
-import { useScrapeJob, useSnapshots, useStartScrape } from "../../api/hooks";
+import { useScrapeJob, useSnapshots, useStartScrape, useSuggestedDate } from "../../api/hooks";
 import type { FlowType } from "../../api/types";
 import { STEP_LABELS, availabilityOf, incompleteReason, latestAllowed, type Availability } from "./availability";
 
@@ -42,6 +42,7 @@ function errorMessage(e: unknown): string {
 export function RunPicker({ busy, onSubmit }: Props): JSX.Element {
   const queryClient = useQueryClient();
   const snapshots = useSnapshots();
+  const suggested = useSuggestedDate();
   const startScrape = useStartScrape();
   const [date, setDate] = useState<string>("");
   const [period, setPeriod] = useState<number>(19);
@@ -52,7 +53,9 @@ export function RunPicker({ busy, onSubmit }: Props): JSX.Element {
   const today = new Date();
   const rows = snapshots.data ?? [];
   const selectable = rows.filter((s) => incompleteReason(s) === null);
-  const effectiveDate = date || selectable[selectable.length - 1]?.date || "";
+  // Por defecto, la fecha sugerida (mañana desde que XM suele publicar el despacho, hoy antes); si
+  // la API no la da, la última fecha ya descargada y completa.
+  const effectiveDate = date || suggested.data?.date || selectable[selectable.length - 1]?.date || "";
   const availability = availabilityOf(effectiveDate, rows, today);
   const periodValid = Number.isInteger(period) && period >= 1 && period <= 24;
   const scraping = startScrape.isPending || (job.data !== undefined && job.data.status !== "listo" && job.data.status !== "error");

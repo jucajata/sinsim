@@ -127,3 +127,14 @@ def test_date_rules_and_unknown_job(fake: FakeXm, client):
     r = api.post(f"/api/snapshots/{tomorrow}/descarga")
     assert r.status_code == 202
     assert wait_done(api, r.json()["job_id"])["error"]["code"] == "XM_FILE_NOT_FOUND"
+
+
+def test_suggested_date_follows_the_dispatch_publication_hour(client):
+    api, _ = client
+    r = api.get("/api/snapshots/fecha-sugerida")
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert set(body) == {"date", "published_at", "timezone"}
+    assert body["published_at"] == "15:00" and body["timezone"] == "America/Bogota"
+    today = date.today()
+    assert body["date"] in (today.isoformat(), (today + timedelta(days=1)).isoformat())

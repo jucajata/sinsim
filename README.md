@@ -72,6 +72,7 @@ cambios que vienen de un origen que no es local.
 | `uv run --project backend sinsim n1 --fecha YYYY-MM-DD --periodo N [--fecha-despacho F] [--salida DIR] [--json]` | Corre el flujo AC base y el análisis de contingencias N-1; escribe los cuatro listados en CSV |
 | `uv run --project backend sinsim sc --fecha YYYY-MM-DD --periodo N [--fecha-despacho F] [--barra NOMBRE ...] [--salida DIR] [--json]` | Cortocircuito trifásico máximo IEC 60909 por barra (Ikss, Sk, Rk, Xk, X/R); escribe tres CSV y metadatos, o solo JSON |
 | `uv run --project backend sinsim equivalencias elevadores --fecha YYYY-MM-DD [--salida RUTA]` | Mantenimiento: propone `data/equivalencias/elevadores.csv` (unidad ↔ transformador elevador) para curarlo a mano |
+| `uv run --project backend sinsim equivalencias revisar-elevadores --fecha YYYY-MM-DD [--salida RUTA]` | Mantenimiento: chequea cada fila de `elevadores.csv` contra PARATEC y lista las que hay que revisar |
 | `uv run --project backend sinsim scrape --fecha YYYY-MM-DD [--out data/paratec/]` | Descarga PARATEC, `dDEC` y `PRON_BARRA` de esa fecha y crea un snapshot nuevo. Se admite hasta mañana (XM publica el despacho la víspera). La interfaz hace lo mismo desde el campo de fecha |
 | `make dev` | Levanta la API (`127.0.0.1:8000`) y la interfaz (`127.0.0.1:5173`) |
 | `sinsim serve [--puerto N] [--no-abrir]` | Levanta la API y la interfaz construida en `127.0.0.1` y abre el navegador |
@@ -143,8 +144,11 @@ uv run --project backend sinsim sc --fecha 2026-10-20 --periodo 19 --barra "SABA
 La primera forma escribe `cc_barras.csv`, `cc_fuentes.csv`, `cc_calidad.csv` y `metadatos.json`;
 la segunda imprime un único JSON con esa barra, su calidad y sus supuestos, pensado para que otra
 herramienta lo consuma. Limitaciones de esta versión: solo falla trifásica (la monofásica necesita
-impedancias de secuencia cero que PARATEC no publica), sin corriente de pico, y la propuesta de
-`elevadores.csv` no está curada (supuestos S26 a S31 en [docs/supuestos.md](docs/supuestos.md)).
+impedancias de secuencia cero que PARATEC no publica) y sin corriente de pico (supuestos S26 a S31
+en [docs/supuestos.md](docs/supuestos.md)). En `elevadores.csv`, 149 de 183 filas están curadas
+con lo que publica PARATEC (transformador de uso «Generación», mismo operador que la unidad,
+nombre o marca, tensiones y capacidad coherentes); las demás traen en `note` lo que falta
+revisar, y `sinsim equivalencias revisar-elevadores` las lista.
 
 ## Cómo se construye el caso
 

@@ -31,3 +31,32 @@ def test_malformed_date_is_invalid():
     with pytest.raises(DomainError) as exc:
         parse_allowed("2026-13-01", TODAY)
     assert exc.value.code == "INVALID_DATE"
+
+
+def test_suggested_date_is_tomorrow_once_the_dispatch_is_usually_published():
+    from datetime import datetime, time
+    from zoneinfo import ZoneInfo
+
+    from sinsim.domain.dates import suggested_date
+
+    bogota = ZoneInfo("America/Bogota")
+    published = time(15, 0)
+    assert suggested_date(datetime(2026, 11, 9, 14, 59, tzinfo=bogota), published, bogota) == date(
+        2026, 11, 9
+    )
+    assert suggested_date(datetime(2026, 11, 9, 15, 0, tzinfo=bogota), published, bogota) == date(
+        2026, 11, 10
+    )
+    # La hora que cuenta es la de Colombia, aunque el reloj del equipo esté en otra zona:
+    # 21:30 UTC son las 16:30 en Bogotá, ya publicado; 19:30 UTC son las 14:30, todavía no.
+    utc = ZoneInfo("UTC")
+    assert suggested_date(datetime(2026, 11, 9, 21, 30, tzinfo=utc), published, bogota) == date(
+        2026, 11, 10
+    )
+    assert suggested_date(datetime(2026, 11, 9, 19, 30, tzinfo=utc), published, bogota) == date(
+        2026, 11, 9
+    )
+    # Pasada la medianoche en UTC sigue siendo el día anterior en Bogotá.
+    assert suggested_date(datetime(2026, 11, 10, 2, 0, tzinfo=utc), published, bogota) == date(
+        2026, 11, 10
+    )

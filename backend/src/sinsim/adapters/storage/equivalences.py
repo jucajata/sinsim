@@ -32,7 +32,7 @@ ALIASES_FILE = "subestaciones_alias.csv"
 COORDS_FILE = "coordenadas_subestaciones.csv"
 STEP_UPS_FILE = "elevadores.csv"
 RESOURCE_KINDS = {"plant", "unit", "intl_link"}
-STEP_UP_METHODS = {"nombre+tension", "nombre", "tension", "manual"}
+STEP_UP_METHODS = {"nombre+tension", "marca+tension", "nombre", "tension", "manual"}
 STEP_UP_COLUMNS = ("unit_id", "trafo_id", "method", "curated", "valid_from", "valid_to", "note")
 
 

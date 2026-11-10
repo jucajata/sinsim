@@ -2,7 +2,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
 import { ProblemError } from "../../api/client";
-import type { Problem, ScrapeJob, SnapshotSummary } from "../../api/types";
+import type { Problem, ScrapeJob, SnapshotSummary, SuggestedDate } from "../../api/types";
+import { isoDate } from "./availability";
 import { RunPicker } from "./RunPicker";
 
 const ok: SnapshotSummary = { date: "2026-10-20", has_paratec: true, has_dispatch: true, has_demand: true, intact: true };
@@ -12,6 +13,7 @@ const mocks = vi.hoisted(() => ({
   snapshots: vi.fn<() => Promise<SnapshotSummary[]>>(),
   startScrape: vi.fn<(date: string) => Promise<ScrapeJob>>(),
   scrapeJob: vi.fn<(id: string) => Promise<ScrapeJob>>(),
+  suggestedDate: vi.fn<() => Promise<SuggestedDate>>(),
 }));
 
 vi.mock("../../api/client", async (importOriginal) => {
@@ -52,6 +54,9 @@ beforeEach(() => {
   mocks.snapshots.mockReset();
   mocks.startScrape.mockReset();
   mocks.scrapeJob.mockReset();
+  mocks.suggestedDate.mockReset();
+  // Sin fecha sugerida (API caída): se usa la última fecha disponible.
+  mocks.suggestedDate.mockRejectedValue(new Error("sin red"));
 });
 
 describe("RunPicker", () => {
@@ -63,6 +68,17 @@ describe("RunPicker", () => {
     expect(screen.getByTestId("run-button")).toBeEnabled();
     fireEvent.click(screen.getByTestId("run-button"));
     expect(onSubmit).toHaveBeenCalledWith({ snapshotDate: "2026-10-20", period: 19, flowType: "ac" });
+  });
+
+  it("propone por defecto la fecha sugerida aunque no esté descargada y ofrece descargarla (FR-039)", async () => {
+    const tomorrow = isoDate(new Date(), 1);
+    mocks.snapshots.mockResolvedValue([ok]);
+    mocks.suggestedDate.mockResolvedValue({ date: tomorrow, published_at: "15:00", timezone: "America/Bogota" });
+    renderPicker();
+    await waitFor(() => expect(screen.getByTestId("snapshot-date")).toHaveValue(tomorrow));
+    expect(screen.getByTestId("snapshot-status")).toHaveAttribute("data-kind", "missing");
+    expect(screen.getByTestId("scrape-button")).toBeVisible();
+    expect(screen.getByTestId("run-button")).toBeDisabled();
   });
 
   it("ofrece descargar una fecha sin snapshot y la deja lista al terminar (FR-038)", async () => {

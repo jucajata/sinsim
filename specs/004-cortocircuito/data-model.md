@@ -11,7 +11,7 @@ reutilizan `Trace` y `ProblemInfo`.
 |---|---|
 | `ScSourceKind` | `sincrona`, `convertidor` |
 | `ScMethod` (origen de un parámetro) | `publicado`, `mediana`, `relacion_iec`, `derivado_p_cosphi`, `tension_elevador`, `tension_barra` |
-| `StepUpMethod` | `nombre+tension`, `nombre`, `tension`, `manual` |
+| `StepUpMethod` | `nombre+tension`, `marca+tension`, `nombre`, `tension`, `manual` |
 
 ## 2. Columnas nuevas de la tabla normalizada `generators`
 

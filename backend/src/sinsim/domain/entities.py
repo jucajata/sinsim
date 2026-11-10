@@ -108,6 +108,14 @@ class SnapshotSummary(Frozen):
     intact: bool
 
 
+class SuggestedDate(Frozen):
+    """`GET /api/snapshots/fecha-sugerida`: fecha que la interfaz propone por defecto (FR-039)."""
+
+    date: date
+    published_at: str
+    timezone: str
+
+
 @dataclass(frozen=True)
 class SnapshotTables:
     """Tablas normalizadas de un snapshot (data-model.md §2)."""
@@ -524,7 +532,7 @@ ScSourceKind = Literal["sincrona", "convertidor"]
 ScMethod = Literal[
     "publicado", "mediana", "relacion_iec", "derivado_p_cosphi", "tension_elevador", "tension_barra"
 ]
-StepUpMethod = Literal["nombre+tension", "nombre", "tension", "manual"]
+StepUpMethod = Literal["nombre+tension", "marca+tension", "nombre", "tension", "manual"]
 
 
 class StepUpEquivalence(Frozen):

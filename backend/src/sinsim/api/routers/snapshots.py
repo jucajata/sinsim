@@ -6,13 +6,14 @@ La descarga corre en el servidor local con la misma lógica que `sinsim scrape`;
 
 from __future__ import annotations
 
-from datetime import date
+from datetime import date, datetime, time
+from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Request, status
 
 from sinsim.bootstrap import AppContext
-from sinsim.domain.dates import ensure_allowed
-from sinsim.domain.entities import ScrapeJob, SnapshotSummary
+from sinsim.domain.dates import ensure_allowed, suggested_date
+from sinsim.domain.entities import ScrapeJob, SnapshotSummary, SuggestedDate
 from sinsim.services import snapshots as snapshot_service
 from sinsim.services.scrape import scrape_snapshot
 
@@ -29,6 +30,19 @@ def ctx_of(request: Request) -> AppContext:
 def list_snapshots(request: Request) -> list[SnapshotSummary]:
     """Lista las fechas disponibles y qué datos tiene cada una."""
     return snapshot_service.list_snapshots(ctx_of(request).snapshots)
+
+
+@router.get("/snapshots/fecha-sugerida", response_model=SuggestedDate)
+def get_suggested_date(request: Request) -> SuggestedDate:
+    """Fecha por defecto: mañana desde la hora en que XM suele publicar el despacho, hoy antes."""
+    cfg = ctx_of(request).cfg.config.scraper
+    tz = ZoneInfo(cfg.timezone)
+    published_at = time.fromisoformat(cfg.dispatch_published_at)
+    return SuggestedDate(
+        date=suggested_date(datetime.now(tz), published_at, tz),
+        published_at=cfg.dispatch_published_at,
+        timezone=cfg.timezone,
+    )
 
 
 @router.post(

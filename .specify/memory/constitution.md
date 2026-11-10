@@ -1,6 +1,12 @@
 <!--
 Sync Impact Report
-- Versión: 1.3.0 → 1.4.0 (MINOR, 2026-10-25). Se añade el comando público `sinsim sc`, que
+- Versión: 1.4.0 → 1.5.0 (MINOR, 2026-11-09). Se añade el comando de mantenimiento
+  `sinsim equivalencias revisar-elevadores`, que chequea `data/equivalencias/elevadores.csv`
+  contra PARATEC para priorizar su curación (decisión del usuario del 2026-11-09). No se elimina
+  ni se redefine ningún principio.
+  - IV «Comandos públicos»: nueva entrada `uv run sinsim equivalencias revisar-elevadores …`.
+  - Plantillas (.specify/templates/): revisadas; no requieren cambios.
+- Enmienda anterior, 1.3.0 → 1.4.0 (MINOR, 2026-10-25). Se añade el comando público `sinsim sc`, que
   calcula el cortocircuito trifásico IEC 60909 ya previsto en I «Capacidades en alcance»
   (specs/004-cortocircuito/; decisión del usuario del 2026-10-25), y el comando de
   mantenimiento `sinsim equivalencias elevadores`. No se elimina ni se redefine ningún principio.
@@ -230,6 +236,9 @@ origen verificables; cualquier valor silencioso o inventado invalida el análisi
 - `uv run sinsim equivalencias elevadores --fecha YYYY-MM-DD [--salida RUTA]` — comando de
   mantenimiento del repositorio: propone la tabla `data/equivalencias/elevadores.csv`
   (unidad ↔ transformador elevador) a partir de un snapshot, para curarla a mano.
+- `uv run sinsim equivalencias revisar-elevadores --fecha YYYY-MM-DD [--salida RUTA]` — comando
+  de mantenimiento del repositorio: chequea cada fila de `elevadores.csv` contra PARATEC (nombre o
+  marca de la unidad, tensiones, capacidad, subestación) y lista las que hay que revisar a mano.
 
 #### Modo instalado
 
@@ -358,4 +367,4 @@ decisión documentada; el código no especificado es deuda que nadie revisó.
   `.specify/templates/`.
 - El "Constitution Check" de cada `plan.md` DEBE verificar los principios III, IV y VI.
 
-**Versión**: 1.4.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-10-25
+**Versión**: 1.5.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-11-09
