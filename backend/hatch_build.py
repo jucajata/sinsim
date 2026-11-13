@@ -7,6 +7,7 @@ El wheel lleva, de solo lectura:
 - `sinsim/_bundled/geo/` (mapa base)
 - `sinsim/_bundled/paratec/<DEMO_SNAPSHOT>/` (snapshot de demostración, byte a byte)
 - `sinsim/web/` (interfaz construida con `pnpm --dir frontend build`, si existe)
+- `sinsim/LICENSE` (texto de la GPL-3.0, que debe acompañar cada distribución)
 
 Los toma del repositorio. El sdist los lleva en `_bundle_src/`, para que el wheel también se
 pueda construir desde el sdist, fuera del repositorio.
@@ -41,7 +42,10 @@ def _glob(base: Path, rel: str, pattern: str) -> list[str]:
 
 def resources(source: Path) -> dict[str, str]:
     """Mapa `ruta relativa en el repositorio → ruta dentro del wheel`."""
-    out = {"config/defaults.toml": "sinsim/_bundled/config/defaults.toml"}
+    out = {
+        "config/defaults.toml": "sinsim/_bundled/config/defaults.toml",
+        "LICENSE": "sinsim/LICENSE",
+    }
     for rel in _glob(source, "data/equivalencias", "*.csv"):
         out[rel] = f"sinsim/_bundled/equivalencias/{Path(rel).name}"
     for rel in _glob(source, "data/geo", "*.geojson") + _glob(source, "data/geo", "README.md"):

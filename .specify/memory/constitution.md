@@ -1,6 +1,13 @@
 <!--
 Sync Impact Report
-- Versión: 1.4.0 → 1.5.0 (MINOR, 2026-11-09). Se añade el comando de mantenimiento
+- Versión: 1.5.0 → 2.0.0 (MAJOR, 2026-11-13). Cambia la licencia del proyecto de MIT a
+  GPL-3.0-or-later (decisión del usuario del 2026-11-13, para poder usar bibliotecas GPL como
+  ANDES en un futuro análisis de estabilidad). Se redefine el propósito del principio I; el resto
+  de principios no cambia. Las versiones hasta la 0.7.2 inclusive siguen bajo MIT.
+  - I «Naturaleza del proyecto»: «licencia MIT» → «licencia GPL-3.0 o posterior».
+  - La estabilidad dinámica sigue fuera de alcance hasta su propia enmienda y spec.
+  - Plantillas (.specify/templates/): revisadas; no requieren cambios.
+- Enmienda anterior, 1.4.0 → 1.5.0 (MINOR, 2026-11-09). Se añade el comando de mantenimiento
   `sinsim equivalencias revisar-elevadores`, que chequea `data/equivalencias/elevadores.csv`
   contra PARATEC para priorizar su curación (decisión del usuario del 2026-11-09). No se elimina
   ni se redefine ningún principio.
@@ -75,7 +82,7 @@ DEBERÍA y PUEDE se usan en el sentido de RFC 2119.
 
 ### I. Naturaleza del proyecto
 
-**Propósito**: herramienta open-source (licencia MIT) para construir, simular y analizar
+**Propósito**: herramienta open-source (licencia GPL-3.0 o posterior) para construir, simular y analizar
 modelos de red del Sistema Interconectado Nacional (SIN) de Colombia con **pandapower**,
 alimentada por los parámetros técnicos publicados en **PARATEC** (XM) y por los archivos
 públicos de XM que definen el punto de operación: el **despacho programado** (`dDEC`) y el
@@ -367,4 +374,4 @@ decisión documentada; el código no especificado es deuda que nadie revisó.
   `.specify/templates/`.
 - El "Constitution Check" de cada `plan.md` DEBE verificar los principios III, IV y VI.
 
-**Versión**: 1.5.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-11-09
+**Versión**: 2.0.0 | **Ratificada**: 2026-10-19 | **Última enmienda**: 2026-11-13
