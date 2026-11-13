@@ -1,6 +1,7 @@
 {
   "name": "sinsim-frontend",
   "private": true,
+  "license": "GPL-3.0-or-later",
   "version": "0.7.2",
   "type": "module",
   "scripts": {

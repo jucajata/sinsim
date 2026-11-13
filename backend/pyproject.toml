@@ -2,7 +2,7 @@
 name = "sinsim"
 version = "0.7.2"
 description = "Flujo de potencia del SIN colombiano con pandapower, PARATEC y archivos públicos de XM"
-license = "MIT"
+license = "GPL-3.0-or-later"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "pandapower==3.5.6",

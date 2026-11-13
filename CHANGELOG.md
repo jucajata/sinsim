@@ -8,6 +8,14 @@ proyecto está en desarrollo y el contenido de un caso puede cambiar entre versi
 Cada caso registra en su traza la versión de sinsim con que se calculó: para reproducir un
 resultado, usa el código de esa versión.
 
+## [Sin publicar]
+
+### Cambiado
+
+- Licencia: sinsim pasa de MIT a GPL-3.0-or-later (`LICENSE`, `pyproject.toml`, `package.json`,
+  README y Constitución 2.0.0), para poder usar bibliotecas GPL como ANDES en el análisis de
+  estabilidad. Las versiones hasta la 0.7.2 inclusive siguen disponibles bajo MIT.
+
 ## [0.7.2] - 2026-11-10
 
 ### Corregido

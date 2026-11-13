@@ -1,6 +1,6 @@
 # sinsim — flujo de potencia del SIN colombiano
 
-Herramienta open-source (MIT) para construir y simular, con [pandapower](https://www.pandapower.org/),
+Herramienta open-source (GPL-3.0 o posterior) para construir y simular, con [pandapower](https://www.pandapower.org/),
 modelos del Sistema Interconectado Nacional (SIN) de Colombia a partir de:
 
 - los parámetros técnicos de los equipos publicados en **PARATEC** (XM),
@@ -199,3 +199,15 @@ en el reporte de calidad; nunca se completa en silencio. Para aportar:
 4. Verifica con `make test` y `make demo`: la cobertura debe subir y no debe aparecer nada nuevo
    sin ubicar.
 5. Abre un pull request con el motivo y la fuente de cada fila.
+
+## Licencia
+
+Copyright (C) 2026 Juan Camilo Jaramillo Tascón.
+
+sinsim es software libre: puedes redistribuirlo y modificarlo bajo los términos de la
+[Licencia Pública General GNU](LICENSE), versión 3 o (a tu elección) cualquier versión posterior
+(`GPL-3.0-or-later`). Se distribuye sin ninguna garantía. Las versiones hasta la 0.7.2 inclusive
+se publicaron bajo licencia MIT y quienes las obtuvieron conservan esos términos.
+
+Los datos de `data/paratec/` son información proporcionada por XM S.A. E.S.P. – PARATEC y
+archivos públicos de despacho; los rigen los términos de uso de XM, no esta licencia.
